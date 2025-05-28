@@ -4955,12 +4955,42 @@ text {
 40. Contact us css 
 =====================*/
 
+.contactPage {
+  background-color: #f7f7f7;
+}
+
+.contactPage .personBox:hover .personInfo i {
+  background-color: #fda31b;
+  transition: 0.1s;
+}
+.contactPage .personInfo {
+  display: flex;
+  gap: 10px;
+  /* margin-bottom: 10px; */
+}
+
+.contactPage .personInfo i {
+  display: flex;
+  padding: 11px;
+  background-color: #0b4575;
+  color: white;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 7px 15px -9px;
+  transition: 0.2s;
+}
+
+.contact-area {
+  padding: 60px 0;
+}
+
 .contact-wrapper {
   position: relative;
   background: var(--color-white);
   border-radius: 20px;
   box-shadow: var(--box-shadow);
   z-index: 1;
+  overflow: hidden;
 }
 
 .contact-img {
@@ -4987,7 +5017,7 @@ text {
 }
 
 .contact-form {
-  padding: 25px;
+  padding-right: 25px;
 }
 
 .contact-form-header {
@@ -5029,20 +5059,21 @@ text {
   margin-bottom: 50px;
 }
 
-.contact-info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 35px;
-  padding: 30px 20px;
-  position: relative;
-  margin-bottom: 25px;
-  border-radius: 50px 50px 50px 0;
-  background: var(--color-white);
-  box-shadow: var(--box-shadow);
-  transition: var(--transition);
-}
+.contactPage .contact-info {
+  display: flex
+  ;
+      flex-direction: column;
+      align-items: flex-start;
+      text-align: center;
+      gap: 20px;
+      padding: 15px 15px;
+      position: relative;
+      margin-bottom: 25px;
+      border-radius: 20px 20px 20px 5px;
+      background: var(--color-white);
+      transition: var(--transition);
+      padding-bottom: 9px;
+      box-shadow: rgba(9, 30, 66, 0.10) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;}
 
 .contact-info::before {
   content: "";
@@ -5057,40 +5088,74 @@ text {
 }
 
 .contact-info-icon {
-  font-size: 35px;
-  color: var(--color-white);
-  width: 70px;
-  height: 70px;
-  line-height: 70px;
+  font-size: 16px;
+  color: #0b4575;
+  width: 30px;
+  height: 30px;
+  line-height: 34px;
   text-align: center;
   position: relative;
   border-radius: 30px;
-  background: var(--theme-color);
+  /* background: var(--theme-color);*/
 }
 
 .contact-info-icon::before {
   content: "";
   position: absolute;
-  left: -15px;
-  right: -15px;
-  top: -15px;
-  bottom: -15px;
-  border: 3px solid var(--theme-color);
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  border: 1px solid var(--theme-color);
   border-radius: 40px;
 }
 
 .contact-info h5 {
-  font-size: 20px;
-  font-weight: 600;
-  margin-bottom: 8px;
+  font-size: 15px;
+  font-weight: 800;
+  margin-bottom: 5px;
   color: var(--color-dark);
+  text-align: right;
+  font-family: 'iransansx';
 }
 
 .contact-info p {
-  color: var(--color-dark);
+  color: #0b4575;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 14px;
+  text-align: left;
+  font-family: iransansxfanum;
 }
+
+.contactPage h4 {
+  font-family: 'iransansx';
+  font-weight: 800;
+}
+
+.contactPage p.desc1 {
+  font-size: .95rem;
+  margin-top: 5px;
+  color: #52626e;
+}
+
+.contactPage p.desc2 {
+  font-size: .9rem;
+  /* margin-top: 5px; */
+  color: #52626e;
+}
+
+
+
+#map {
+  height: 350px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+
 
 
 @media all and (max-width: 768px) {
@@ -5516,18 +5581,33 @@ text {
 45. Faq css 
 ======================*/
 
+
+.faqPage {
+  background-color: #f7f7f7;
+}
+
+.faqPage p.desc {
+  text-align: justify;
+  font-size: 1rem;
+}
+
+.faqPage p strong {
+  color: #355c87;
+  font-weight: 600;
+}
+
 .faq-area .accordion-item {
   border: none;
   margin-bottom: 30px;
   background: var(--color-white);
-  border-radius: 30px 30px 30px 0 !important;
+  border-radius: 30px 30px 30px 8px !important;
   box-shadow: var(--box-shadow);
 }
 
 .faq-area .accordion-item span {
   width: 45px;
   height: 45px;
-  margin-right: 15px;
+  margin-left: 15px;
 }
 
 .faq-area .accordion-item i {
@@ -5538,6 +5618,10 @@ text {
   background: var(--theme-color);
   text-align: center;
   color: var(--color-white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.7rem;
 }
 
 .faq-area .accordion-button:not(.collapsed) {
@@ -5549,19 +5633,42 @@ text {
 .accordion-button {
   border-radius: 0px !important;
   background: transparent;
-  font-weight: 600;
-  font-size: 20px;
+  font-weight: 800;
+  font-size: 17px;
   color: var(--color-dark);
   box-shadow: none !important;
+  text-align: right;
+  font-family: 'iransansx';
 }
 
 .accordion-button:not(.collapsed) {
-  border-bottom: 1px solid var(--theme-color);
+  border-bottom: 1px dashed #0b45751f;
 }
 
 .accordion-button:not(.collapsed)::after {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
 }
+
+.accordion-button::after {
+  margin-left: unset;
+  margin-right: auto;
+}
+
+.faqPage .form-control {
+  font-size: 0.9rem;
+  font-weight: 300;
+  padding: 10px 15px;
+}
+
+.faqPage .form-control:focus {
+  color: var(--bs-body-color);
+  background-color: var(--bs-body-bg);
+  border-color: #86b7fe;
+  outline: 0;
+  box-shadow: none;
+  border-color: var(--theme-color);
+}
+
 
 @media all and (max-width: 991px) {
   .faq-right {
@@ -5572,6 +5679,7 @@ text {
     font-size: 16px;
   }
 }
+
 
 
 
@@ -7424,9 +7532,9 @@ text {
 }
 
 @media (max-width: 567px) {
-  #results_table_wrapper > div.row.dt-row > div.col-sm-12{
+  #results_table_wrapper>div.row.dt-row>div.col-sm-12 {
     overflow-x: auto;
-    }
+  }
 }
 
 .searchPage .table th {
@@ -7907,10 +8015,11 @@ div.dataTables_wrapper div.dataTables_filter {
   min-width: 34px;
   text-align: center;
 }
+
 .searchPage .page-link:hover {
- 
+
   background-color: #012758 !important;
-    border: 1px solid transparent;
+  border: 1px solid transparent;
 
 }
 
