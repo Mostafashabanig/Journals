@@ -2163,7 +2163,7 @@ label {
 
 .hero-single {
   padding-top: 70px;
-  padding-bottom: 240px;
+  padding-bottom: 110px;
   background-position: center !important;
   background-size: cover !important;
   background-repeat: no-repeat !important;
@@ -2173,6 +2173,10 @@ label {
   position: relative;
   z-index: 1;
   /* background: #0b4575 !important; */
+}
+.indexPage .hero-single {
+  padding-top: 70px;
+  padding-bottom: 240px;
 }
 
 .hero-single::before {
@@ -7540,10 +7544,18 @@ text {
 .searchPage .box {
   background-color: white;
   box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
-  padding: 25px;
+  padding: 20px;
   border-radius: 9px;
-  /* overflow-x: auto;
-  overflow-y: clip; */
+
+}
+
+.searchPage .filters .box {
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  padding: 0;
+  border-radius: 9px;
+  margin-bottom: 25px;
+  overflow: hidden;
 }
 
 .searchPage #results_table_wrapper {
@@ -7606,26 +7618,48 @@ text {
   text-align: center;
 }
 
+.searchPage table tr.disable td:first-child {
+  border-right: 13px solid #cacdd5;
+  position: relative;
+}
+
+.searchPage table tr.disable td:first-child:after {
+  content: "غیرفعال";
+  position: absolute;
+  rotate: -90deg;
+  font-size: 0.6rem;
+  right: -22px;
+  top: 13px;
+  color: #686d7a;
+  font-weight: 500;
+}
+
 .searchPage table tr td:nth-child(4),
 .searchPage table tr td:nth-child(5),
 .searchPage table tr td:nth-child(6),
 .searchPage table tr td:nth-child(7),
 .searchPage table tr td:nth-child(8) {
-  text-align: center;
-  border-right: 1px solid #0000000a;
+  /* text-align: center; */
+  /* border-right: 1px solid #0000000a; */
 }
 
-.searchPage table tr td:nth-child(4) {
-  border-right: 1px solid #0002;
+.searchPage table tr td:nth-child(5) {
+  /* border-right: 1px solid #0002; */
+  text-align: center;
 }
 
 .searchPage table tr td:nth-child(8) {
-  border-left: 1px solid #0002;
+  /* border-left: 1px solid #0002; */
 }
 
 .searchPage table tr:hover td {
   background-color: #f2f3f7 !important;
   transition: 0.05s;
+}
+
+.searchPage table tr.disable td {
+  background-color: #e6e9ef !important;
+  color: #00000087 !important;
 }
 
 
@@ -7684,6 +7718,53 @@ text {
   border-radius: 18px;
   font-size: 0.8rem;
 }
+
+
+
+
+
+/* filters */
+
+.searchPage .filters ul li {
+  display: flex;
+  gap: 5px;
+}
+
+.searchPage .filters ul li:not(:last-child) {
+  border-bottom: 1px solid #b9bfcf36;
+}
+
+.searchPage .filters h5 {
+  font-family: 'iransansx';
+  background-color: #e6e9ef;
+  padding: 12px 15px;
+  color: #343a46;
+  font-size: 1rem
+}
+
+.searchPage .filters .body {
+  max-height: 280px;
+  padding: 5px 15px;
+}
+
+.searchPage .filters input[type="checkbox"] {
+  scale: 1.1;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.searchPage .filters label {
+  user-select: none;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
 
 
 
@@ -7975,9 +8056,15 @@ a.jTitle {
   font-size: 0.84rem;
 }
 
+
 a.jTitle:hover {
   color: #b36c00;
   /* font-weight: 400; */
+}
+
+
+tr.disable a.jTitle {
+  color: #0000008c;
 }
 
 
@@ -8032,6 +8119,7 @@ div.dataTables_wrapper div.dataTables_filter {
   cursor: pointer;
   font-weight: 400;
   font-size: 0.83rem;
+  padding: 3px 0;
 }
 
 
@@ -8068,4 +8156,13 @@ div.dataTables_wrapper div.dataTables_filter {
 .page-link.disabled {
   background-color: #e9ecef75;
   border-color: #dee2e6b3;
+}
+
+
+
+
+
+
+.journalPage{
+  
 }
