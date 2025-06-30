@@ -1,13 +1,8 @@
-/*=====================================================
-Template Name   : Eduka
-Description     : School, College, University And Courses HTML5 Template
-Author          : LunarTemp
-Version         : 1.0
-=======================================================*/
+
 
 
 (function ($) {
-    
+
     "use strict";
 
     // multi level dropdown menu
@@ -63,36 +58,36 @@ Version         : 1.0
             "<i class='far fa-long-arrow-right'></i>"
         ],
 
-        onInitialized: function(event) {
-        var $firstAnimatingElements = $('.owl-item').eq(event.item.index).find("[data-animation]");
-        doAnimations($firstAnimatingElements);
+        onInitialized: function (event) {
+            var $firstAnimatingElements = $('.owl-item').eq(event.item.index).find("[data-animation]");
+            doAnimations($firstAnimatingElements);
         },
 
-        onChanged: function(event){
-        var $firstAnimatingElements = $('.owl-item').eq(event.item.index).find("[data-animation]");
-        doAnimations($firstAnimatingElements);
+        onChanged: function (event) {
+            var $firstAnimatingElements = $('.owl-item').eq(event.item.index).find("[data-animation]");
+            doAnimations($firstAnimatingElements);
         }
     });
 
     //hero slider do animations
     function doAnimations(elements) {
-		var animationEndEvents = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
-		elements.each(function () {
-			var $this = $(this);
-			var $animationDelay = $this.data('delay');
-			var $animationDuration = $this.data('duration');
-			var $animationType = 'animated ' + $this.data('animation');
-			$this.css({
-				'animation-delay': $animationDelay,
-				'-webkit-animation-delay': $animationDelay,
+        var animationEndEvents = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+        elements.each(function () {
+            var $this = $(this);
+            var $animationDelay = $this.data('delay');
+            var $animationDuration = $this.data('duration');
+            var $animationType = 'animated ' + $this.data('animation');
+            $this.css({
+                'animation-delay': $animationDelay,
+                '-webkit-animation-delay': $animationDelay,
                 'animation-duration': $animationDuration,
                 '-webkit-animation-duration': $animationDuration,
-			});
-			$this.addClass($animationType).one(animationEndEvents, function () {
-				$this.removeClass($animationType);
-			});
-		});
-	}
+            });
+            $this.addClass($animationType).one(animationEndEvents, function () {
+                $this.removeClass($animationType);
+            });
+        });
+    }
 
 
     // testimonial-slider
@@ -222,7 +217,7 @@ Version         : 1.0
 
 
     // scroll to top
-    $(window).on('scroll',function () {
+    $(window).on('scroll', function () {
         if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
             $("#scroll-top").addClass('active');
         } else {
@@ -272,18 +267,18 @@ Version         : 1.0
 
 
     // progress bar
-    $(document).ready(function(){
+    $(document).ready(function () {
         var progressBar = $('.progress');
-        if(progressBar.length) {
-        progressBar.each(function () {
-            var Self = $(this);
-            Self.appear(function () {
-            var progressValue = Self.data('value');
-            Self.find('.progress-bar').animate({
-                width:progressValue+'%'           
-            }, 1000);
-            });
-        })
+        if (progressBar.length) {
+            progressBar.each(function () {
+                var Self = $(this);
+                Self.appear(function () {
+                    var progressValue = Self.data('value');
+                    Self.find('.progress-bar').animate({
+                        width: progressValue + '%'
+                    }, 1000);
+                });
+            })
         }
     });
 
@@ -310,5 +305,68 @@ Version         : 1.0
 
 
 
+$(document).ready(function() {
 
+    
+    $('.searchPage .sidebar input[type="checkbox"]').each(function(index) {
+        $(this).attr('id', 'checkbox-' + index);
+        $(this).closest('label').attr('for', 'checkbox-' + index);
+    });
+
+    $('.searchPage .sidebar .box').each(function(boxIndex) {
+        $(this).find('input[type="checkbox"]').attr('name', 'filter-' + boxIndex);
+       
+        $(this).find('.boxBody').show();
+        $(this).find('.collapseIcon').addClass('rotated');
+    });
+
+    
+    $('.searchPage .sidebar .collapseIcon').on('click', function(e) {
+        e.stopPropagation();
+        $(this).closest('.box').find('.boxBody').slideToggle('fast');
+        $(this).toggleClass('rotated');
+    });
+
+    
+    $('.searchPage .sidebar input[type="checkbox"]').on('change', function() {
+        const anyChecked = $(this).closest('.box').find('input[type="checkbox"]:checked').length > 0;
+
+       
+        if (anyChecked) {
+            $(this).closest('.box').find('.cancel').fadeIn('fast');
+        } else {
+            $(this).closest('.box').find('.cancel').fadeOut('fast');
+        }
+        
+        
+        const filterData = {};
+        $('.searchPage .sidebar .box').each(function() {
+            const title = $(this).find('h5').text().trim();
+            const checkedValues = [];
+
+            $(this).find('input[type="checkbox"]:checked').each(function() {
+                checkedValues.push($(this).val());
+            });
+
+            if (checkedValues.length > 0) {
+                filterData[title] = checkedValues;
+            }
+        });
+
+
+        console.log('filterData: ', filterData);
+
+       
+    });
+    
+    // when cancel button clicked
+    $('.searchPage .sidebar .cancel').on('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        $(this).closest('.box').find('input[type="checkbox"]:checked').prop('checked', false).trigger('change');
+
+
+    });
+});
 
