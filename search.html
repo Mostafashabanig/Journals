@@ -321,12 +321,12 @@
           </div>
         </div> -->
           <div class="row">
-            <div class="col-lg-3">
+            <div class="col-lg-3 col-md-12">
               <div class="sidebar">
 
                 <div class="box" id="filterGroup">
                   <div class="boxHeader">
-                    <h5>گروه علمی</h5>
+                    <h5> <i class="bi bi-diagram-2"></i>  گروه علمی</h5>
                     <div class="btns">
                       <a class="cancel">لغو</a>
                       <i class="bi bi-chevron-up collapseIcon"></i>
@@ -407,7 +407,7 @@
 
                 <div class="box" id="filterOwner">
                   <div class="boxHeader">
-                    <h5>صاحب امتیاز</h5>
+                    <h5> <i class="bi bi-building"></i> صاحب امتیاز</h5>
                     <div class="btns">
                       <a class="cancel">لغو</a>
                       <i class="bi bi-chevron-up collapseIcon"></i>
@@ -415,6 +415,10 @@
                     
                   </div>
                   <div class="boxBody">
+                    <div class="filterSearchBox">
+                      <input type="text" name="" id="" placeholder="جست‌وجو کنید ...">
+                      <i class="bi bi-x"></i>
+                    </div>
                     <ul>
                       <li>
                         <div class="checkbox-wrapper-65">
@@ -469,6 +473,58 @@
                           </label>
                         </div>
                       </li>
+                      <li>
+                        <div class="checkbox-wrapper-65">
+                          <label for="">
+                            <input type="checkbox" id="" value="123 دانشنامه">
+                            <span class="cbx">
+                              <svg width="12px" height="11px" viewBox="0 0 12 11">
+                                <polyline points="1 6.29411765 4.5 10 11 1"></polyline>
+                              </svg>
+                            </span>
+                            <span>123 دانشنامه	</span>
+                          </label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="checkbox-wrapper-65">
+                          <label for="">
+                            <input type="checkbox" id="" value="Information 3">
+                            <span class="cbx">
+                              <svg width="12px" height="11px" viewBox="0 0 12 11">
+                                <polyline points="1 6.29411765 4.5 10 11 1"></polyline>
+                              </svg>
+                            </span>
+                            <span>Information 3	</span>
+                          </label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="checkbox-wrapper-65">
+                          <label for="">
+                            <input type="checkbox" id="" value="231441(3)">
+                            <span class="cbx">
+                              <svg width="12px" height="11px" viewBox="0 0 12 11">
+                                <polyline points="1 6.29411765 4.5 10 11 1"></polyline>
+                              </svg>
+                            </span>
+                            <span>231441(3) Eng	</span>
+                          </label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="checkbox-wrapper-65">
+                          <label for="">
+                            <input type="checkbox" id="" value="-">
+                            <span class="cbx">
+                              <svg width="12px" height="11px" viewBox="0 0 12 11">
+                                <polyline points="1 6.29411765 4.5 10 11 1"></polyline>
+                              </svg>
+                            </span>
+                            <span>-</span>
+                          </label>
+                        </div>
+                      </li>
                       
                     </ul>
                   </div>
@@ -476,7 +532,7 @@
 
                 <div class="box" id="filterRank">
                   <div class="boxHeader">
-                    <h5>رتبه</h5>
+                    <h5> <i class="bi bi-trophy"></i> رتبه</h5>
                     <div class="btns">
                       <a class="cancel">لغو</a>
                       <i class="bi bi-chevron-up collapseIcon"></i>
@@ -556,7 +612,7 @@
 
                 <div class="box" id="filterLanguage">
                   <div class="boxHeader">
-                    <h5>زبان</h5>
+                    <h5> <i class="bi bi-translate"></i> زبان</h5>
                     <div class="btns">
                       <a class="cancel">لغو</a>
                       <i class="bi bi-chevron-up collapseIcon"></i>
@@ -614,7 +670,7 @@
 
               </div>
             </div>
-            <div class="col-lg-9">
+            <div class="col-lg-9 col-md-12">
               <div class="box">
                 <table id="results_table" class="table" style="width: 100%">
                   <thead>
@@ -956,6 +1012,7 @@
     <script>
       $(document).ready(function () {
         var table = $("#results_table").DataTable({
+          lengthMenu: [15, 25, 50, 100],
           // ordering: false,
           // // paging: false,
           // searchPanes: true

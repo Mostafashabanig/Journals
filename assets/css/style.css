@@ -1,6 +1,3 @@
-
-
-
 :root {
   scroll-behavior: smooth;
 }
@@ -657,9 +654,9 @@ img {
 }
 
 label {
-  color: #999;
+  /* color: #999;
   cursor: pointer;
-  font-weight: 400;
+  font-weight: 400; */
 }
 
 *::-moz-selection {
@@ -1456,6 +1453,11 @@ label {
     height: 34px;
     line-height: 37px;
     margin-left: 0;
+  }
+
+  .headerTop .header {
+    flex-direction: column;
+    gap: 25px;
   }
 }
 
@@ -3517,6 +3519,7 @@ label {
   margin: 0;
   font-size: 1.1rem;
   font-weight: 400;
+  line-height: 1.3;
 }
 
 #links .box .box_header a.btn_more_news {
@@ -4912,14 +4915,15 @@ text {
 }
 
 .contactPage .personInfo i {
-  display: flex;
-  padding: 11px;
-  background-color: #0b4575;
-  color: white;
-  border-radius: 50px;
-  font-size: 1.2rem;
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 7px 15px -9px;
-  transition: 0.2s;
+    display: flex
+;
+    padding: 11px;
+    background-color: #0b4575;
+    color: white;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    box-shadow: rgba(0, 0, 0, 0.9) 0px 7px 20px -9px;
+    transition: 0.2s;
 }
 
 .contact-area {
@@ -8006,7 +8010,7 @@ div.dataTables_wrapper div.dataTables_filter {
   text-align: left;
 }
 
-.searchPage .box label {
+.searchPage .sidebar .box label {
   color: #5c5c5c;
   cursor: pointer;
   font-weight: 400;
@@ -8022,6 +8026,7 @@ div.dataTables_wrapper div.dataTables_filter {
   margin-left: 0 !important;
   min-width: 34px;
   text-align: center;
+  color: #555;
 }
 
 .searchPage .page-link:hover {
@@ -8051,6 +8056,7 @@ div.dataTables_wrapper div.dataTables_filter {
 
 
 
+
 .searchPage .sidebar .box {
   padding: 0px;
   overflow: hidden;
@@ -8058,7 +8064,7 @@ div.dataTables_wrapper div.dataTables_filter {
 }
 
 .searchPage .sidebar .boxHeader {
-  padding: 15px;
+  padding: 11px 11px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -8066,11 +8072,24 @@ div.dataTables_wrapper div.dataTables_filter {
   border-bottom: 1px solid #0001;
 }
 
+.searchPage .sidebar .box.collapsed .boxHeader {
+  border-bottom: 0px;
+}
+
 
 .searchPage .sidebar .boxHeader h5 {
   font-family: 'iransansxf';
-  font-size: 1rem;
+  font-size: 0.93rem;
   font-weight: 700;
+  display: flex;
+  gap: 7px;
+}
+
+.searchPage .sidebar .boxHeader h5 i {
+  font-size: 1rem;
+  display: inline-flex;
+  align-items: center;
+  
 }
 
 .searchPage .sidebar .boxHeader .btns {
@@ -8083,8 +8102,7 @@ div.dataTables_wrapper div.dataTables_filter {
 .searchPage .sidebar .boxHeader .cancel {
   background-color: TRANSPARENT;
   /* color: #6d460c; */
-  display: inline-flex
-;
+  display: inline-flex;
   border-radius: 7px;
   padding: 2px 11px;
   font-size: 0.7rem;
@@ -8100,7 +8118,7 @@ div.dataTables_wrapper div.dataTables_filter {
   background-color: #fda31b;
   color: #fff;
   transition: 0.1s;
- 
+
 }
 
 .searchPage .sidebar .boxHeader i.collapseIcon {
@@ -8109,8 +8127,7 @@ div.dataTables_wrapper div.dataTables_filter {
   /* border-radius: 4px; */
   border: 1px solid #0002;
   padding: 7px;
-  display: inline-flex
-;
+  display: inline-flex;
   font-size: 0.7rem;
   align-items: center;
   justify-content: center;
@@ -8135,8 +8152,9 @@ div.dataTables_wrapper div.dataTables_filter {
 
 .searchPage .sidebar .boxBody {
   /* margin-top: 15px; */
-  padding: 15px;
-  padding-top: 10px;
+  padding: 10px;
+  max-height: 300px;
+  overflow: auto;
 }
 
 
@@ -8178,6 +8196,7 @@ div.dataTables_wrapper div.dataTables_filter {
   display: block;
   float: left;
   width: 18px;
+  min-width: 18px;
   height: 18px;
   border-radius: 4px;
   /* background-color: #606062; */
@@ -8202,7 +8221,7 @@ div.dataTables_wrapper div.dataTables_filter {
 
 .searchPage .sidebar .checkbox-wrapper-65 .cbx+span {
   float: left;
-  margin-left: 6px;
+  /* margin-left: 6px; */
 }
 
 .searchPage .sidebar .checkbox-wrapper-65 {
@@ -8232,6 +8251,58 @@ div.dataTables_wrapper div.dataTables_filter {
 }
 
 
+.sidebar .filterSearchBox {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+
+.sidebar .filterSearchBox input {
+  border-radius: 15px;
+  border: 1px solid #0002;
+  padding: 2px 10px;
+  font-size: 0.85rem;
+  color: #444;
+  font-weight: 400;
+  width: 100%;
+}
+
+.sidebar .filterSearchBox input:focus {
+  border: 1px solid #0008;
+  color: #222;
+  box-shadow: none;
+  outline: none;
+}
+
+.sidebar .filterSearchBox input::placeholder {
+  font-size: 0.8rem;
+  color: #888;
+  opacity: 1;
+}
+
+.sidebar .filterSearchBox i {
+  position: absolute;
+  left: 3px;
+  background-color: #0000000f;
+  border-radius: 15px;
+  display: flex;
+  top: 3px;
+  padding: 5px;
+  cursor: pointer;
+  display: none;
+}
+
+.sidebar .filterSearchBox i:hover {
+  background-color: #fda31b;
+  color: white;
+}
+
+
+
+
+
+
+
 
 
 
@@ -8254,9 +8325,8 @@ div.dataTables_wrapper div.dataTables_filter {
 }
 
 .filters .body {
-  display: flex
-  ;
-      gap: 10px;
+  display: flex;
+  gap: 10px;
 }
 
 .filters .body .filter {
@@ -8268,8 +8338,9 @@ div.dataTables_wrapper div.dataTables_filter {
   color: #333;
   background-color: white;
 }
+
 .filters .body .filter:hover {
-background-color: #0000000a;
+  background-color: #0000000a;
   transition: 0.1s;
 }
 
@@ -8301,6 +8372,7 @@ background-color: #0000000a;
   padding-bottom: 20px;
   border-bottom: 1px dashed #0001;
   line-height: 1.4;
+  color: #0b294a;
 }
 
 .poster {
@@ -8311,12 +8383,14 @@ background-color: #0000000a;
   background-color: #0b4575;
   color: white;
   border-radius: 21px;
-  padding: 5px 15px;
+  padding: 3px 12px;
   border: 1px solid #0b4575;
   display: flex;
   align-items: center;
   gap: 10px;
   transition: .15s;
+  font-family: 'iransansx';
+  font-size: 0.8rem;
 }
 
 .button1:hover {
@@ -8336,6 +8410,9 @@ background-color: #0000000a;
   align-items: center;
   gap: 10px;
   transition: .15s;
+  font-size: 0.8rem;
+  padding: 3px 12px;
+  font-family: 'iransansxfanum';
 }
 
 .button2:hover {
@@ -8379,7 +8456,7 @@ background-color: #0000000a;
 
 #w1 span.key {
   color: #243849e6;
-  cursor: pointer;
+  /* cursor: pointer; */
   font-weight: 300;
 }
 
@@ -8396,7 +8473,7 @@ background-color: #0000000a;
 #w2 .box:hover .right {
   border: 1px solid #fda31b69;
   color: #fda31b;
-  transition: border 0.05s, color 0.5s;
+  transition: border 0.01s, color 0.1s;
 }
 
 #w2 .box:hover span.value {
@@ -8409,7 +8486,7 @@ background-color: #0000000a;
   display: flex;
   border: 1px solid #0b457545;
   color: #0b4575;
-  border-radius: 13px;
+  border-radius: 29px;
   width: 40px;
   height: 40px;
   justify-content: center;
@@ -8417,6 +8494,11 @@ background-color: #0000000a;
   margin-left: 14px;
   transition: border 0.1s, color 0.5s;
 
+}
+
+#w2 .box .right i {
+  display: flex;
+  font-size: 1rem;
 }
 
 #w2 span.value {
@@ -8468,7 +8550,7 @@ background-color: #0000000a;
 }
 
 #w3 span.key {
-  color: #062540;
+  color: #19507d;
   display: block;
   font-weight: 400;
   font-size: 0.95rem;
@@ -8522,6 +8604,8 @@ background-color: #0000000a;
   border: 0 !IMPORTANT;
   padding: 5px 10px;
   border-bottom: 2px solid transparent ! IMPORTANT;
+  font-size: 1rem;
+  font-weight: 300;
 }
 
 .journalPage .tabs .nav-link:hover {
@@ -8536,6 +8620,8 @@ background-color: #0000000a;
   border-color: var(--bs-nav-tabs-link-active-border-color);
   border: 0;
   border-bottom: 2px solid #0b4575 !important;
+  font-weight: 400;
+  color: #0b4575;
 }
 
 .journalPage .tabs .nav-tabs .nav-link:focus,
@@ -8607,11 +8693,16 @@ background-color: #0000000a;
 
 
 
+.sidebar {
+  margin-bottom: 25px;
+}
 
-
-
-
-
+@media (max-width: 1199px) {
+  .team-img img {
+    aspect-ratio: 1 / 1;
+    height: auto;
+  }
+}
 
 
 @media (max-width: 991px) {
@@ -8633,6 +8724,19 @@ background-color: #0000000a;
   .journalPage .team-area {
     padding: 50px 0;
   }
+
+  .searchPage .sidebar .box {
+    width: 330px;
+    margin-bottom: 0px;
+  }
+
+  .searchPage .sidebar {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
 }
 
 @media (max-width: 767px) {
@@ -8643,6 +8747,20 @@ background-color: #0000000a;
   .journalPage #w1 .left {
     align-items: flex-end;
     margin-top: 25px;
+  }
+
+  #links .col-md-6 {
+    margin-bottom: 15px;
+  }
+
+  .fa-negative {
+    margin-top: -160px;
+    margin-left: 20px;
+  }
+
+  .searchPage .sidebar .box {
+    width: 100%;
+    margin-bottom: 0px;
   }
 }
 
