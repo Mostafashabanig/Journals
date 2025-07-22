@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="fa"
-  class="">
+<html lang="fa" class="">
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -26,6 +25,11 @@
   <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+  <script src="assets/vendor/jalaliDate/moment.min.js"></script>
+  <script src="assets/vendor/jalaliDate/moment-jalaali.js"></script>
+
+  <link href="assets/vendor/select2/select2.min.css" rel="stylesheet" />
+
 
 
 </head>
@@ -59,7 +63,7 @@
       <nav class="navbar navbar-expand-lg">
         <div class="container position-relative">
 
- 
+
           <div class="mobile-menu-right">
             <div class="search-btn">
               <button type="button" class="nav-right-link search-box-outer"><i class="far fa-search"></i></button>
@@ -91,7 +95,7 @@
               <li class="nav-item">
                 <a class="nav-link" href="">تماس با ما</a>
               </li>
-             
+
 
 
             </ul>
@@ -142,23 +146,32 @@
                         <div class="header-right">
                           <a href="https://journalportal.msrt.ir/">
                             <div class="logo-container">
-                              <img src="assets/img/va-logo-w.png"  data-animation="fadeInRight" data-delay=".50s" style="animation-delay: 0.5s;">
+                              <img src="assets/img/va-logo-w.png" data-animation="fadeInRight" data-delay=".50s"
+                                style="animation-delay: 0.5s;">
                             </div>
                             <div class="main-title-container">
-                              <span  data-animation="fadeInDown" data-delay=".25s" style="animation-delay: 0.25s;">وزارت علوم، تحقیقات و فناوری </span>
-                              <h3 data-animation="fadeInLeft" data-delay=".75s" class="" style="animation-delay: 0.75s;">پرتال نشریه‌های علمی</h3>
-                              <p  data-animation="fadeInUp" data-delay="1s" style="animation-delay: 1s;">معاونت پژوهشی / دفتر سیاست‌گذاری و برنامه‌ریزی امور پژوهشی</p>
+                              <span data-animation="fadeInDown" data-delay=".25s" style="animation-delay: 0.25s;">وزارت
+                                علوم، تحقیقات و فناوری </span>
+                              <h3 data-animation="fadeInLeft" data-delay=".75s" class=""
+                                style="animation-delay: 0.75s;">پرتال نشریه‌های علمی</h3>
+                              <p data-animation="fadeInUp" data-delay="1s" style="animation-delay: 1s;">معاونت پژوهشی /
+                                دفتر سیاست‌گذاری و برنامه‌ریزی امور پژوهشی</p>
                             </div>
                           </a>
                         </div>
                         <div class="header-left justify-content-end">
                           <div class="en-section">
                             <div class="flag">
-                              <a href="https://journalportal.msrt.ir/"  data-animation="fadeInDown" data-delay=".25s" style="animation-delay: 0.25s;" >journalportal.msrt.ir</a>
-                              <img src="assets/img/iran.png" alt="iran-flag" data-animation="fadeInLeft" data-delay=".75s" class="" style="animation-delay: 0.75s;">
+                              <a href="https://journalportal.msrt.ir/" data-animation="fadeInDown" data-delay=".25s"
+                                style="animation-delay: 0.25s;">journalportal.msrt.ir</a>
+                              <img src="assets/img/iran.png" alt="iran-flag" data-animation="fadeInLeft"
+                                data-delay=".75s" class="" style="animation-delay: 0.75s;">
                             </div>
-                            <h3 data-animation="fadeInRight" data-delay=".50s" style="animation-delay: 0.5s;">IRANIAN JOURNALS</h3>
-                            <p data-animation="fadeInUp" data-delay="1s"  style="text-transform: uppercase; animation-delay: 1s;">minisrty of science, research and technology</p>
+                            <h3 data-animation="fadeInRight" data-delay=".50s" style="animation-delay: 0.5s;">IRANIAN
+                              JOURNALS</h3>
+                            <p data-animation="fadeInUp" data-delay="1s"
+                              style="text-transform: uppercase; animation-delay: 1s;">minisrty of science, research and
+                              technology</p>
                           </div>
                           <div class="pattern-header-container"> </div>
                         </div>
@@ -192,7 +205,7 @@
                 </div>
               </div>
             </div>
-           
+
           </div>
         </div>
         <div class="owl-nav"><button type="button" role="presentation" class="owl-prev"><i
@@ -202,6 +215,7 @@
       </div>
     </div>
     <!-- hero slider end -->
+
 
 
     <!-- feature area -->
@@ -228,43 +242,1196 @@
                       </div>
                       <div class="col-lg-4">
                         <div class="form-group">
-                          <select class="form-select" name="" id="">
-                            <option value="">نمونه</option>
+                          <select class="form-select" id="selectFilter1" name="Group">
+                            <option value="">گروه‌</option>
+                            <option value="1">علوم انسانی</option>
+                            <option value="2">فنی و مهندسی</option>
+                            <option value="3">کشاورزی و منابع طبیعی</option>
+                            <option value="4">دامپزشکی</option>
+                            <option value="5">علوم پایه</option>
+                            <option value="6">هنر و معماری</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-lg-4">
+                        <div class="form-group">
+                          <select class="form-select subSelectFilter" id="selectFilter2" name="SubGroupId">
+
+                            <!-- علوم انسانی -->
+                            <option data-group="1" value="6">اخلاق</option>
+                            <option data-group="1" value="93">ادبیات - زبان شناسی</option>
+                            <option data-group="1" value="92">ادبیات - زبان و ادبیات انگلیسی</option>
+                            <option data-group="1" value="91">ادبیات - زبان و ادبیات روسی</option>
+                            <option data-group="1" value="90">ادبیات - زبان و ادبیات عربی</option>
+                            <option data-group="1" value="2">ادبیات - زبان و ادبیات فارسی</option>
+                            <option data-group="1" value="89">ادبیات - زبان و ادبیات فرانسه</option>
+                            <option data-group="1" value="7">ادیان، مذاهب و عرفان</option>
+                            <option data-group="1" value="16">اقتصاد</option>
+                            <option data-group="1" value="1">تاریخ</option>
+                            <option data-group="1" value="14">تربیت بدنی</option>
+                            <option data-group="1" value="15">جغرافیا</option>
+                            <option data-group="1" value="17">حسابداری</option>
+                            <option data-group="1" value="11">روانشناسی</option>
+                            <option data-group="1" value="13">علم اطلاعات و دانش شناسی</option>
+                            <option data-group="1" value="4">علوم اجتماعی</option>
+                            <option data-group="1" value="12">علوم تربیتی</option>
+                            <option data-group="1" value="3">علوم سیاسی</option>
+                            <option data-group="1" value="5">علوم قرآن و حدیث</option>
+                            <option data-group="1" value="10">فقه و حقوق</option>
+                            <option data-group="1" value="9">فلسفه و کلام</option>
+                            <option data-group="1" value="18">مالی</option>
+                            <option data-group="1" value="19">مدیریت</option>
+
+                            <!-- فنی مهندسی ها -->
+                            <option data-group="2" value="20">برق و کامپیوتر</option>
+                            <option data-group="2" value="34">پدافند غیرعامل</option>
+                            <option data-group="2" value="29">پلیمر</option>
+                            <option data-group="2" value="21">صنایع</option>
+                            <option data-group="2" value="22">عمران</option>
+                            <option data-group="2" value="23">فناوری اطلاعات</option>
+                            <option data-group="2" value="32">مهندسی آب</option>
+                            <option data-group="2" value="33">مهندسی پزشکی</option>
+                            <option data-group="2" value="25">مهندسی دریا</option>
+                            <option data-group="2" value="31">مهندسی زلزله</option>
+                            <option data-group="2" value="27">مهندسی شیمی</option>
+                            <option data-group="2" value="30">مهندسی معدن</option>
+                            <option data-group="2" value="26">مواد و متالوژی</option>
+                            <option data-group="2" value="24">مکانیک</option>
+                            <option data-group="2" value="28">نفت</option>
+
+                            <!-- کشاورزی -->
+                            <option data-group="3" value="36">آب و خاک</option>
+                            <option data-group="3" value="50">آبخیزداری</option>
+                            <option data-group="3" value="37">اقتصاد کشاورزی</option>
+                            <option data-group="3" value="38">اکولوژی</option>
+                            <option data-group="3" value="39">باغبانی</option>
+                            <option data-group="3" value="51">بیابان</option>
+                            <option data-group="3" value="40">بیوتکنولوژی و ژنتیک گیاهی</option>
+                            <option data-group="3" value="41">جنگلداری</option>
+                            <option data-group="3" value="43">زراعت</option>
+                            <option data-group="3" value="46">شیلات</option>
+                            <option data-group="3" value="47">صنایع چوب و کاغذ</option>
+                            <option data-group="3" value="48">صنایع غذایی</option>
+                            <option data-group="3" value="49">علوم ترویج</option>
+                            <option data-group="3" value="45">علوم دام</option>
+                            <option data-group="3" value="44">گیاهپزشکی</option>
+                            <option data-group="3" value="42">ماشین های کشاورزی</option>
+                            <option data-group="3" value="52">محیط زیست</option>
+                            <option data-group="3" value="53">مرتع </option>
+                            <option data-group="3" value="85">منابع طبیعی</option>
+
+                            <!-- دامپزشکی -->
+                            <option data-group="4" value="54">دامپزشکی </option>
+
+                            <!-- پایه -->
+                            <option data-group="5" value="86">adld</option>
+                            <option data-group="5" value="57">آمار</option>
+                            <option data-group="5" value="58">ریاضی</option>
+                            <option data-group="5" value="59">زمین شناسی</option>
+                            <option data-group="5" value="60">زیست شناسی</option>
+                            <option data-group="5" value="62">شیمی</option>
+                            <option data-group="5" value="55">علوم</option>
+                            <option data-group="5" value="63">فیزیک </option>
+                            <option data-group="5" value="61">محیط زیست</option>
+                            <option data-group="5" value="56">هواشناسی</option>
+
+                            <!-- هنر معماری -->
+                            <option data-group="6" value="65">معماری </option>
+                            <option data-group="6" value="64">هنر</option>
+
+
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-lg-4">
+                        <div class="form-group">
+                          <select name="Language" class="form-select" id="selectFilter3">
+                            <option value="" selected="">زبان نشریه</option>
+                            <option value="1">فارسی</option>
+                            <option value="2">انگلیسی</option>
+                            <option value="3">فرانسه</option>
+                            <option value="4">آلمانی</option>
+                            <option value="5">عربی</option>
+                            <option value="6">روسی</option>
+                            <option value="7">زبان دیگر</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-lg-4">
+                        <div class="form-group">
+                          <select name="Applicant" class="form-select" id="selectFilter4">
+                            <option value="">نوع صاحب امتیاز</option>
+                            <option value="1">مؤسسه- دانشگاه</option>
+                            <option value="3">مؤسسه- مرکز آموزش عالی</option>
+                            <option value="5">مؤسسه- مرکز پژوهشی</option>
+                            <option value="6">مؤسسه- پژوهشکده</option>
+                            <option value="10">مؤسسه- مرکز فناوری</option>
+                            <option value="22">انجمن علمی</option>
+                            <option value="44">مؤسسه- انتشارات دولتی و غیردولتی</option>
+                            <option value="99">سایر</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-lg-4">
+                        <div class="form-group">
+                          <select name="UniversityId" class="form-control subSelectFilter" id="selectFilter5">
+
+                            <option value="">نام صاحب امتیاز</option>
+
+                            <!-- دانشگاه -->
+                            <option data-group="1" value="3713"> جامعه المصطفی العالمیه</option>
+                            <option data-group="1" value="4179"> دانشگاه غیر دولتی- غیر انتفاعی مهر البرز</option>
+                            <option data-group="1" value="3723"> دانشگاه غیردولتی- غیرانتفاعی شیخ بهایی</option>
+                            <option data-group="1" value="1645"> گروه پژوهشی سیستمهای هوشمند واژه</option>
+                            <option data-group="1" value="6060"> موسسه آمزش عالی غیر انتفاعی- غیر دولتی ره پویان سید
+                              الشهدا (ع) </option>
+                            <option data-group="1" value="1656">بنیاد ایران شناسی</option>
+                            <option data-group="1" value="6050">پایگاه استنادی علوم جهان اسلام </option>
+                            <option data-group="1" value="1596">پردیس ابوریحان</option>
+                            <option data-group="1" value="321">پردیس فارابی دانشگاه تهران</option>
+                            <option data-group="1" value="1610">پژوهشگاه ارتباطات و فناوری اطلاعات</option>
+                            <option data-group="1" value="1520">پژوهشگاه بین المللی زلزله شناسی و مهندسی زلزله</option>
+                            <option data-group="1" value="1483">پژوهشگاه پلیمر و پتروشیمی ایران</option>
+                            <option data-group="1" value="1508">پژوهشگاه تربیت بدنی و علوم ورزشی</option>
+                            <option data-group="1" value="1521">پژوهشگاه حوزه و دانشگاه</option>
+                            <option data-group="1" value="1475">پژوهشگاه دانش های بنیادی </option>
+                            <option data-group="1" value="1504">پژوهشگاه رنگ</option>
+                            <option data-group="1" value="6057">پژوهشگاه رویان</option>
+                            <option data-group="1" value="6077">پژوهشگاه زابل</option>
+                            <option data-group="1" value="1467">پژوهشگاه شیمی و مهندسی شیمی ایران</option>
+                            <option data-group="1" value="1587">پژوهشگاه صنعت نفت- وزارت نفت</option>
+                            <option data-group="1" value="6067">پژوهشگاه علوم انتظامی و مطالعات اجتماعی</option>
+                            <option data-group="1" value="1522">پژوهشگاه علوم انسانی و مطالعات فرهنگی</option>
+                            <option data-group="1" value="2735">پژوهشگاه علوم و فرهنگ اسلامی</option>
+                            <option data-group="1" value="1523">پژوهشگاه علوم و فناوری اطلاعات ایران</option>
+                            <option data-group="1" value="1585">پژوهشگاه علوم و فنون هسته‌ای </option>
+                            <option data-group="1" value="6089">پژوهشگاه علوم و معارف دفاع مقدس </option>
+                            <option data-group="1" value="1591">پژوهشگاه فرهنگ و اندیشه اسلامی</option>
+                            <option data-group="1" value="2737">پژوهشگاه فضایی ایران</option>
+                            <option data-group="1" value="5969">پژوهشگاه قرآن وحدیث</option>
+                            <option data-group="1" value="1499">پژوهشگاه ملی اقیانوس شناسی و علوم جوی</option>
+                            <option data-group="1" value="1507">پژوهشگاه ملی مهندسی ژنتیک و زیست فناوری</option>
+                            <option data-group="1" value="1473">پژوهشگاه مواد و انرژی</option>
+                            <option data-group="1" value="1578">پژوهشگاه نیرو</option>
+                            <option data-group="1" value="1611">پژوهشگاه هواشناسی و علوم جو</option>
+                            <option data-group="1" value="5968">پژوهشگاه هوافضا</option>
+                            <option data-group="1" value="5970">پژوهشکده اسناد</option>
+                            <option data-group="1" value="2744">پژوهشکده امام خمینی (ره) و انقلاب اسلامی</option>
+                            <option data-group="1" value="1642">پژوهشکده پولی و بانکی</option>
+                            <option data-group="1" value="6078">پژوهشکده حقوق و قانون ایران</option>
+                            <option data-group="1" value="2757">پژوهشکده شورای نگهبان- شورای نگهبان</option>
+                            <option data-group="1" value="1631">پژوهشکده علوم زمین</option>
+                            <option data-group="1" value="2763">پژوهشکده قوه قضائیه- قوه قضائیه</option>
+                            <option data-group="1" value="2765">پژوهشکده محیط زیست و توسعه پایدار</option>
+                            <option data-group="1" value="2766">پژوهشکده مطالعات فناوری</option>
+                            <option data-group="1" value="1639">پژوهشکده هنر، معماری و شهرسازی(نظر)</option>
+                            <option data-group="1" value="1599">تست کاربر اکسیر</option>
+                            <option data-group="1" value="1364">جهاد دانشگاهی</option>
+                            <option data-group="1" value="292">جهاد دانشگاهی تهران</option>
+                            <option data-group="1" value="301">جهاد دانشگاهی واحد البرز،</option>
+                            <option data-group="1" value="1358">جهاددانشگاهی اردبیل</option>
+                            <option data-group="1" value="316">جهاددانشگاهی مشهد</option>
+                            <option data-group="1" value="1570">خاتم </option>
+                            <option data-group="1" value="1577">دانشگاه آزاد اسلامی</option>
+                            <option data-group="1" value="29">دانشگاه آیت الله العظمی بروجردی (ره)</option>
+                            <option data-group="1" value="240">دانشگاه ادیان و مذاهب</option>
+                            <option data-group="1" value="4">دانشگاه اراک</option>
+                            <option data-group="1" value="155">دانشگاه اردبیل</option>
+                            <option data-group="1" value="5">دانشگاه اردکان</option>
+                            <option data-group="1" value="6">دانشگاه ارومیه</option>
+                            <option data-group="1" value="7">دانشگاه اصفهان</option>
+                            <option data-group="1" value="3281">دانشگاه افسری امام علی (ع)</option>
+                            <option data-group="1" value="8">دانشگاه الزهرا(س)</option>
+                            <option data-group="1" value="9">دانشگاه امام صادق (ع)</option>
+                            <option data-group="1" value="10">دانشگاه ایلام</option>
+                            <option data-group="1" value="1388">دانشگاه بابلسر</option>
+                            <option data-group="1" value="1329">دانشگاه باقرالعلوم</option>
+                            <option data-group="1" value="11">دانشگاه بجنورد</option>
+                            <option data-group="1" value="12">دانشگاه بزرگمهر قائنات </option>
+                            <option data-group="1" value="13">دانشگاه بناب</option>
+                            <option data-group="1" value="14">دانشگاه بوعلی سینا</option>
+                            <option data-group="1" value="1461">دانشگاه بیرجند</option>
+                            <option data-group="1" value="1362">دانشگاه بین المللی امام رضا (ع)</option>
+                            <option data-group="1" value="1669">دانشگاه بین المللی چابهار</option>
+                            <option data-group="1" value="217">دانشگاه بین المللی قزوین</option>
+                            <option data-group="1" value="1375">دانشگاه بین‌المللی امام خمینی (ره)</option>
+                            <option data-group="1" value="1360">دانشگاه پدافند هوایی خاتم الانبیا(ص)</option>
+                            <option data-group="1" value="1491">دانشگاه پیام نور</option>
+                            <option data-group="1" value="18">دانشگاه تبریز</option>
+                            <option data-group="1" value="256">دانشگاه تحصیلات تکمیلی صنعتی و فناوری پیشرفته کرمان
+                            </option>
+                            <option data-group="1" value="19">دانشگاه تحصیلات تکمیلی علوم پایه زنجان</option>
+                            <option data-group="1" value="290">دانشگاه تخصصی فناوری های نوین آمل</option>
+                            <option data-group="1" value="21">دانشگاه تربت حیدریه</option>
+                            <option data-group="1" value="268">دانشگاه تربیت دبیر شهید رجایی</option>
+                            <option data-group="1" value="1419">دانشگاه تربیت مدرس</option>
+                            <option data-group="1" value="234">دانشگاه تربیت مدرس نور</option>
+                            <option data-group="1" value="184">دانشگاه تربیت معلم</option>
+                            <option data-group="1" value="24">دانشگاه تفرش</option>
+                            <option data-group="1" value="25">دانشگاه تهران</option>
+                            <option data-group="1" value="182">دانشگاه تهران - کرج ، ایران</option>
+                            <option data-group="1" value="1332">دانشگاه تهران-واحد قم</option>
+                            <option data-group="1" value="138">دانشگاه جامع امام حسین (ع)</option>
+                            <option data-group="1" value="3282">دانشگاه جامع امام حسین (ع)</option>
+                            <option data-group="1" value="26">دانشگاه جامع علمی ـ کاربردی</option>
+                            <option data-group="1" value="231">دانشگاه جامع علمی کاربردی استان گلستان</option>
+                            <option data-group="1" value="1345">دانشگاه جامع علمی کاربردی بندرعباس</option>
+                            <option data-group="1" value="158">دانشگاه جامع علمی کاربردی علوم و صنایع شیلاتی میرزاکوچک
+                              خان رشت </option>
+                            <option data-group="1" value="27">دانشگاه جهرم</option>
+                            <option data-group="1" value="28">دانشگاه جیرفت</option>
+                            <option data-group="1" value="30">دانشگاه حضرت معصومه(س) قم</option>
+                            <option data-group="1" value="31">دانشگاه حضرت نرجس (س) ویژه خواهران </option>
+                            <option data-group="1" value="32">دانشگاه حکیم سبزواری</option>
+                            <option data-group="1" value="1414">دانشگاه خارج از کشور</option>
+                            <option data-group="1" value="33">دانشگاه خلیج فارس</option>
+                            <option data-group="1" value="34">دانشگاه خوارزمی</option>
+                            <option data-group="1" value="1449">دانشگاه خوانسار</option>
+                            <option data-group="1" value="35">دانشگاه دامغان</option>
+                            <option data-group="1" value="36">دانشگاه دریانوردی و علوم دریایی چابهار</option>
+                            <option data-group="1" value="226">دانشگاه رازی</option>
+                            <option data-group="1" value="246">دانشگاه رجا، قزوین</option>
+                            <option data-group="1" value="38">دانشگاه زابل</option>
+                            <option data-group="1" value="39">دانشگاه زنجان</option>
+                            <option data-group="1" value="151">دانشگاه سراوان</option>
+                            <option data-group="1" value="40">دانشگاه سلمان فارسی کازرون</option>
+                            <option data-group="1" value="41">دانشگاه سمنان</option>
+                            <option data-group="1" value="1625">دانشگاه سوره</option>
+                            <option data-group="1" value="42">دانشگاه سیدجمال الدین اسدآبادی</option>
+                            <option data-group="1" value="43">دانشگاه سیستان و بلوچستان</option>
+                            <option data-group="1" value="44">دانشگاه شاهد</option>
+                            <option data-group="1" value="45">دانشگاه شاهرود</option>
+                            <option data-group="1" value="168">دانشگاه شمال</option>
+                            <option data-group="1" value="174">دانشگاه شهاب دانش قم</option>
+                            <option data-group="1" value="46">دانشگاه شهرکرد</option>
+                            <option data-group="1" value="49">دانشگاه شهید باهنر کرمان</option>
+                            <option data-group="1" value="47">دانشگاه شهید بهشتی</option>
+                            <option data-group="1" value="50">دانشگاه شهید چمران اهواز</option>
+                            <option data-group="1" value="1378">دانشگاه شهید عباسپور</option>
+                            <option data-group="1" value="48">دانشگاه شهید مدنی آذربایجان-تبریز</option>
+                            <option data-group="1" value="247">دانشگاه شهید مطهری</option>
+                            <option data-group="1" value="286">دانشگاه شیخ بهایی</option>
+                            <option data-group="1" value="51">دانشگاه شیراز</option>
+                            <option data-group="1" value="3697">دانشگاه صدا و سیما</option>
+                            <option data-group="1" value="298">دانشگاه صداوسیمای جمهوری اسلامی ایران</option>
+                            <option data-group="1" value="308">دانشگاه صنایع و معادن</option>
+                            <option data-group="1" value="313">دانشگاه صنعت آب و برق (شهید عباسپور) تهران</option>
+                            <option data-group="1" value="1327">دانشگاه صنعت آب وبرق شهید عباسپور</option>
+                            <option data-group="1" value="52">دانشگاه صنعت نفت</option>
+                            <option data-group="1" value="1453">دانشگاه صنعتی اراک</option>
+                            <option data-group="1" value="54">دانشگاه صنعتی ارومیه</option>
+                            <option data-group="1" value="63">دانشگاه صنعتی اصفهان</option>
+                            <option data-group="1" value="1470">دانشگاه صنعتی امیر کبیر</option>
+                            <option data-group="1" value="266">دانشگاه صنعتی اورمیه</option>
+                            <option data-group="1" value="55">دانشگاه صنعتی بیرجند</option>
+                            <option data-group="1" value="56">دانشگاه صنعتی جندی شاپور</option>
+                            <option data-group="1" value="57">دانشگاه صنعتی خاتم الانبیا بهبهان</option>
+                            <option data-group="1" value="66">دانشگاه صنعتی خواجه نصیرالدین طوسی</option>
+                            <option data-group="1" value="111">دانشگاه صنعتی سجاد</option>
+                            <option data-group="1" value="67">دانشگاه صنعتی سهند تبریز</option>
+                            <option data-group="1" value="58">دانشگاه صنعتی سیرجان</option>
+                            <option data-group="1" value="276">دانشگاه صنعتی شاهرود</option>
+                            <option data-group="1" value="68">دانشگاه صنعتی شریف</option>
+                            <option data-group="1" value="59">دانشگاه صنعتی شهدای هویزه</option>
+                            <option data-group="1" value="69">دانشگاه صنعتی شیراز</option>
+                            <option data-group="1" value="60">دانشگاه صنعتی قم</option>
+                            <option data-group="1" value="1492">دانشگاه صنعتی قوچان</option>
+                            <option data-group="1" value="199">دانشگاه صنعتی مالک اشتر</option>
+                            <option data-group="1" value="220">دانشگاه صنعتی نوشیروانی بابل</option>
+                            <option data-group="1" value="62">دانشگاه صنعتی همدان</option>
+                            <option data-group="1" value="1459">دانشگاه صنعتی هویزه</option>
+                            <option data-group="1" value="61">دانشگاه صنعتی کرمانشاه</option>
+                            <option data-group="1" value="1335">دانشگاه عالی دفاع ملی</option>
+                            <option data-group="1" value="70">دانشگاه علامه طباطبایی</option>
+                            <option data-group="1" value="73">دانشگاه علم و صنعت ایران</option>
+                            <option data-group="1" value="238">دانشگاه علم و فرهنگ </option>
+                            <option data-group="1" value="74">دانشگاه علم و فناوری مازندران</option>
+                            <option data-group="1" value="248">دانشگاه علم و هنر</option>
+                            <option data-group="1" value="320">دانشگاه علم و هنر یزد</option>
+                            <option data-group="1" value="147">دانشگاه علمی کاربردی</option>
+                            <option data-group="1" value="75">دانشگاه علوم اقتصادی</option>
+                            <option data-group="1" value="76">دانشگاه علوم انتظامی امین</option>
+                            <option data-group="1" value="1323">دانشگاه علوم بهزیستی و توان بخشی تهران</option>
+                            <option data-group="1" value="195">دانشگاه علوم بهزیستی و توانبخشی</option>
+                            <option data-group="1" value="163">دانشگاه علوم پزشکی اراک</option>
+                            <option data-group="1" value="1626">دانشگاه علوم پزشکی ارومیه</option>
+                            <option data-group="1" value="270">دانشگاه علوم پزشکی اصفهان</option>
+                            <option data-group="1" value="1322">دانشگاه علوم پزشکی البرز</option>
+                            <option data-group="1" value="160">دانشگاه علوم پزشکی ایران</option>
+                            <option data-group="1" value="260">دانشگاه علوم پزشکی ایرانشهر</option>
+                            <option data-group="1" value="169">دانشگاه علوم پزشکی بابل</option>
+                            <option data-group="1" value="1618">دانشگاه علوم پزشکی بقیه الله</option>
+                            <option data-group="1" value="196">دانشگاه علوم پزشکی بوشهر</option>
+                            <option data-group="1" value="262">دانشگاه علوم پزشکی تبریز</option>
+                            <option data-group="1" value="263">دانشگاه علوم پزشکی تهران</option>
+                            <option data-group="1" value="302">دانشگاه علوم پزشکی زاهدان</option>
+                            <option data-group="1" value="1413">دانشگاه علوم پزشکی زنجان</option>
+                            <option data-group="1" value="267">دانشگاه علوم پزشکی شهید بهشتی</option>
+                            <option data-group="1" value="1355">دانشگاه علوم پزشکی شهیدصدوقی یزد</option>
+                            <option data-group="1" value="261">دانشگاه علوم پزشکی شیراز</option>
+                            <option data-group="1" value="236">دانشگاه علوم پزشکی گیلان</option>
+                            <option data-group="1" value="1465">دانشگاه علوم پزشکی لارستان</option>
+                            <option data-group="1" value="1462">دانشگاه علوم پزشکی مشهد</option>
+                            <option data-group="1" value="1597">دانشگاه علوم پزشکی همدان</option>
+                            <option data-group="1" value="1650">دانشگاه علوم پزشکی و خدمات بهداشتی درمانی ایران</option>
+                            <option data-group="1" value="1608">دانشگاه علوم پزشکی و خدمات بهداشتی درمانی تهران</option>
+                            <option data-group="1" value="1595">دانشگاه علوم پزشکی و خدمات بهداشتی درمانی جندی شاپور
+                              اهواز</option>
+                            <option data-group="1" value="1637">دانشگاه علوم پزشکی و خدمات بهداشتی درمانی قم</option>
+                            <option data-group="1" value="1590">دانشگاه علوم پزشکی و خدمات بهداشتی درمانی هرمزگان
+                            </option>
+                            <option data-group="1" value="1406">دانشگاه علوم پزشکی و خدمات بهداشتی،درمانی کردستان
+                            </option>
+                            <option data-group="1" value="189">دانشگاه علوم پزشکی و خدمات بهداشتی-درمانی تهران</option>
+                            <option data-group="1" value="5959">دانشگاه علوم پزشکی و خدمات درمانی اردبیل</option>
+                            <option data-group="1" value="1396">دانشگاه علوم پزشکی کاشان</option>
+                            <option data-group="1" value="1613">دانشگاه علوم دریایی امام خمینی نوشهر</option>
+                            <option data-group="1" value="190">دانشگاه علوم قضائی و خدمات اداری</option>
+                            <option data-group="1" value="167">دانشگاه علوم و فنون دریایی چابهار</option>
+                            <option data-group="1" value="78">دانشگاه علوم و فنون دریایی خرمشهر</option>
+                            <option data-group="1" value="318">دانشگاه علوم و فنون هوایی شهید ستاری</option>
+                            <option data-group="1" value="1566">دانشگاه علوم و معارف قرآن کریم</option>
+                            <option data-group="1" value="1518">دانشگاه علوم کشاورزی و دامپروری تربت جام</option>
+                            <option data-group="1" value="86">دانشگاه علوم کشاورزی و منابع طبیعی خوزستان</option>
+                            <option data-group="1" value="77">دانشگاه علوم کشاورزی و منابع طبیعی ساری</option>
+                            <option data-group="1" value="79">دانشگاه علوم کشاورزی و منابع طبیعی گرگان</option>
+                            <option data-group="1" value="145">دانشگاه غیر انتفاعی</option>
+                            <option data-group="1" value="317">دانشگاه غیر انتفاعی خردگرایان مطهر</option>
+                            <option data-group="1" value="1366">دانشگاه غیر انتفاعی خیام مشهد</option>
+                            <option data-group="1" value="1339">دانشگاه غیر انتفاعی صدرالمتالهین</option>
+                            <option data-group="1" value="1602">دانشگاه غیر انتفاعی عدالت</option>
+                            <option data-group="1" value="6086">دانشگاه غیر دولتی- غیر انتفاعی مهر البرز</option>
+                            <option data-group="1" value="1342">دانشگاه غیرانتفاعی و غیردولتی سمنگان</option>
+                            <option data-group="1" value="3707">دانشگاه غیردولتی غیرانتفاعی ادیان و مذاهب</option>
+                            <option data-group="1" value="285">دانشگاه غیردولتی غیرانتفاعی علوم و فنون مازندران</option>
+                            <option data-group="1" value="293">دانشگاه غیردولتی- غیرانتفاعی اشرفی اصفهانی</option>
+                            <option data-group="1" value="80">دانشگاه فردوسی مشهد</option>
+                            <option data-group="1" value="81">دانشگاه فرزانگان سمنان</option>
+                            <option data-group="1" value="1420">دانشگاه فرماندهی و ستاد ارتش جهموری اسلامی ایران (آجا)
+                            </option>
+                            <option data-group="1" value="183">دانشگاه فرهنگیان</option>
+                            <option data-group="1" value="82">دانشگاه فسا</option>
+                            <option data-group="1" value="83">دانشگاه فناوری های نوین سبزوار</option>
+                            <option data-group="1" value="148">دانشگاه فنی و حرفه ای</option>
+                            <option data-group="1" value="85">دانشگاه قم</option>
+                            <option data-group="1" value="88">دانشگاه گرمسار</option>
+                            <option data-group="1" value="89">دانشگاه گلستان</option>
+                            <option data-group="1" value="90">دانشگاه گنبد</option>
+                            <option data-group="1" value="91">دانشگاه گیلان</option>
+                            <option data-group="1" value="93">دانشگاه لرستان</option>
+                            <option data-group="1" value="94">دانشگاه مازندران</option>
+                            <option data-group="1" value="95">دانشگاه محقق اردبیلی</option>
+                            <option data-group="1" value="288">دانشگاه محیط زیست کرج</option>
+                            <option data-group="1" value="1616">دانشگاه مذاهب اسلامی</option>
+                            <option data-group="1" value="71">دانشگاه مراغه</option>
+                            <option data-group="1" value="1368">دانشگاه مشهد</option>
+                            <option data-group="1" value="1395">دانشگاه معارف اسلامی</option>
+                            <option data-group="1" value="295">دانشگاه مفید</option>
+                            <option data-group="1" value="72">دانشگاه ملایر</option>
+                            <option data-group="1" value="311">دانشگاه مهندسی فناوری های نوین قوچان</option>
+                            <option data-group="1" value="3">دانشگاه میبد</option>
+                            <option data-group="1" value="98">دانشگاه نهاوند (ویژه دختران)</option>
+                            <option data-group="1" value="99">دانشگاه نیشابور</option>
+                            <option data-group="1" value="100">دانشگاه هرمزگان</option>
+                            <option data-group="1" value="102">دانشگاه هنر اسلامی تبریز</option>
+                            <option data-group="1" value="103">دانشگاه هنر اصفهان</option>
+                            <option data-group="1" value="101">دانشگاه هنر تهران</option>
+                            <option data-group="1" value="104">دانشگاه هنر شیراز</option>
+                            <option data-group="1" value="105">دانشگاه ولایت</option>
+                            <option data-group="1" value="106">دانشگاه ولی عصر(عج) رفسنجان</option>
+                            <option data-group="1" value="108">دانشگاه کاشان</option>
+                            <option data-group="1" value="109">دانشگاه کردستان</option>
+                            <option data-group="1" value="1452">دانشگاه کوثر بجنورد</option>
+                            <option data-group="1" value="110">دانشگاه یاسوج</option>
+                            <option data-group="1" value="107">دانشگاه یزد</option>
+                            <option data-group="1" value="3857">دانشکده روابط بین الملل وابسته به وزارت امور خارجه
+                            </option>
+                            <option data-group="1" value="1456">دانشکده علوم کشاورزی و منابع طبیعی داراب</option>
+                            <option data-group="1" value="6080">دانشکده غیر انتفاعی-غیردولتی رفاه</option>
+                            <option data-group="1" value="3863">دانشکده غیردولتی-غیرانتفاعی الهیات و معارف اسلامی (هدی)
+                            </option>
+                            <option data-group="1" value="1513">دانشکده فنی و مهندسی گرمسار</option>
+                            <option data-group="1" value="1505">سازمان پژوهش های علمی و صنعتی ایران</option>
+                            <option data-group="1" value="1628">سازمان تحقیقات، آموزش و ترویج کشاورزی</option>
+                            <option data-group="1" value="1562">سازمان مطالعه و تدوین کتب علوم انسانی دانشگاهها
+                              (پژوهشکده تحقیق و توسعه "سمت")</option>
+                            <option data-group="1" value="1666">شرکت آتیه پردازان سپاهان</option>
+                            <option data-group="1" value="1647">شرکت بوم نگاران هوشمند امید</option>
+                            <option data-group="1" value="1684">شرکت پارس پرداز</option>
+                            <option data-group="1" value="1646">شرکت پترو فرآیند دلتا</option>
+                            <option data-group="1" value="1680">شرکت توربو کمپرسور تک خاورمیانه</option>
+                            <option data-group="1" value="1635">شرکت جوانه نرم افزار</option>
+                            <option data-group="1" value="1663">شرکت خدمات نیروگاهی آهار</option>
+                            <option data-group="1" value="1638">شرکت دانش بنیان آسفالت سبز هیرگان</option>
+                            <option data-group="1" value="1651">شرکت دانش بنیان فن آفرینان آریا البرز</option>
+                            <option data-group="1" value="1644">شرکت دانش بنیان مارال پوشش نانو</option>
+                            <option data-group="1" value="1640">شرکت دانش بنیان کیمیا بومی سازان</option>
+                            <option data-group="1" value="1672">شرکت راه انرژی دنیا</option>
+                            <option data-group="1" value="1676">شرکت رهپویان دانش و فناوری فرا</option>
+                            <option data-group="1" value="1685">شرکت ریز پردازنده شریف</option>
+                            <option data-group="1" value="1679">شرکت سامانه های انرژی تدبیرگران</option>
+                            <option data-group="1" value="1667">شرکت سان اوج پویان اسپادانا</option>
+                            <option data-group="1" value="1661">شرکت سنجش ابزار پویای آینده</option>
+                            <option data-group="1" value="1664">شرکت سینا تسنیم سپاهان</option>
+                            <option data-group="1" value="1683">شرکت صنعت الکترنیک امواج آبی</option>
+                            <option data-group="1" value="1655">شرکت صنعتی و تولیدی دیزل سنگین ایران</option>
+                            <option data-group="1" value="1673">شرکت طرح و آزمون آسمانه فاطر</option>
+                            <option data-group="1" value="1648">شرکت فرابرد هوشمند میهن</option>
+                            <option data-group="1" value="1681">شرکت مپوا(مهندسان پایش وضعیت امیرکبیر)</option>
+                            <option data-group="1" value="1662">شرکت مشکات صنعت الکتریک فارس</option>
+                            <option data-group="1" value="1675">شرکت مهندسی ارتباطی پیام پرداز</option>
+                            <option data-group="1" value="1660">شرکت مهندسی زمین رایانه آریا برنا</option>
+                            <option data-group="1" value="1665">شرکت نداک</option>
+                            <option data-group="1" value="1652">شرکت هم اندیشان صنعت مشاور (هیکو)</option>
+                            <option data-group="1" value="1670">شرکت کاوش صنعت شیخ بهایی</option>
+                            <option data-group="1" value="1653">شرکت کندا ایده</option>
+                            <option data-group="1" value="6075">فرهنگستان هنر جمهوری اسلامی ایران</option>
+                            <option data-group="1" value="1474">فناوری های نوین امل </option>
+                            <option data-group="1" value="6074">گروه پژوهشی باستان کاوی تیسافرن</option>
+                            <option data-group="1" value="6082">گروه پژوهشی روانشناسی سلامت ایرانمهر</option>
+                            <option data-group="1" value="6084">گروه پژوهشی سیاستگذاری و تحلیل راهبردی آیندگان </option>
+                            <option data-group="1" value="5961">گروه پژوهشی فرهنگ و زبانها باستانی یادگار باستان
+                            </option>
+                            <option data-group="1" value="6083">گروه پژوهشی مطالعات ازدواج و طلاق مهرآور</option>
+                            <option data-group="1" value="3895">مؤسسه فرهنگ،‌ هنر و ارتباطات- وزارت فرهنگ و ارشاد اسلامی
+                            </option>
+                            <option data-group="1" value="6066">مؤسسه آموزش عالی آزاد ابن یمین</option>
+                            <option data-group="1" value="3893">مؤسسه پژوهش های برنامه ریزی، اقتصاد کشاورزی و توسعه
+                              روستایی</option>
+                            <option data-group="1" value="5966">مؤسسه پژوهش و برنامه ریزی آموزش عالی</option>
+                            <option data-group="1" value="1495">مؤسسه تحقیقات جمعیت کشور</option>
+                            <option data-group="1" value="115">مجتمع آموزش عالی اسفراین</option>
+                            <option data-group="1" value="116">مجتمع آموزش عالی بم </option>
+                            <option data-group="1" value="118">مجتمع آموزش عالی تربت جام</option>
+                            <option data-group="1" value="119">مجتمع آموزش عالی زرند</option>
+                            <option data-group="1" value="120">مجتمع آموزش عالی سراوان </option>
+                            <option data-group="1" value="121">مجتمع آموزش عالی گناباد </option>
+                            <option data-group="1" value="1482">مجتمع آموزش عالی لارستان</option>
+                            <option data-group="1" value="127">مرکز آموزش عالی اقلید </option>
+                            <option data-group="1" value="6076">مرکز آموزش عالی شهید باکری میاندوآب</option>
+                            <option data-group="1" value="1506">مرکز آموزش عالی فیروزآباد</option>
+                            <option data-group="1" value="1486">مرکز آموزش عالی محلات</option>
+                            <option data-group="1" value="1659">مرکز آموزش عالی هوانوردی و فرودگاهی کشور</option>
+                            <option data-group="1" value="1488">مرکز آموزش عالی کاشمر(ویژه پسران) </option>
+                            <option data-group="1" value="6088">مرکز پژوهش های مجلس شورای اسلامی</option>
+                            <option data-group="1" value="6061">مرکز پژوهشی تمدن اسلامی و دین پژوهی پیامبر اعظم (ص)
+                            </option>
+                            <option data-group="1" value="6079">مرکز پژوهشی مبانی و مدل های اقتصادی بومی</option>
+                            <option data-group="1" value="6081">مرکز پژوهشی وارثین تمدن ایرانی-اسلامی</option>
+                            <option data-group="1" value="3945">مرکز تحقیقات بتن</option>
+                            <option data-group="1" value="1527">مرکز تحقیقات سیاست علمی کشور</option>
+                            <option data-group="1" value="6068">مرکز دائره المعارف بزرگ اسلامی (مرکز پژوهشهای ایرانی و
+                              اسلامی) </option>
+                            <option data-group="1" value="1668">مرکز رشد دانشگاه صنعتی نوشیروانی بابل</option>
+                            <option data-group="1" value="133">مرکز رشد واحدهای فناوری دانشگاه علوم کشاورزی و منابع
+                              طبیعی گرگان </option>
+                            <option data-group="1" value="5960">مرکز مطالعات راهبردی آجا</option>
+                            <option data-group="1" value="6065">مرکز مطالعات و تحقیقات اجتماعی ایران مهر</option>
+                            <option data-group="1" value="3955">مرکز مطالعات و همکاریهای علمی بین المللی</option>
+                            <option data-group="1" value="125">مرکز نشر دانشگاهی</option>
+                            <option data-group="1" value="129">مرکزآموزش عالی فنی و مهندسی بوئین زهرا</option>
+                            <option data-group="1" value="130">مرکزآموزش عالی لامرد </option>
+                            <option data-group="1" value="135">مرکزرشد واحدهای فناوری دانشگاه کاشان</option>
+                            <option data-group="1" value="3958">موزه ملی علوم و فناوری ایران</option>
+                            <option data-group="1" value="1657">موسسه آموزش عالی آل طه</option>
+                            <option data-group="1" value="1636">موسسه آموزش عالی امام جواد(ع)</option>
+                            <option data-group="1" value="6087">موسسه آموزش عالی دارالحکمه</option>
+                            <option data-group="1" value="6058">موسسه آموزش عالی غیر انتفاعی و غیر دولتی مولانا</option>
+                            <option data-group="1" value="3963">موسسه آموزش عالی غیر دولتی-غیر انتفاعی آپادانا</option>
+                            <option data-group="1" value="3966">موسسه آموزش عالی غیر دولتی-غیر انتفاعی آفاق</option>
+                            <option data-group="1" value="4078">موسسه آموزش عالی غیردولتی غیرانتفاعی رفاه</option>
+                            <option data-group="1" value="4098">موسسه آموزش عالی غیردولتی غیرانتفاعی سناباد گلبهار
+                            </option>
+                            <option data-group="1" value="4102">موسسه آموزش عالی غیردولتی غیرانتفاعی شاندیز</option>
+                            <option data-group="1" value="6063">موسسه آموزش عالی فردوس</option>
+                            <option data-group="1" value="6049">موسسه آموزش عالی فن پردازان پارسی</option>
+                            <option data-group="1" value="97">موسسه آموزش عالی مهارت افزایی و اشتغال پذیری گلبهار
+                            </option>
+                            <option data-group="1" value="1674">موسسه آموزش عالی کار واحد قزوین</option>
+                            <option data-group="1" value="3957">موسسه استنادی و پایش علم و فناوری جهان اسلام (ای اس سی)
+                            </option>
+                            <option data-group="1" value="1558">موسسه پژوهش و برنامه ریزی آموزش عالی</option>
+                            <option data-group="1" value="6085">موسسه پژوهشی اقتصاد و مدیریت نواندیشان فردا</option>
+                            <option data-group="1" value="1559">موسسه پژوهشی حکمت و فلسفه ایران</option>
+                            <option data-group="1" value="1525">موسسه پژوهشی علوم و صنایع غذایی</option>
+                            <option data-group="1" value="1641">موسسه تحقیقات آب (وزارت نیرو)</option>
+                            <option data-group="1" value="1607">موسسه تحقیقات جنگلها و مراتع کشور</option>
+                            <option data-group="1" value="6072">موسسه تحقیقات خاک و آب</option>
+                            <option data-group="1" value="6051">موسسه علوم و توسعه پایدار آریا</option>
+                            <option data-group="1" value="6056">موسسه مطالعات فرهنگی و اجتماعی</option>
+                            <option data-group="1" value="1649">موسسه مطالعات و پژوهشهای حقوقی شهر دانش</option>
+                            <option data-group="1" value="-1">سایر</option>
+
+
+
+
+                            <!-- مرکز آموزش عالی -->
+                            <option data-group="3" value="-1">سایر</option>
+
+                            <!-- مرکز پژوهشی -->
+                            <option data-group="5" value="-1">سایر</option>
+
+                            <!-- پژوهشکده -->
+                            <option data-group="6" value="-1">سایر</option>
+
+                            <!-- مرکز فناوری -->
+
+                            <option data-group="10" value="6045"> مرکز رشد واحدهای فناور دامپزشکی</option>
+                            <option data-group="10" value="5995"> مرکز رشد واحدهای فناوری اطلاعات و ارتباطات دانشگاه
+                              تحصیلات تکمیلی علوم
+                              پایه زنجان</option>
+                            <option data-group="10" value="6031"> مرکز رشد واحدهای فناور دانشگاه خوارزمی</option>
+                            <option data-group="10" value="5993"> مرکز رشد واحدهای فناوری بیسکویت و صنایع وابسته دانشگاه
+                              علمی کاربردی
+                              زنجان</option>
+                            <option data-group="10" value="6032"> واحدهای فناور دانشکده شهید منتظری مشهد</option>
+                            <option data-group="10" value="1534">پارک زیست فناوری خلیج فارس (قشم)</option>
+                            <option data-group="10" value="1546">پارک علم و فناوری کرمانشاه</option>
+                            <option data-group="10" value="1476">پارک علم و فناوری آذربایجان غربی</option>
+                            <option data-group="10" value="1531">پارک علم و فناوری ارتباطات و فناوری اطلاعات (ICT)
+                            </option>
+                            <option data-group="10" value="1532">پارک علم و فناوری استان آذربایجان شرقی</option>
+                            <option data-group="10" value="1528">پارک علم و فناوری استان اردبیل</option>
+                            <option data-group="10" value="1493">پارک علم و فناوری استان چهارمحال و بختیاری</option>
+                            <option data-group="10" value="1494">پارک علم و فناوری استان خراسان جنوبی</option>
+                            <option data-group="10" value="1539">پارک علم و فناوری استان خراسان رضوی</option>
+                            <option data-group="10" value="1479">پارک علم و فناوری استان خراسان شمالی</option>
+                            <option data-group="10" value="1487">پارک علم و فناوری استان خوزستان</option>
+                            <option data-group="10" value="1497">پارک علم و فناوری استان سمنان</option>
+                            <option data-group="10" value="1542">پارک علم و فناوری استان سیستان و بلوچستان</option>
+                            <option data-group="10" value="1503">پارک علم و فناوری استان فارس</option>
+                            <option data-group="10" value="1510">پارک علم و فناوری استان قم</option>
+                            <option data-group="10" value="1502">پارک علم و فناوری استان گلستان</option>
+                            <option data-group="10" value="1548">پارک علم و فناوری استان گیلان</option>
+                            <option data-group="10" value="1489">پارک علم و فناوری استان لرستان</option>
+                            <option data-group="10" value="1549">پارک علم و فناوری استان مازندران</option>
+                            <option data-group="10" value="1477">پارک علم و فناوری استان مرکزی</option>
+                            <option data-group="10" value="1490">پارک علم و فناوری استان هرمزگان</option>
+                            <option data-group="10" value="1481">پارک علم و فناوری استان همدان</option>
+                            <option data-group="10" value="1480">پارک علم و فناوری استان کردستان</option>
+                            <option data-group="10" value="1509">پارک علم و فناوری استان کرمان</option>
+                            <option data-group="10" value="1547">پارک علم و فناوری استان کهکیلویه و بویراحمد</option>
+                            <option data-group="10" value="1530">پارک علم و فناوری البرز</option>
+                            <option data-group="10" value="6048">پارک علم و فناوری ایرانیان (انجمن خیرین توسعه علم و
+                              فناوری ایرانیان)
+                            </option>
+                            <option data-group="10" value="1498">پارک علم و فناوری ایلام</option>
+                            <option data-group="10" value="1536">پارک علم و فناوری پردیس</option>
+                            <option data-group="10" value="6046">پارک علم و فناوری دانشگاه آزاد اسلامی</option>
+                            <option data-group="10" value="1540">پارک علم و فناوری دانشگاه تحصیلات تکمیلی علوم پایه
+                              زنجان</option>
+                            <option data-group="10" value="1588">پارک علم و فناوری دانشگاه تربیت مدرس</option>
+                            <option data-group="10" value="1478">پارک علم و فناوری دانشگاه تهران</option>
+                            <option data-group="10" value="1500">پارک علم و فناوری دانشگاه سمنان</option>
+                            <option data-group="10" value="6047">پارک علم و فناوری دانشگاه شهید بهشتی</option>
+                            <option data-group="10" value="1485">پارک علم و فناوری دانشگاه صنعتی شریف</option>
+                            <option data-group="10" value="1537">پارک علم و فناوری دانشگاه علوم پزشکی و خدمات بهداشتی و
+                              درمانی ایران
+                            </option>
+                            <option data-group="10" value="1541">پارک علم و فناوری زنجان</option>
+                            <option data-group="10" value="2725">پارک علم و فناوری زنجان</option>
+                            <option data-group="10" value="6052">پارک علم و فناوری سازمان پژوهش های علمی و صنعتی ایران
+                            </option>
+                            <option data-group="10" value="1529">پارک علم و فناوری شیخ بهایی اصفهان</option>
+                            <option data-group="10" value="1538">پارک علم و فناوری های نرم و صنایع فرهنگی</option>
+                            <option data-group="10" value="1654">پارک علم و فناوری کرمانشاه</option>
+                            <option data-group="10" value="1550">پارک علم و فناوری یزد</option>
+                            <option data-group="10" value="1544">پارک علم وفناوری استان قزوین</option>
+                            <option data-group="10" value="1533">پارک علم وفناوری خلیج فارس (استان بوشهر)</option>
+                            <option data-group="10" value="112">شهرک علمی و تحقیقاتی اصفهان</option>
+                            <option data-group="10" value="1524">مرکز رشد پژوهشگاه هوافضا</option>
+                            <option data-group="10" value="6019">مرکز رشد خوشه فناوری های سنگ شهرستان تیران و کرون
+                              دانشگاه علمی و
+                              کاربردی اصفهان</option>
+                            <option data-group="10" value="6002">مرکز رشد فناوری اطلاعات و ارتباطات جهاددانشگاهی (رویش)
+                            </option>
+                            <option data-group="10" value="6042">مرکز رشد فناوری های نرم و صنایع فرهنگی</option>
+                            <option data-group="10" value="5974">مرکز رشد واحدهای فناور دانشگاه آزاد اسلامی واحد قزوین
+                            </option>
+                            <option data-group="10" value="5985">مرکز رشد واحدهای فناور دانشگاه علوم کشاورزی و منابع
+                              طبیعی گرگان
+                            </option>
+                            <option data-group="10" value="5984">مرکز رشد واحدهای فناور دانشگاه گلستان</option>
+                            <option data-group="10" value="6044">مرکز رشد واحدهای فناور بازی های رایانه ای </option>
+                            <option data-group="10" value="6035">مرکز رشد واحدهای فناور پژوهشگاه پلیمر و پتروشیمی ایران
+                            </option>
+                            <option data-group="10" value="6003">مرکز رشد واحدهای فناور پژوهشگاه شیمی و مهندسی شیمی
+                              ایران</option>
+                            <option data-group="10" value="6033">مرکز رشد واحدهای فناور پژوهشگاه هوافضا</option>
+                            <option data-group="10" value="6034">مرکز رشد واحدهای فناور دانشگاه آزاد اسلامی واحد اردبیل
+                            </option>
+                            <option data-group="10" value="6030">مرکز رشد واحدهای فناور دانشگاه آزاد اسلامی واحد اهواز
+                            </option>
+                            <option data-group="10" value="6038">مرکز رشد واحدهای فناور دانشگاه آزاد اسلامی واحد
+                              خوراسگان</option>
+                            <option data-group="10" value="6039">مرکز رشد واحدهای فناور دانشگاه آزاد اسلامی واحد رودهن
+                            </option>
+                            <option data-group="10" value="6040">مرکز رشد واحدهای فناور دانشگاه اصفهان</option>
+                            <option data-group="10" value="6007">مرکز رشد واحدهای فناور دانشگاه ایلام</option>
+                            <option data-group="10" value="6014">مرکز رشد واحدهای فناور دانشگاه تبریز</option>
+                            <option data-group="10" value="5999">مرکز رشد واحدهای فناور دانشگاه حکیم سبزواری</option>
+                            <option data-group="10" value="6036">مرکز رشد واحدهای فناور دانشگاه خواجه نصیرالدین طوسی
+                            </option>
+                            <option data-group="10" value="6001">مرکز رشد واحدهای فناور دانشگاه شاهد</option>
+                            <option data-group="10" value="6008">مرکز رشد واحدهای فناور دانشگاه علم و صنعت ایران
+                            </option>
+                            <option data-group="10" value="6029">مرکز رشد واحدهای فناور دانشگاه فردوسی مشهد</option>
+                            <option data-group="10" value="6021">مرکز رشد واحدهای فناور دانشگاه گیلان</option>
+                            <option data-group="10" value="6022">مرکز رشد واحدهای فناور دانشگاه محقق اردبیلی</option>
+                            <option data-group="10" value="6043">مرکز رشد واحدهای فناور دانشگاه هوایی شهید ستاری
+                            </option>
+                            <option data-group="10" value="6018">مرکز رشد واحدهای فناور دانشگاه کاشان</option>
+                            <option data-group="10" value="6041">مرکز رشد واحدهای فناور دانشگاه یزد</option>
+                            <option data-group="10" value="5979">مرکز رشد واحدهای فناور شهرستان محلات و نیم ور</option>
+                            <option data-group="10" value="6024">مرکز رشد واحدهای فناور صنایع فرهنگی جهاد دانشگاهی زنجان
+                            </option>
+                            <option data-group="10" value="5991">مرکز رشد واحدهای فناور صنعت آب وبرق</option>
+                            <option data-group="10" value="6027">مرکز رشد واحدهای فناور علوم انسانی دانشگاه علامه
+                              طباطبایی</option>
+                            <option data-group="10" value="6028">مرکز رشد واحدهای فناور علوم انسانی دانشگاه فردوسی مشهد
+                            </option>
+                            <option data-group="10" value="6023">مرکز رشد واحدهای فناور گز، شیرینی، شکلات و صنایع وابسته
+                              دانشگاه علمی
+                              کاربردی اصفهان</option>
+                            <option data-group="10" value="6037">مرکز رشد واحدهای فناور منطقه آزاد قشم</option>
+                            <option data-group="10" value="6025">مرکز رشد واحدهای فناور نوین </option>
+                            <option data-group="10" value="6026">مرکز رشد واحدهای فناور هنرهای قرآنی</option>
+                            <option data-group="10" value="6004">مرکز رشد واحدهای فناوری پژوهشگاه ملی و مهندسی ژنتیک و
+                              زیست فناوری
+                            </option>
+                            <option data-group="10" value="5986">مرکز رشد واحدهای فناوری دانشگاه رازی کرمانشاه</option>
+                            <option data-group="10" value="6013">مرکز رشد واحدهای فناوری اطلاعات وارتباطات دانشگاه
+                              ارومیه</option>
+                            <option data-group="10" value="5990">مرکز رشد واحدهای فناوری اطلاعات وارتباطات دانشگاه قم
+                            </option>
+                            <option data-group="10" value="6016">مرکز رشد واحدهای فناوری پژوهشگاه مواد و انرژی</option>
+                            <option data-group="10" value="6006">مرکز رشد واحدهای فناوری پژوهشکده صنایع رنگ ایران
+                            </option>
+                            <option data-group="10" value="6012">مرکز رشد واحدهای فناوری جهاد دانشگاهی ارومیه</option>
+                            <option data-group="10" value="5983">مرکز رشد واحدهای فناوری جهاد دانشگاهی لرستان</option>
+                            <option data-group="10" value="5976">مرکز رشد واحدهای فناوری جهاد دانشگاهی هرمزگان</option>
+                            <option data-group="10" value="5988">مرکز رشد واحدهای فناوری دانشگاه آزاد اسلامی سنندج
+                            </option>
+                            <option data-group="10" value="5998">مرکز رشد واحدهای فناوری دانشگاه الزهراء (س)</option>
+                            <option data-group="10" value="5975">مرکز رشد واحدهای فناوری دانشگاه بوعلی سینا همدان
+                            </option>
+                            <option data-group="10" value="5992">مرکز رشد واحدهای فناوری دانشگاه بین المللی امام خمینی
+                              قزوین</option>
+                            <option data-group="10" value="5971">مرکز رشد واحدهای فناوری دانشگاه بین المللی چابهار
+                            </option>
+                            <option data-group="10" value="5978">مرکز رشد واحدهای فناوری دانشگاه تفرش</option>
+                            <option data-group="10" value="6011">مرکز رشد واحدهای فناوری دانشگاه جامع امام حسین(ع)
+                            </option>
+                            <option data-group="10" value="5973">مرکز رشد واحدهای فناوری دانشگاه زابل</option>
+                            <option data-group="10" value="5994">مرکز رشد واحدهای فناوری دانشگاه زنجان</option>
+                            <option data-group="10" value="5972">مرکز رشد واحدهای فناوری دانشگاه سیستان و بلوچستان
+                            </option>
+                            <option data-group="10" value="6000">مرکز رشد واحدهای فناوری دانشگاه شهرکرد</option>
+                            <option data-group="10" value="5997">مرکز رشد واحدهای فناوری دانشگاه شهید چمران اهواز
+                            </option>
+                            <option data-group="10" value="6010">مرکز رشد واحدهای فناوری دانشگاه صنعتی امیرکبیر</option>
+                            <option data-group="10" value="6009">مرکز رشد واحدهای فناوری دانشگاه صنعتی سهند تبریز
+                            </option>
+                            <option data-group="10" value="5982">مرکز رشد واحدهای فناوری دانشگاه صنعتی نوشیروانی بابل
+                            </option>
+                            <option data-group="10" value="5981">مرکز رشد واحدهای فناوری دانشگاه مازندران</option>
+                            <option data-group="10" value="5977">مرکز رشد واحدهای فناوری دانشگاه هرمزگان</option>
+                            <option data-group="10" value="5987">مرکز رشد واحدهای فناوری دانشگاه ولی عصر(عج) رفسنجان
+                            </option>
+                            <option data-group="10" value="5989">مرکز رشد واحدهای فناوری دانشگاه کردستان</option>
+                            <option data-group="10" value="6020">مرکز رشد واحدهای فناوری دانشگاه یاسوج</option>
+                            <option data-group="10" value="6005">مرکز رشد واحدهای فناوری سازمان‌ پژوهشهای‌علمی‌وصنعتی
+                              ایران</option>
+                            <option data-group="10" value="5980">مرکز رشد واحدهای فناوری طبرستان</option>
+                            <option data-group="10" value="5996">مرکز رشد واحدهای فناوری نفت و گاز (مستقر در دانشگاه
+                              صنعت نفت)</option>
+                            <option data-group="10" value="6015">مرکز رشد واحدهای فناوری کشاورزی و گیاهان دارویی جهاد
+                              دانشگاهی ایلام
+                            </option>
+                            <option data-group="10" value="6017">مرکزرشد واحدهای فناوری فرآورده های گیاهان دارویی جهاد
+                              دانشگاهی واحد
+                              البرز</option>
+                            <option data-group="10" value="-1">سایر</option>
+
+
+
+
+
+
+                            <!-- انجمن علمی -->
+                            <option data-group="22" value="6897">انجمن اخلاق اسلامی</option>
+                            <option data-group="22" value="6911">انجمن ادبیات و هنر اسلامی</option>
+                            <option data-group="22" value="6896">انجمن ارتباطات و تبلیغ حوزه علمیه</option>
+                            <option data-group="22" value="6908">انجمن اصول فقه حوزه</option>
+                            <option data-group="22" value="6901">انجمن اقتصاد اسلامی حوزه علمیه</option>
+                            <option data-group="22" value="6927">انجمن اقتصاد ایران</option>
+                            <option data-group="22" value="5881">انجمن ایرانی حقوق اداری</option>
+                            <option data-group="22" value="6904">انجمن تاريخ‌پژوهان حوزه</option>
+                            <option data-group="22" value="6892">انجمن تحقیق و تصحیح نسخه های خطی</option>
+                            <option data-group="22" value="6898">انجمن ترجمه و زبان‌های خارجی</option>
+                            <option data-group="22" value="6909">انجمن تعليم و تربيت اسلامي حوزه علمیه</option>
+                            <option data-group="22" value="6900">انجمن حديث حوزه</option>
+                            <option data-group="22" value="6926">انجمن حقوق عمومی اسلامی ایران</option>
+                            <option data-group="22" value="6915">انجمن دین و فضای مجازی</option>
+                            <option data-group="22" value="6910">انجمن روان‌شناسی اسلامی </option>
+                            <option data-group="22" value="5458">انجمن علمی آئین دادرسی مدنی ایران</option>
+                            <option data-group="22" value="5591">انجمن علمی آب و فاضلاب ایران</option>
+                            <option data-group="22" value="5802">انجمن علمی آبخیزداری ایران</option>
+                            <option data-group="22" value="5804">انجمن علمی آبزی پروری ایران</option>
+                            <option data-group="22" value="5803">انجمن علمی آبیاری و زهكشی ایران</option>
+                            <option data-group="22" value="5592">انجمن علمی آسیب شناسی ورزشی و حركات اصلاحی ایران
+                            </option>
+                            <option data-group="22" value="5701">انجمن علمی آكوستیك و ارتعاشات ایران</option>
+                            <option data-group="22" value="5668">انجمن علمی آمار ایران</option>
+                            <option data-group="22" value="5593">انجمن علمی آمایش سرزمین ایران</option>
+                            <option data-group="22" value="5453">انجمن علمی آموزش عالی ایران</option>
+                            <option data-group="22" value="5594">انجمن علمی آموزش محیط زیست و توسعه پایدار ایران
+                            </option>
+                            <option data-group="22" value="5702">انجمن علمی آموزش مهندسی ایران</option>
+                            <option data-group="22" value="5455">انجمن علمی آموزش و پرورش تطبیقی ایران</option>
+                            <option data-group="22" value="5456">انجمن علمی آموزش و توسعه منابع انسانی</option>
+                            <option data-group="22" value="5454">انجمن علمی آموزش&nbsp;زبان و ادبیات انگلیسی ایران
+                            </option>
+                            <option data-group="22" value="5700">انجمن علمی آهن و فولاد ایران</option>
+                            <option data-group="22" value="5457">انجمن علمی آینده نگری ایران</option>
+                            <option data-group="22" value="5580">انجمن علمی اپتیک و فوتونیک ایران</option>
+                            <option data-group="22" value="5707">انجمن علمی احتراق ایران</option>
+                            <option data-group="22" value="5459">انجمن علمی اخلاق زیستی اسلامی ایران</option>
+                            <option data-group="22" value="5460">انجمن علمی ادبیات تطبیقی ایران</option>
+                            <option data-group="22" value="5461">انجمن علمی ادبیات داستانی ایران</option>
+                            <option data-group="22" value="6907">انجمن علمی اديان و مذاهب</option>
+                            <option data-group="22" value="5889">انجمن علمی ارتقاء کتابخانه های عمومی</option>
+                            <option data-group="22" value="5581">انجمن علمی ارزیابی محیط ‌زیست ایران</option>
+                            <option data-group="22" value="5582">انجمن علمی استاندارد ایران</option>
+                            <option data-group="22" value="5462">انجمن علمی اسلام و پیشرفت ایران</option>
+                            <option data-group="22" value="4">انجمن علمی اصلاح روند آبیاری</option>
+                            <option data-group="22" value="5585">انجمن علمی اعجاز قرآن ایران</option>
+                            <option data-group="22" value="5463">انجمن علمی اقتصاد اسلامی ایران</option>
+                            <option data-group="22" value="5464">انجمن علمی اقتصاد انرژی ایران</option>
+                            <option data-group="22" value="5465">انجمن علمی اقتصاد توسعه منطقه ای ایران</option>
+                            <option data-group="22" value="6932">انجمن علمی اقتصاد دفاع ایران</option>
+                            <option data-group="22" value="5466">انجمن علمی اقتصاد شهری ایران</option>
+                            <option data-group="22" value="5583">انجمن علمی اقتصاد فرهنگ و هنر ایران</option>
+                            <option data-group="22" value="5805">انجمن علمی اقتصاد كشاورزی ایران</option>
+                            <option data-group="22" value="5584">انجمن علمی اقیانوس شناسی ایران</option>
+                            <option data-group="22" value="5586">انجمن علمی اكولوژی ایران</option>
+                            <option data-group="22" value="5709">انجمن علمی الكترو مغناطیس مهندسی ایران</option>
+                            <option data-group="22" value="5708">انجمن علمی الكتروشیمی ایران</option>
+                            <option data-group="22" value="5710">انجمن علمی الكترونیك قدرت ایران</option>
+                            <option data-group="22" value="5587">انجمن علمی انرژی ایران</option>
+                            <option data-group="22" value="5651">انجمن علمی انرژی ایران</option>
+                            <option data-group="22" value="5703">انجمن علمی انرژی بادی ایران</option>
+                            <option data-group="22" value="5704">انجمن علمی انرژی خورشیدی ایران</option>
+                            <option data-group="22" value="5705">انجمن علمی انرژی زمین گرمایی ایران</option>
+                            <option data-group="22" value="5468">انجمن علمی انسان شناسی ایران</option>
+                            <option data-group="22" value="5706">انجمن علمی انفورماتیك ایران</option>
+                            <option data-group="22" value="5467">انجمن علمی انقلاب اسلامی ایران</option>
+                            <option data-group="22" value="47">انجمن علمی ایران</option>
+                            <option data-group="22" value="5469">انجمن علمی ایران شناسی</option>
+                            <option data-group="22" value="5470">انجمن علمی ایرانی اخلاق در علوم و فناوری</option>
+                            <option data-group="22" value="5471">انجمن علمی ایرانی تاریخ</option>
+                            <option data-group="22" value="5472">انجمن علمی ایرانی تاریخ اسلام</option>
+                            <option data-group="22" value="5473">انجمن علمی ایرانی تاریخ فلسفه</option>
+                            <option data-group="22" value="5669">انجمن علمی ایرانی تحقیق در عملیات </option>
+                            <option data-group="22" value="5474">انجمن علمی ایرانی تعلیم و تربیت</option>
+                            <option data-group="22" value="5475">انجمن علمی ایرانی جرم شناسی</option>
+                            <option data-group="22" value="5476">انجمن علمی ایرانی حقوق بشر</option>
+                            <option data-group="22" value="5477">انجمن علمی ایرانی حقوق جزا</option>
+                            <option data-group="22" value="5479">انجمن علمی ایرانی روابط بین الملل</option>
+                            <option data-group="22" value="5478">انجمن علمی ایرانی روانشناسی</option>
+                            <option data-group="22" value="5481">انجمن علمی ایرانی زبان و ادبیات روسی</option>
+                            <option data-group="22" value="5480">انجمن علمی ایرانی زبان و ادبیات عربی</option>
+                            <option data-group="22" value="5482">انجمن علمی ایرانی ژئومورفولوژی </option>
+                            <option data-group="22" value="5485">انجمن علمی ایرانی مطالعات جهان</option>
+                            <option data-group="22" value="5486">انجمن علمی ایرانی مطالعات جهان اسلام</option>
+                            <option data-group="22" value="5588">انجمن علمی ایرانی مطالعات زنان</option>
+                            <option data-group="22" value="5589">انجمن علمی ایرانی مطالعات سازمان ملل</option>
+                            <option data-group="22" value="5484">انجمن علمی ایرانی مطالعات فرهنگی و ارتباطات</option>
+                            <option data-group="22" value="5487">انجمن علمی ایرانی مطالعات منطقه ای </option>
+                            <option data-group="22" value="5483">انجمن علمی ایرانی مطالعات و تحقیقات جامعه اطلاعاتی
+                            </option>
+                            <option data-group="22" value="5590">انجمن علمی ایمنی زیستی ایران</option>
+                            <option data-group="22" value="5864">انجمن علمی ایمیل نماینده هیئت موسس نام فارسی :
+                              مکاترونیک</option>
+                            <option data-group="22" value="5488">انجمن علمی بازاریابی ایران</option>
+                            <option data-group="22" value="5711">انجمن علمی بازرسی غیر مخرب ایران</option>
+                            <option data-group="22" value="5489">انجمن علمی بازرگانی ایران</option>
+                            <option data-group="22" value="5490">انجمن علمی باستان شناسی ایران</option>
+                            <option data-group="22" value="5712">انجمن علمی بتن ایران</option>
+                            <option data-group="22" value="5806">انجمن علمی بذر ایران</option>
+                            <option data-group="22" value="5652">انجمن علمی برق و الكترونیك ایران</option>
+                            <option data-group="22" value="5713">انجمن علمی برقابی ایران</option>
+                            <option data-group="22" value="5670">انجمن علمی بلورشناسی و كانی شناسی ایران</option>
+                            <option data-group="22" value="5807">انجمن علمی بهداشت آبزیان ایران</option>
+                            <option data-group="22" value="5595">انجمن علمی بهداشت مواد غذایی ایران</option>
+                            <option data-group="22" value="5808">انجمن علمی بیماری شناسی گیاهی ایران</option>
+                            <option data-group="22" value="5809">انجمن علمی بیماری های داخلی دامهای بزرگ ایران</option>
+                            <option data-group="22" value="5596">انجمن علمی بیوانفورماتیك ایران</option>
+                            <option data-group="22" value="5597">انجمن علمی بیوتكنولوژی ایران</option>
+                            <option data-group="22" value="5671">انجمن علمی بیوشیمی- فیزیك ایران</option>
+                            <option data-group="22" value="5598">انجمن علمی پارك های علم و فناوری ایران</option>
+                            <option data-group="22" value="5672">انجمن علمی پپتید ایران</option>
+                            <option data-group="22" value="5599">انجمن علمی پدافند غیر عامل ایران</option>
+                            <option data-group="22" value="5600">انجمن علمی پروبیوتیك و غذاهای فراسودمند ایران</option>
+                            <option data-group="22" value="5601">انجمن علمی پروتئومیكس ایران</option>
+                            <option data-group="22" value="5573">انجمن علمی پژوهش های هنری ایران</option>
+                            <option data-group="22" value="5495">انجمن علمی پژوهشهای آموزشی ایران</option>
+                            <option data-group="22" value="5496">انجمن علمی پژوهشهای انتظامی ایران</option>
+                            <option data-group="22" value="5497">انجمن علمی پول و بانك ایران</option>
+                            <option data-group="22" value="5602">انجمن علمی پویا شناسی سامانه ها</option>
+                            <option data-group="22" value="5603">انجمن علمی تاریخ اجتماعی علم و فناوری ایران</option>
+                            <option data-group="22" value="5714">انجمن علمی تجارت الكترونیك ایران</option>
+                            <option data-group="22" value="5673">انجمن علمی تحلیل پوششی داده ها</option>
+                            <option data-group="22" value="5493">انجمن علمی تحول علوم انسانی ایران</option>
+                            <option data-group="22" value="5491">انجمن علمی تربیت بدنی وعلوم ورزشی ایران</option>
+                            <option data-group="22" value="5492">انجمن علمی ترویج زبان و ادب فارسی ایران</option>
+                            <option data-group="22" value="5604">انجمن علمی ترویج علم ایران</option>
+                            <option data-group="22" value="5810">انجمن علمی ترویج و آموزش كشاورزی ایران</option>
+                            <option data-group="22" value="5605">انجمن علمی تعالی كسب و كار ایران</option>
+                            <option data-group="22" value="5494">انجمن علمی تعاون ایران</option>
+                            <option data-group="22" value="5606">انجمن علمی توانمند سازی خانواده ایران</option>
+                            <option data-group="22" value="5811">انجمن علمی توسعه روستایی ایران</option>
+                            <option data-group="22" value="5715">انجمن علمی تونل ایران</option>
+                            <option data-group="22" value="5500">انجمن علمی جامعه شناسی سیاسی ایران</option>
+                            <option data-group="22" value="5499">انجمن علمی جامعه‌شناسی آموزش و پرورش ایران</option>
+                            <option data-group="22" value="5498">انجمن علمی جامعه‌شناسی ایران</option>
+                            <option data-group="22" value="5674">انجمن علمی جراحی دامپزشكی ایران</option>
+                            <option data-group="22" value="5502">انجمن علمی جغرافیا و برنامه ریزی روستایی ایران</option>
+                            <option data-group="22" value="5503">انجمن علمی جغرافیا و برنامه ریزی شهری ایران</option>
+                            <option data-group="22" value="5504">انجمن علمی جغرافیا و برنامه ریزی مناطق مرزی ایران
+                            </option>
+                            <option data-group="22" value="5501">انجمن علمی جغرافیایی ایران</option>
+                            <option data-group="22" value="5607">انجمن علمی جلبك شناسی ایران</option>
+                            <option data-group="22" value="5608">انجمن علمی جمعیت ایرانی پیشبرد ارتباط صنعت و دانشگاه
+                            </option>
+                            <option data-group="22" value="5812">انجمن علمی جمعیت ایرانی علوم زعفران </option>
+                            <option data-group="22" value="5610">انجمن علمی جمعیت پیشگیری از خودكشی ایران</option>
+                            <option data-group="22" value="5609">انجمن علمی جمعیت توسعه علمی ایران</option>
+                            <option data-group="22" value="5612">انجمن علمی جمعیت جهانی شدن ایران</option>
+                            <option data-group="22" value="5611">انجمن علمی جمعیت شناسی ایران</option>
+                            <option data-group="22" value="5813">انجمن علمی جمعیت فن آوری نیشکر ایران</option>
+                            <option data-group="22" value="5814">انجمن علمی جنگلبانی ایران</option>
+                            <option data-group="22" value="5716">انجمن علمی جوشكاری و آزمایشهای غیرمخرب ایران</option>
+                            <option data-group="22" value="5675">انجمن علمی چینه شناسی ایران</option>
+                            <option data-group="22" value="5505">انجمن علمی حسابداری ایران</option>
+                            <option data-group="22" value="5507">انجمن علمی حسابداری مدیریت ایران</option>
+                            <option data-group="22" value="5506">انجمن علمی حسابرسی ایران</option>
+                            <option data-group="22" value="5613">انجمن علمی حسابرسی فناوری اطلاعات ایران</option>
+                            <option data-group="22" value="5815">انجمن علمی حشره شناسی ایران</option>
+                            <option data-group="22" value="5816">انجمن علمی حفاظت از تنوع زیستی ایران</option>
+                            <option data-group="22" value="5676">انجمن علمی حفاظت در برابر اشعه ایران</option>
+                            <option data-group="22" value="5508">انجمن علمی حقوق اساسی ایران</option>
+                            <option data-group="22" value="5509">انجمن علمی حقوق اقتصادی ایران</option>
+                            <option data-group="22" value="5510">انجمن علمی حقوق بشر اسلامی ایران</option>
+                            <option data-group="22" value="5511">انجمن علمی حقوق پزشكی ایران</option>
+                            <option data-group="22" value="5512">انجمن علمی حقوق مالكیت فكری ایران</option>
+                            <option data-group="22" value="5513">انجمن علمی حقوق ورزشی ایران</option>
+                            <option data-group="22" value="6936">انجمن علمی حقوق کودک ایران</option>
+                            <option data-group="22" value="5514">انجمن علمی حكمت و فلسفه ایران</option>
+                            <option data-group="22" value="5717">انجمن علمی حمل و نقل ایران</option>
+                            <option data-group="22" value="5718">انجمن علمی حمل و نقل هوایی ایران</option>
+                            <option data-group="22" value="6935">انجمن علمی حکمرانی متعالی ایران</option>
+                            <option data-group="22" value="5614">انجمن علمی خلاء ایران</option>
+                            <option data-group="22" value="5719">انجمن علمی خوردگی ایران</option>
+                            <option data-group="22" value="5817">انجمن علمی دامپزشكی طیور ایران</option>
+                            <option data-group="22" value="5818">انجمن علمی دانش كشاورزی گرمسیری ایران</option>
+                            <option data-group="22" value="3022">انجمن علمی دانشجویی</option>
+                            <option data-group="22" value="5677">انجمن علمی دیرینه‌شناسی ایران</option>
+                            <option data-group="22" value="5722">انجمن علمی رئولوژی ایران</option>
+                            <option data-group="22" value="5720">انجمن علمی رباتیك ایران</option>
+                            <option data-group="22" value="5679">انجمن علمی رسوب شناسی ایران</option>
+                            <option data-group="22" value="5615">انجمن علمی رفاه اجتماعی ایران</option>
+                            <option data-group="22" value="5515">انجمن علمی رفتار حركتی و روانشناسی ورزشی ایران</option>
+                            <option data-group="22" value="5721">انجمن علمی رمز ایران</option>
+                            <option data-group="22" value="5517">انجمن علمی روانشناسی اجتماعی ایران</option>
+                            <option data-group="22" value="5516">انجمن علمی روانشناسی ایران </option>
+                            <option data-group="22" value="5519">انجمن علمی روانشناسی تربیتی ایران</option>
+                            <option data-group="22" value="5520">انجمن علمی روانشناسی خانواده ایران</option>
+                            <option data-group="22" value="5522">انجمن علمی روانشناسی سلامت ایران</option>
+                            <option data-group="22" value="5523">انجمن علمی روانشناسی صنعتی و سازمانی ایران</option>
+                            <option data-group="22" value="5524">انجمن علمی روانشناسی علوم انتظامی ایران</option>
+                            <option data-group="22" value="5890">انجمن علمی روانشناسی نظامی ایران</option>
+                            <option data-group="22" value="5616">انجمن علمی روانشناسی و مشاوره اعتیاد ایران</option>
+                            <option data-group="22" value="5518">انجمن علمی روانشناسی‌بالینی‌كودك و نوجوان ایران
+                            </option>
+                            <option data-group="22" value="11">انجمن علمی ریاضی ایران</option>
+                            <option data-group="22" value="5678">انجمن علمی ریاضی ایران</option>
+                            <option data-group="22" value="5723">انجمن علمی ریخته‌گری ایران</option>
+                            <option data-group="22" value="5525">انجمن علمی زبان شناسی ایران</option>
+                            <option data-group="22" value="5654">انجمن علمی زبان و ادبیات ایران</option>
+                            <option data-group="22" value="5526">انجمن علمی زبان و ادبیات فارسی ایران</option>
+                            <option data-group="22" value="5527">انجمن علمی زبان و ادبیات فرانسه ایران</option>
+                            <option data-group="22" value="5680">انجمن علمی زمین ساخت و زمین شناسی ساختمانی ایران
+                            </option>
+                            <option data-group="22" value="5682">انجمن علمی زمین شناسی اقتصادی ایران</option>
+                            <option data-group="22" value="5681">انجمن علمی زمین شناسی ایران</option>
+                            <option data-group="22" value="5655">انجمن علمی زمین شناسی ایران</option>
+                            <option data-group="22" value="5683">انجمن علمی زمین شناسی نفت ایران</option>
+                            <option data-group="22" value="5724">انجمن علمی زمین‌شناسی مهندسی ایران</option>
+                            <option data-group="22" value="5819">انجمن علمی زنبور عسل ایران</option>
+                            <option data-group="22" value="5653">انجمن علمی زیر ساخت و پیشگیری و ایمنی ایران</option>
+                            <option data-group="22" value="5617">انجمن علمی زیست الگوی ایران</option>
+                            <option data-group="22" value="5684">انجمن علمی زیست شناسی ایران</option>
+                            <option data-group="22" value="5685">انجمن علمی زیست شناسی سلولی- تكوینی ایران</option>
+                            <option data-group="22" value="5528">انجمن علمی ژئوپلیتیك ایران</option>
+                            <option data-group="22" value="5686">انجمن علمی ژئوفیزیك ایران</option>
+                            <option data-group="22" value="5725">انجمن علمی ژئومكانیك نفت ایران</option>
+                            <option data-group="22" value="5687">انجمن علمی ژنتیك ایران</option>
+                            <option data-group="22" value="5618">انجمن علمی ساختمانهای پایدار ایران</option>
+                            <option data-group="22" value="5820">انجمن علمی سازگاری با خشكی و خشكسالی ایران</option>
+                            <option data-group="22" value="5726">انجمن علمی سازه های سبك وزن ایران</option>
+                            <option data-group="22" value="5727">انجمن علمی سازه های فضاكار ایران</option>
+                            <option data-group="22" value="5728">انجمن علمی سازه‌های فولادی ایران</option>
+                            <option data-group="22" value="5619">انجمن علمی سامانه های اطلاعاتی مكانی ایران</option>
+                            <option data-group="22" value="5729">انجمن علمی سرامیك ایران</option>
+                            <option data-group="22" value="5620">انجمن علمی سلامت الكترونیك ایران</option>
+                            <option data-group="22" value="5688">انجمن علمی سنجش از دور ایران</option>
+                            <option data-group="22" value="5689">انجمن علمی سنجش از دور زمین شناختی ایران</option>
+                            <option data-group="22" value="5621">انجمن علمی سوختهای زیستی ایران</option>
+                            <option data-group="22" value="5821">انجمن علمی سیستم های سطوح آبگیر باران</option>
+                            <option data-group="22" value="5690">انجمن علمی سیستم‌های فازی ایران</option>
+                            <option data-group="22" value="5622">انجمن علمی سیستمهای هوشمند ایران</option>
+                            <option data-group="22" value="5730">انجمن علمی شبكه هوشمند انرژی ایران</option>
+                            <option data-group="22" value="5822">انجمن علمی شتر ایران</option>
+                            <option data-group="22" value="5623">انجمن علمی شورای انجمنهای علمی ایران</option>
+                            <option data-group="22" value="5691">انجمن علمی شورای خانه‌های ریاضیات ایران</option>
+                            <option data-group="22" value="5692">انجمن علمی شیمی ایران</option>
+                            <option data-group="22" value="5731">انجمن علمی صنایع رنگ ایران</option>
+                            <option data-group="22" value="5624">انجمن علمی طبیعت گردی ایران</option>
+                            <option data-group="22" value="5529">انجمن علمی عرفان اسلامی ایران</option>
+                            <option data-group="22" value="5625">انجمن علمی عصب روانشناسی ایران</option>
+                            <option data-group="22" value="5661">انجمن علمی علوم آب ایران</option>
+                            <option data-group="22" value="5693">انجمن علمی علوم آناتومی دامپزشكی ایران</option>
+                            <option data-group="22" value="5530">انجمن علمی علوم اداری ایران</option>
+                            <option data-group="22" value="5626">انجمن علمی علوم ایمنی ایران</option>
+                            <option data-group="22" value="5823">انجمن علمی علوم باغبانی ایران</option>
+                            <option data-group="22" value="5662">انجمن علمی علوم جغرافیایی ایران</option>
+                            <option data-group="22" value="5824">انجمن علمی علوم خاك ایران</option>
+                            <option data-group="22" value="5825">انجمن علمی علوم دامی ایران</option>
+                            <option data-group="22" value="5531">انجمن علمی علوم راهبردی ایران</option>
+                            <option data-group="22" value="5664">انجمن علمی علوم ریاضی ایران</option>
+                            <option data-group="22" value="5826">انجمن علمی علوم زراعت و اصلاح نباتات ایران</option>
+                            <option data-group="22" value="5663">انجمن علمی علوم زیستی ایران</option>
+                            <option data-group="22" value="5532">انجمن علمی علوم سیاسی ایران</option>
+                            <option data-group="22" value="5827">انجمن علمی علوم علفهای هرز ایران</option>
+                            <option data-group="22" value="5533">انجمن علمی علوم قرآن و حدیث ایران</option>
+                            <option data-group="22" value="5534">انجمن علمی علوم قضایی ایران</option>
+                            <option data-group="22" value="5535">انجمن علمی علوم مدیریت ایران</option>
+                            <option data-group="22" value="5739">انجمن علمی علوم مهندسی برق ایران</option>
+                            <option data-group="22" value="5732">انجمن علمی علوم و تكنولوژی سطح ایران</option>
+                            <option data-group="22" value="5829">انجمن علمی علوم و صنایع چوب و كاغذ ایران</option>
+                            <option data-group="22" value="5733">انجمن علمی علوم و صنایع غذایی ایران</option>
+                            <option data-group="22" value="5627">انجمن علمی علوم و فناوری بسته بندی ایران</option>
+                            <option data-group="22" value="5734">انجمن علمی علوم و فناوری رادار ایران</option>
+                            <option data-group="22" value="5828">انجمن علمی علوم و فناوری غلات ایران</option>
+                            <option data-group="22" value="5735">انجمن علمی علوم و فناوری مهندسی نساجی ایران</option>
+                            <option data-group="22" value="5629">انجمن علمی علوم و فناوری های شناختی ایران</option>
+                            <option data-group="22" value="5736">انجمن علمی علوم و فناوری های شیمیایی ایران</option>
+                            <option data-group="22" value="5737">انجمن علمی علوم و فناوری های میكروبی ایران</option>
+                            <option data-group="22" value="5738">انجمن علمی علوم و فنون دریایی ایران</option>
+                            <option data-group="22" value="5630">انجمن علمی علوم و مهندسی پلاسمای ایران</option>
+                            <option data-group="22" value="5740">انجمن علمی علوم و مهندسی پلیمر ایران</option>
+                            <option data-group="22" value="5741">انجمن علمی علوم و مهندسی منابع آب ایران</option>
+                            <option data-group="22" value="5574">انجمن علمی فرش ایران</option>
+                            <option data-group="22" value="5742">انجمن علمی فرماندهی، کنترل، مخابرات، كامپیوتر و اطلاعات
+                              ایران
+                            </option>
+                            <option data-group="22" value="5743">انجمن علمی فضای معماری نو ایران</option>
+                            <option data-group="22" value="6918">انجمن علمی فقه جزای تطبیقی ایران</option>
+                            <option data-group="22" value="5536">انجمن علمی فقه و حقوق خانواده ایران</option>
+                            <option data-group="22" value="5537">انجمن علمی فقه و حقوق شهروندی ایران</option>
+                            <option data-group="22" value="5538">انجمن علمی فلسفه تعلیم و تربیت ایران</option>
+                            <option data-group="22" value="5539">انجمن علمی فلسفه دین ایران</option>
+                            <option data-group="22" value="5540">انجمن علمی فلسفه ملاصدرا ایران</option>
+                            <option data-group="22" value="5541">انجمن علمی فلسفه میان فرهنگی ایران</option>
+                            <option data-group="22" value="5631">انجمن علمی فناوری آموزشی ایران</option>
+                            <option data-group="22" value="5792">انجمن علمی فناوری آموزشی ایران</option>
+                            <option data-group="22" value="5744">انجمن علمی فناوری اطلاعات و ارتباطات ایران</option>
+                            <option data-group="22" value="5628">انجمن علمی فناوری چاپ ایران</option>
+                            <option data-group="22" value="5660">انجمن علمی فناوری، نوآوری و تجاری سازی ایران</option>
+                            <option data-group="22" value="5632">انجمن علمی فناوریهای بومی ایران</option>
+                            <option data-group="22" value="5793">انجمن علمی فناوریهای بومی ایران</option>
+                            <option data-group="22" value="5694">انجمن علمی فیزیك ایران</option>
+                            <option data-group="22" value="5830">انجمن علمی فیزیولوژی گیاهی ایران</option>
+                            <option data-group="22" value="5794">انجمن علمی قارچ شناسی ایران</option>
+                            <option data-group="22" value="5633">انجمن علمی قارچ شناسی ایران</option>
+                            <option data-group="22" value="5542">انجمن علمی قرآن و تحول علوم ایران</option>
+                            <option data-group="22" value="6923">انجمن علمی قرآن و عهدین ایران</option>
+                            <option data-group="22" value="5747">انجمن علمی كامپوزیت ایران</option>
+                            <option data-group="22" value="5746">انجمن علمی كامپیوتر ایران</option>
+                            <option data-group="22" value="5543">انجمن علمی كتابداری و اطلاع‌رسانی ایران</option>
+                            <option data-group="22" value="5656">انجمن علمی كشاورزی مدرن ایران</option>
+                            <option data-group="22" value="5695">انجمن علمی كشت سلول و بافت گیاهی ایران</option>
+                            <option data-group="22" value="5833">انجمن علمی كشت های بدون خاك ایران</option>
+                            <option data-group="22" value="5832">انجمن علمی كلینیكال پاتولوژی دامپزشكی ایران</option>
+                            <option data-group="22" value="5795">انجمن علمی كنترل آلودگی هوای ایران</option>
+                            <option data-group="22" value="5634">انجمن علمی كنترل آلودگی هوای ایران</option>
+                            <option data-group="22" value="5831">انجمن علمی كنه شناسی ایران</option>
+                            <option data-group="22" value="5696">انجمن علمی كواترنری ایران</option>
+                            <option data-group="22" value="5544">انجمن علمی كودكان استثنایی ایران</option>
+                            <option data-group="22" value="5545">انجمن علمی گردشگری ایران</option>
+                            <option data-group="22" value="5657">انجمن علمی گروههای حقوق ایران</option>
+                            <option data-group="22" value="5834">انجمن علمی گل و گیاهان زینتی ایران</option>
+                            <option data-group="22" value="5658">انجمن علمی گیاهان داروئی ایران</option>
+                            <option data-group="22" value="5835">انجمن علمی گیاهان دارویی ایران</option>
+                            <option data-group="22" value="5659">انجمن علمی گیاهپزشكی ایران</option>
+                            <option data-group="22" value="5745">انجمن علمی لجستیک ایران</option>
+                            <option data-group="22" value="5748">انجمن علمی ماشین بینائی و پردازش تصویر ایران</option>
+                            <option data-group="22" value="5521">انجمن علمی مالی اسلامی ایران</option>
+                            <option data-group="22" value="5546">انجمن علمی مالی ایران</option>
+                            <option data-group="22" value="5838">انجمن علمی ماهی شناسی ایران</option>
+                            <option data-group="22" value="5836">انجمن علمی ماهیان زینتی ایران</option>
+                            <option data-group="22" value="5837">انجمن علمی ماهیان سردابی ایران</option>
+                            <option data-group="22" value="5547">انجمن علمی محاسبات بیمه و مالی ایران</option>
+                            <option data-group="22" value="5636">انجمن علمی محیط زیست ایران</option>
+                            <option data-group="22" value="5797">انجمن علمی محیط زیست ایران</option>
+                            <option data-group="22" value="5798">انجمن علمی مخاطره شناسی ایران</option>
+                            <option data-group="22" value="5637">انجمن علمی مخاطره شناسی ایران</option>
+                            <option data-group="22" value="5891">انجمن علمی مددکاری اجتماعی ایران</option>
+                            <option data-group="22" value="5548">انجمن علمی مدیریت آموزشی ایران</option>
+                            <option data-group="22" value="5638">انجمن علمی مدیریت اطلاعات ایران</option>
+                            <option data-group="22" value="5799">انجمن علمی مدیریت اطلاعات ایران</option>
+                            <option data-group="22" value="5550">انجمن علمی مدیریت ایران</option>
+                            <option data-group="22" value="5639">انجمن علمی مدیریت بحران ایران</option>
+                            <option data-group="22" value="5800">انجمن علمی مدیریت بحران ایران</option>
+                            <option data-group="22" value="5801">انجمن علمی مدیریت پروژه ایران</option>
+                            <option data-group="22" value="5640">انجمن علمی مدیریت پروژه ایران</option>
+                            <option data-group="22" value="5552">انجمن علمی مدیریت دانش ایران</option>
+                            <option data-group="22" value="5551">انجمن علمی مدیریت دولتی ایران</option>
+                            <option data-group="22" value="5553">انجمن علمی مدیریت راهبردی ایران</option>
+                            <option data-group="22" value="5554">انجمن علمی مدیریت راهبردی منابع انسانی ایران</option>
+                            <option data-group="22" value="5555">انجمن علمی مدیریت رفتار سازمانی ایران</option>
+                            <option data-group="22" value="5556">انجمن علمی مدیریت صنعتی ایران</option>
+                            <option data-group="22" value="5641">انجمن علمی مدیریت فناوری ایران</option>
+                            <option data-group="22" value="5557">انجمن علمی مدیریت مصرف انرژی ایران</option>
+                            <option data-group="22" value="5558">انجمن علمی مدیریت و برنامه ریزی فرهنگی ایران</option>
+                            <option data-group="22" value="5840">انجمن علمی مدیریت و كنترل مناطق بیابانی ایران</option>
+                            <option data-group="22" value="5643">انجمن علمی مدیریت و مهندسی بهداشت ایمنی و محیط زیست
+                              ایران</option>
+                            <option data-group="22" value="5642">انجمن علمی مدیریت و مهندسی تالابها</option>
+                            <option data-group="22" value="5559">انجمن علمی مدیریت ورزشی ایران</option>
+                            <option data-group="22" value="5665">انجمن علمی مدیریتی ایران</option>
+                            <option data-group="22" value="5749">انجمن علمی مراكز تحقیق و توسعه صنایع و معادن ایران
+                            </option>
+                            <option data-group="22" value="5839">انجمن علمی مرتعداری ایران</option>
+                            <option data-group="22" value="5560">انجمن علمی مشاوره ایران</option>
+                            <option data-group="22" value="5561">انجمن علمی مطالعات امنیت بین الملل ایران</option>
+                            <option data-group="22" value="5562">انجمن علمی مطالعات برنامه درسی ایران</option>
+                            <option data-group="22" value="5563">انجمن علمی مطالعات خانواده در ایران</option>
+                            <option data-group="22" value="5565">انجمن علمی مطالعات سالمندی ایران</option>
+                            <option data-group="22" value="5644">انجمن علمی مطالعات صلح ایران</option>
+                            <option data-group="22" value="5564">انجمن علمی مطالعات قرآنی و فرهنگ اسلامی ایران</option>
+                            <option data-group="22" value="5566">انجمن علمی مطالعات كودكان پیش از دبستان ایران</option>
+                            <option data-group="22" value="5567">انجمن علمی مطالعات نهج البلاغه ایران</option>
+                            <option data-group="22" value="5697">انجمن علمی مطالعات و تحقیقات مهندسی حیات</option>
+                            <option data-group="22" value="27">انجمن علمی مطالعات و سیاستگذاری روابط فرهنگی-بین المللی
+                            </option>
+                            <option data-group="22" value="5568">انجمن علمی معارف اسلامی ایران</option>
+                            <option data-group="22" value="5576">انجمن علمی معماری منظر ایران</option>
+                            <option data-group="22" value="5575">انجمن علمی معماری و شهرسازی ایران</option>
+                            <option data-group="22" value="5751">انجمن علمی مكاترونیك ایران</option>
+                            <option data-group="22" value="5750">انجمن علمی مكانیك سنگ ایران</option>
+                            <option data-group="22" value="5666">انجمن علمی منابع طبیعی و محیط زیست ایران</option>
+                            <option data-group="22" value="5569">انجمن علمی منطق ایران</option>
+                            <option data-group="22" value="5841">انجمن علمی مهندسی آبیاری و آب ایران</option>
+                            <option data-group="22" value="5646">انجمن علمی مهندسی ارزش ایران</option>
+                            <option data-group="22" value="5754">انجمن علمی مهندسی بتن و سازه های بتنی ایران </option>
+                            <option data-group="22" value="5755">انجمن علمی مهندسی برق و الكترونیك ایران</option>
+                            <option data-group="22" value="5756">انجمن علمی مهندسی بهره‌وری صنعت برق ایران</option>
+                            <option data-group="22" value="5757">انجمن علمی مهندسی پزشكی ایران</option>
+                            <option data-group="22" value="5759">انجمن علمی مهندسی پل ایران</option>
+                            <option data-group="22" value="5758">انجمن علمی مهندسی پیشرانش هوافضائی ایران</option>
+                            <option data-group="22" value="5760">انجمن علمی مهندسی حرارتی و برودتی ایران</option>
+                            <option data-group="22" value="5761">انجمن علمی مهندسی حمل و نقل ریلی ایران</option>
+                            <option data-group="22" value="5762">انجمن علمی مهندسی دریایی ایران</option>
+                            <option data-group="22" value="5763">انجمن علمی مهندسی راه و ساختمان ایران</option>
+                            <option data-group="22" value="5764">انجمن علمی مهندسی رودخانه ایران</option>
+                            <option data-group="22" value="5765">انجمن علمی مهندسی روسازی ایران</option>
+                            <option data-group="22" value="5766">انجمن علمی مهندسی زلزله ایران</option>
+                            <option data-group="22" value="5767">انجمن علمی مهندسی ساخت و تولید ایران</option>
+                            <option data-group="22" value="5768">انجمن علمی مهندسی سازه ایران</option>
+                            <option data-group="22" value="5769">انجمن علمی مهندسی سواحل و سازه های دریایی ایران
+                            </option>
+                            <option data-group="22" value="5770">انجمن علمی مهندسی سیستم های سلامت ایران</option>
+                            <option data-group="22" value="5771">انجمن علمی مهندسی شیمی ایران</option>
+                            <option data-group="22" value="5772">انجمن علمی مهندسی صنایع ایران</option>
+                            <option data-group="22" value="5773">انجمن علمی مهندسی صوتیات ایران</option>
+                            <option data-group="22" value="5667">انجمن علمی مهندسی علم و مواد ایران</option>
+                            <option data-group="22" value="5774">انجمن علمی مهندسی عمران ایران</option>
+                            <option data-group="22" value="5775">انجمن علمی مهندسی كنترل و ابزار دقیق ایران</option>
+                            <option data-group="22" value="5776">انجمن علمی مهندسی گاز ایران</option>
+                            <option data-group="22" value="5777">انجمن علمی مهندسی ماشینهای كشاورزی و مكانیزاسیون ایران
+                            </option>
+                            <option data-group="22" value="5647">انجمن علمی مهندسی مالی ایران</option>
+                            <option data-group="22" value="5778">انجمن علمی مهندسی متالورژی و مواد ایران</option>
+                            <option data-group="22" value="5779">انجمن علمی مهندسی معدن ایران</option>
+                            <option data-group="22" value="5780">انجمن علمی مهندسی مکانیک ایران</option>
+                            <option data-group="22" value="5781">انجمن علمی مهندسی نفت ایران</option>
+                            <option data-group="22" value="5782">انجمن علمی مهندسی نقشه برداری و ژئوماتیك ایران</option>
+                            <option data-group="22" value="5783">انجمن علمی مهندسی و مدیریت پسماند ایران</option>
+                            <option data-group="22" value="5752">انجمن علمی مواد پرانرژی ایران</option>
+                            <option data-group="22" value="5645">انجمن علمی مواد جهش زای زیست محیطی ایران</option>
+                            <option data-group="22" value="5753">انجمن علمی موتور ایران</option>
+                            <option data-group="22" value="5570">انجمن علمی موزه و حفاظت و مرمت آثار تاریخی ایران
+                            </option>
+                            <option data-group="22" value="5784">انجمن علمی میكروالكترونیك ایران</option>
+                            <option data-group="22" value="5648">انجمن علمی میكروبیولوژی دامپزشكی ایران</option>
+                            <option data-group="22" value="5649">انجمن علمی نانو فناوری ایران</option>
+                            <option data-group="22" value="5698">انجمن علمی نجوم ایران</option>
+                            <option data-group="22" value="5572">انجمن علمی نقد ادب عربی ایران</option>
+                            <option data-group="22" value="5571">انجمن علمی نقد ادبی ایران</option>
+                            <option data-group="22" value="5785">انجمن علمی نگهداری و تعمیرات ایران</option>
+                            <option data-group="22" value="5842">انجمن علمی نماتد شناسی ایران</option>
+                            <option data-group="22" value="5786">انجمن علمی نیوماتیك و هیدرولیك صنعتی ایران</option>
+                            <option data-group="22" value="5699">انجمن علمی هسته‎ای ایران</option>
+                            <option data-group="22" value="5577">انجمن علمی هنر اسلامی ایران</option>
+                            <option data-group="22" value="6934">انجمن علمی هنر و ادبیات تطبیقی ایران</option>
+                            <option data-group="22" value="5579">انجمن علمی هنر و طراحی محیطی</option>
+                            <option data-group="22" value="5578">انجمن علمی هنرهای تجسمی ایران</option>
+                            <option data-group="22" value="5650">انجمن علمی هواشناسی ایران </option>
+                            <option data-group="22" value="5787">انجمن علمی هوافضای ایران</option>
+                            <option data-group="22" value="5788">انجمن علمی هیدروژن و پیل سوختی ایران</option>
+                            <option data-group="22" value="5789">انجمن علمی هیدرولوژی ایران</option>
+                            <option data-group="22" value="5790">انجمن علمی هیدرولیك ایران</option>
+                            <option data-group="22" value="6917">انجمن علمی کار آفرینی و نو آوری ایران</option>
+                            <option data-group="22" value="5888">انجمن علمی کامپوزیت ایران</option>
+                            <option data-group="22" value="54">انجمن علمی کامپیوتر</option>
+                            <option data-group="22" value="5880">انجمن علمی کشاورزی بوم شناختی ایران</option>
+                            <option data-group="22" value="5796">انجمن علمی کیفیت ایران</option>
+                            <option data-group="22" value="5635">انجمن علمی کیفیت ایران</option>
+                            <option data-group="22" value="5791">انجمن علمی یادگیری الكترونیكی</option>
+                            <option data-group="22" value="6902">انجمن فقه و حقوق اسلامي</option>
+                            <option data-group="22" value="6895">انجمن فیزیولوژی و فارماکولوژی ایران</option>
+                            <option data-group="22" value="6903">انجمن قرآن‌پژوهي</option>
+                            <option data-group="22" value="6912">انجمن كلام اسلامي حوزه علمیه</option>
+                            <option data-group="22" value="6906">انجمن مديريت اسلامی</option>
+                            <option data-group="22" value="6914">انجمن مطالعات اجتماعی حوزه</option>
+                            <option data-group="22" value="6913">انجمن مطالعات سياسي حوزه</option>
+                            <option data-group="22" value="6899">انجمن معرفت‌شناسي حوزه علمیه</option>
+                            <option data-group="22" value="6905">انجمن مهدويت حوزه علمیه</option>
+                            <option data-group="22" value="6933">انجمن هوش و استعداد ایران</option>
+                            <option data-group="22" value="6921">مطالعات غرب آسیا</option>
+
+
+
+
+
+
+                            <!-- موسسه انتشارات دولتی و غیر دولتی -->
+                            <option data-group="44" value="-1">سایر</option>
+
+                            <!-- سایر -->
+                            <option data-group="99" value="-1">سایر</option>
+
                           </select>
                         </div>
                       </div>
                       <div class="col-lg-4">
                         <div class="form-group">
                           <select class="form-select" name="" id="">
-                            <option value="">نمونه</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="col-lg-4">
-                        <div class="form-group">
-                          <select class="form-select" name="" id="">
-                            <option value="">نمونه</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="col-lg-4">
-                        <div class="form-group">
-                          <select class="form-select" name="" id="">
-                            <option value="">نمونه</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="col-lg-4">
-                        <div class="form-group">
-                          <select class="form-select" name="" id="">
-                            <option value="">نمونه</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="col-lg-4">
-                        <div class="form-group">
-                          <select class="form-select" name="" id="">
-                            <option value="">نمونه</option>
+                            <option value="">وضعیت نشریه</option>
+                            <option value="1">فعال</option>
+                            <option value="2">لغو شده</option>
                           </select>
                         </div>
                       </div>
@@ -572,8 +1739,7 @@
                       </p>
                     </div>
                   </a>
-                  <a href=""
-                    class="news_item">
+                  <a href="" class="news_item">
                     <div class="right">
                       <i class="bi bi-bell list_icon"></i>
                     </div>
@@ -583,8 +1749,7 @@
                       </p>
                     </div>
                   </a>
-                  <a href=""
-                    class="news_item">
+                  <a href="" class="news_item">
                     <div class="right">
                       <i class="bi bi-bell list_icon"></i>
                     </div>
@@ -719,10 +1884,15 @@
               style="visibility: visible; animation-delay: 0.25s; animation-name: fadeInUp;">
               <div class="choose-content-info">
                 <div class="site-heading mb-0">
-                  <span class="site-title-tagline"><i class="far fa-book-open-reader"></i> درباره کمیسیون نشریه‌ها</span>
-                  <h2 class="site-title text-white mb-10">نهاد ناظر بر <span>کیفیت و اعتبار</span> نشریه‌های علمی کشور </h2>
+                  <span class="site-title-tagline"><i class="far fa-book-open-reader"></i> درباره کمیسیون
+                    نشریه‌ها</span>
+                  <h2 class="site-title text-white mb-10">نهاد ناظر بر <span>کیفیت و اعتبار</span> نشریه‌های علمی کشور
+                  </h2>
                   <p class="text-white">
-                    کمیسیون نشریه‌ها وزارت علوم , تحقیقات و فناوری نهاد قانونی نظارت بر نشریه‌ها علمی کشور در ایران است. این کمیسیون در مرداد ۱۳۷۳، پس از جداسازی وزارت بهداشت، درمان و آموزش پزشکی از وزارت علوم، تحقیقات و فناوری (سال ۱۳۶۸)، از کمیسیون نشریه‌ها علوم پزشکی جدا شد و فعالیت خود را در معاونت تحقیقات و فناوری وزارت علوم , تحقیقات و فناوری آغاز کرد.
+                    کمیسیون نشریه‌ها وزارت علوم , تحقیقات و فناوری نهاد قانونی نظارت بر نشریه‌ها علمی کشور در ایران است.
+                    این کمیسیون در مرداد ۱۳۷۳، پس از جداسازی وزارت بهداشت، درمان و آموزش پزشکی از وزارت علوم، تحقیقات و
+                    فناوری (سال ۱۳۶۸)، از کمیسیون نشریه‌ها علوم پزشکی جدا شد و فعالیت خود را در معاونت تحقیقات و فناوری
+                    وزارت علوم , تحقیقات و فناوری آغاز کرد.
                   </p>
                 </div>
                 <div class="choose-content-wrap">
@@ -824,7 +1994,7 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-6 mx-auto">
-           
+
           </div>
         </div>
         <div class="row">
@@ -953,8 +2123,8 @@
 
               <div id="box_news" class="box universities">
                 <div class="box_header">
-                  <h5>اخبار و تازه‌ها</h5>
-
+                  <h5>فهرست نشریات بر اساس صاحب امتیاز
+                  </h5>
                 </div>
                 <div class="box_body">
                   <a href="" class="news_item">
@@ -964,13 +2134,13 @@
                       </div>
                       <div class="left">
                         <p>
-                          دانشگاه
+                          دانشگاه آزاد اسلامی
                         </p>
                       </div>
                     </div>
                     <div class="l">
-                      <span>63%</span>
-                      <span>994</span>
+                      <!-- <span>63%</span> -->
+                      <span>137</span>
                     </div>
                   </a>
                   <a href="" class="news_item">
@@ -980,13 +2150,13 @@
                       </div>
                       <div class="left">
                         <p>
-                          دانشگاه
+                          دانشگاه تهران
                         </p>
                       </div>
                     </div>
                     <div class="l">
-                      <span>63%</span>
-                      <span>994</span>
+                      <!-- <span>63%</span> -->
+                      <span>109</span>
                     </div>
                   </a>
                   <a href="" class="news_item">
@@ -996,13 +2166,13 @@
                       </div>
                       <div class="left">
                         <p>
-                          دانشگاه
+                          دانشگاه فردوسی مشهد
                         </p>
                       </div>
                     </div>
                     <div class="l">
-                      <span>63%</span>
-                      <span>994</span>
+                      <!-- <span>63%</span> -->
+                      <span>46</span>
                     </div>
                   </a>
                   <a href="" class="news_item">
@@ -1012,13 +2182,13 @@
                       </div>
                       <div class="left">
                         <p>
-                          دانشگاه
+                          دانشگاه علامه طباطبایی
                         </p>
                       </div>
                     </div>
                     <div class="l">
-                      <span>63%</span>
-                      <span>994</span>
+                      <!-- <span>63%</span> -->
+                      <span>43</span>
                     </div>
                   </a>
                   <a href="" class="news_item">
@@ -1028,30 +2198,13 @@
                       </div>
                       <div class="left">
                         <p>
-                          دانشگاه
+                          دانشگاه تبریز
                         </p>
                       </div>
                     </div>
                     <div class="l">
-                      <span>63%</span>
-                      <span>994</span>
-                    </div>
-                  </a>
-
-                  <a href="" class="news_item">
-                    <div class="r">
-                      <div class="right">
-                        <i class="bi bi-bell list_icon"></i>
-                      </div>
-                      <div class="left">
-                        <p>
-                          دانشگاه
-                        </p>
-                      </div>
-                    </div>
-                    <div class="l">
-                      <span>63%</span>
-                      <span>254</span>
+                      <!-- <span>63%</span> -->
+                      <span>36</span>
                     </div>
                   </a>
 
@@ -1062,13 +2215,13 @@
                       </div>
                       <div class="left">
                         <p>
-                          دانشگاه
+                          دانشگاه اصفهان
                         </p>
                       </div>
                     </div>
                     <div class="l">
-                      <span>63%</span>
-                      <span>210</span>
+                      <!-- <span>63%</span> -->
+                      <span>34</span>
                     </div>
                   </a>
 
@@ -1079,13 +2232,13 @@
                       </div>
                       <div class="left">
                         <p>
-                          دانشگاه
+                          دانشگاه شهید بهشتی
                         </p>
                       </div>
                     </div>
                     <div class="l">
-                      <span>63%</span>
-                      <span>200</span>
+                      <!-- <span>63%</span> -->
+                      <span>32</span>
                     </div>
                   </a>
 
@@ -1096,13 +2249,13 @@
                       </div>
                       <div class="left">
                         <p>
-                          دانشگاه
+                          دانشگاه پیام نور
                         </p>
                       </div>
                     </div>
                     <div class="l">
-                      <span>63%</span>
-                      <span>64</span>
+                      <!-- <span>63%</span> -->
+                      <span>31</span>
                     </div>
                   </a>
 
@@ -1113,13 +2266,48 @@
                       </div>
                       <div class="left">
                         <p>
-                          دانشگاه
+                          دانشگاه تربیت مدرس
                         </p>
                       </div>
                     </div>
                     <div class="l">
-                      <span>63%</span>
+                      <!-- <span>63%</span> -->
+                      <span>26</span>
+                    </div>
+                  </a>
+
+                  <a href="" class="news_item">
+                    <div class="r">
+                      <div class="right">
+                        <i class="bi bi-bell list_icon"></i>
+                      </div>
+                      <div class="left">
+                        <p>
+                          دانشگاه جامع امام حسین (ع)
+                        </p>
+                      </div>
+                    </div>
+                    <div class="l">
+                      <!-- <span>63%</span> -->
                       <span>24</span>
+                    </div>
+                  </a>
+
+
+                  <a href="" class="news_item">
+                    <div class="r">
+                      <div class="right">
+                        <i class="bi bi-bell list_icon"></i>
+                      </div>
+                      <div class="left">
+                        <p>
+                          دانشگاه خوارزمی
+                        </p>
+                      </div>
+                    </div>
+                    <div class="l">
+                      <!-- <span>63%</span> -->
+                      <span>22</span>
                     </div>
                   </a>
 
@@ -1151,7 +2339,7 @@
 
               <div id="box_news" class="box with_more_btn">
                 <div class="box_header">
-                  <h5>اخبار و تازه‌ها</h5>
+                  <h5>آگهی‌ها و تازه‌ها</h5>
 
                 </div>
                 <div class="box_body">
@@ -1190,26 +2378,26 @@
                 <img src="assets/img/va-logo-w.png" alt="">
               </a>
 
-             
+
             </div>
           </div>
-          
+
           <div class="col-md-10 col-sm-12">
             <div class="footer-widget-box list">
               <!-- <h4 class="footer-widget-title">Newsletter</h4> -->
               <div class="footer-newsletter">
-                           
-<p class="mb-3">
-  معاونت پژوهشی / دفتر سیاست‌گذاری و برنامه‌ریزی امور پژوهشی
+
+                <p class="mb-3">
+                  معاونت پژوهشی / دفتر سیاست‌گذاری و برنامه‌ریزی امور پژوهشی
                 </p>
                 <p>
                   گزارش اشکال و درخواست ویرایش اطلاعات
                 </p>
                 <p>
-                  
+
                   دیدگاه خود را درباره عملکرد سامانه با ما در میان بگذارید.
                 </p>
-              
+
               </div>
             </div>
           </div>
@@ -1225,7 +2413,7 @@
                 © همه حقوق این پایگاه از آن دفتر پژوهشی و معاونت پژوهش و فناوری وزارت علوم، تحقیقات و فناوری است.
               </p>
             </div>
-           
+
           </div>
         </div>
       </div>
@@ -1332,49 +2520,49 @@
     });
   </script>
 
-<script>
-  Highcharts.chart('container1', {
-    chart: {
+  <script>
+    Highcharts.chart('container1', {
+      chart: {
         type: 'bar'
-    },
-    title: {
+      },
+      title: {
         text: 'موضوع نشریه‌ها'
-    },
-    subtitle: {
+      },
+      subtitle: {
         text: ''
-    },
-    xAxis: {
-        categories: ['علوم انسانی', 'فنی و مهندسی', 'کشاورزی و منابع طبیعی', 'علوم پایه','هنر و معماری','دامپزشکی'],
+      },
+      xAxis: {
+        categories: ['علوم انسانی', 'فنی و مهندسی', 'کشاورزی و منابع طبیعی', 'علوم پایه', 'هنر و معماری', 'دامپزشکی'],
         title: {
-            text: null
+          text: null
         },
         gridLineWidth: 1,
         lineWidth: 0
-    },
-    yAxis: {
+      },
+      yAxis: {
         min: 0,
         title: {
-            text: 'تعداد',
-            align: 'high'
+          text: 'تعداد',
+          align: 'high'
         },
         labels: {
-            overflow: 'justify'
+          overflow: 'justify'
         },
         gridLineWidth: 0
-    },
-    tooltip: {
+      },
+      tooltip: {
         valueSuffix: ' '
-    },
-    plotOptions: {
+      },
+      plotOptions: {
         bar: {
-            borderRadius: '50%',
-            dataLabels: {
-                enabled: true
-            },
-            groupPadding: 0.1
+          borderRadius: '50%',
+          dataLabels: {
+            enabled: true
+          },
+          groupPadding: 0.1
         }
-    },
-    legend: {
+      },
+      legend: {
         layout: 'vertical',
         align: 'right',
         verticalAlign: 'top',
@@ -1383,20 +2571,20 @@
         floating: true,
         borderWidth: 1,
         backgroundColor:
-            Highcharts.defaultOptions.legend.backgroundColor || '#FFFFFF',
+          Highcharts.defaultOptions.legend.backgroundColor || '#FFFFFF',
         shadow: true
-    },
-    credits: {
+      },
+      credits: {
         enabled: false
-    },
-    series: [{
+      },
+      series: [{
         name: 'نشریه‌ها',
-        data: [994,254, 210,200,64,24]
-    }],
-    legend: { enabled: false }
-});
+        data: [994, 254, 210, 200, 64, 24]
+      }],
+      legend: { enabled: false }
+    });
 
-</script>
+  </script>
 
 
 
@@ -1502,16 +2690,15 @@
   <script src="./o-v/jquery-3.7.1.min.js"></script>
   <script src="./o-v/modernizr.min.js"></script>
   <script src="./o-v/bootstrap.bundle.min.js"></script>
-  <script
-    src="./o-v/imagesloaded.pkgd.min.js"></script>
-  <script
-    src="./o-v/jquery.magnific-popup.min.js"></script>
+  <script src="./o-v/imagesloaded.pkgd.min.js"></script>
+  <script src="./o-v/jquery.magnific-popup.min.js"></script>
   <script src="./o-v/isotope.pkgd.min.js"></script>
   <script src="./o-v/jquery.appear.min.js"></script>
   <script src="./o-v/jquery.easing.min.js"></script>
   <script src="./o-v/owl.carousel.min.js"></script>
   <script src="./o-v/counter-up.js"></script>
   <script src="./o-v/wow.min.js"></script>
+  <script src="assets/vendor/select2/select2.min.js"></script>
   <script src="./o-v/main.js"></script>
 
 

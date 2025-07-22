@@ -320,7 +320,9 @@
                 <img class="poster" src="assets/img/journals/4.jpg" alt="" />
 
                 <div class="chartHolder">
-                  <table>
+                  <div id="container"></div>
+                  
+                  <!-- <table>
                     <tr>
                       <td><span class="rate rD">د</span></td>
                       <td><span class="rate rC">ج</span></td>
@@ -337,7 +339,7 @@
                       <th>1402</th>
                     </tr>
                   </tfoot>
-                  </table>
+                  </table> -->
                 </div>
 
               </div>
@@ -604,12 +606,80 @@
     });
 </script>
 
-    </script>
+
+
+
     <script src="assets/vendor/highcharts/highcharts.js"></script>
     <script src="assets/vendor/highcharts/exporting.js"></script>
     <script src="assets/vendor/highcharts/series-label.js"></script>
     <script src="assets/vendor/highcharts/export-data.js"></script>
     <script src="assets/vendor/highcharts/accessibility.js"></script>
+
+    <script>
+      const colorMap = {
+        5: '#c353ff',   // بین‌المللی
+        4: '#00e497',   // الف
+        3: '#18d0ff',   // ب
+        2: '#eb911e',   // ج
+        1: '#f60d49',   // د
+        0: '#0003'      // " بدون رتبه"
+      };
+    
+      const rawData = [5, 4, 3, 3, 1];
+    
+      const coloredData = rawData.map(val => ({
+        y: val,
+        color: colorMap[val] || '#0003'
+      }));
+    
+      Highcharts.chart('container', {
+        chart: {
+          zoomType: 'xy',
+          height: 300
+        },
+        title: {
+          text: ''
+        },
+        xAxis: [{
+          categories: ['1402', '1401', '1400', '1399', '1398'],
+          crosshair: true
+        }],
+        yAxis: [{
+          labels: { enabled: false },
+          title: { text: '' }
+        }],
+        tooltip: {
+          shared: true,
+          formatter: function() {
+            var value = this.points[0].y;
+            var labels = {
+              5: "بین‌المللی",
+              4: "الف",
+              3: "ب",
+              2: "ج",
+              1: "د",
+              0: " "
+            };
+            return 'ارزشیابی: ' + labels[value];
+          }
+        },
+        plotOptions: {
+          column: {
+            stacking: 'normal'
+          }
+        },
+        series: [{
+          name: 'ارزشیابی',
+          type: 'column',
+          data: coloredData
+        }]
+      });
+    </script>
+    
+
+
+
+
 
     <!-- js -->
     <script src="./o-v/jquery-3.7.1.min.js"></script>

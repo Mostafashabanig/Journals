@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+
+<html lang="fa" class="">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <!-- meta tags -->
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- title -->
+  <title>درباره</title>
+
+  <!-- favicon -->
+  <link rel="icon" type="image/x-icon" href="https://hau.bi/assets/img/logo/favicon.png">
+
+  <!-- css -->
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+
+
+  <!-- searchable table -->
+  <link rel="stylesheet" href="assets/vendor/dataTable/dataTables.bootstrap5.min.css">
+  <link rel="stylesheet" href="assets/vendor/dataTable/searchPanes.bootstrap5.min.css">
+
+
+  <link rel="stylesheet" href="assets/css/animate.min.css">
+  <link rel="stylesheet" href="assets/css/magnific-popup.min.css">
+  <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+
+
+</head>
+
+<body>
+
+
+  <!-- header area -->
+  <header class="header">
+    <!-- header top -->
+    <div class="header-top">
+      <div class="container">
+        <div class="header-top-wrap">
+          <div class="header-top-left">
+            <div class="header-top-social">
+              امروز: یکشنبه ۲۸ اردیبهشت ۱۴۰۴
+            </div>
+          </div>
+          <div class="header-top-right">
+
+            <span>دسترسی به وبسایت رسمی: </span>
+            <a href="http://msrt.ir/fa">وزارت علوم، تحقیقات و فناوری</a>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="main-navigation">
+
+      <nav class="navbar navbar-expand-lg">
+        <div class="container position-relative">
+
+
+          <div class="mobile-menu-right">
+            <div class="search-btn">
+              <button type="button" class="nav-right-link search-box-outer"><i class="far fa-search"></i></button>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav"
+              aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-mobile-icon"><i class="far fa-bars"></i></span>
+            </button>
+          </div>
+
+          <div class="collapse navbar-collapse" id="main_nav">
+            <ul class="navbar-nav">
+              <li class="nav-item dropdown">
+                <a class="nav-link active" href="">صفحه نخست</a>
+
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="">درباره کمیسیون نشریات</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="">سؤالات متداول</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="">راهنمای ثبت و ارزیابی نشریات</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="">پیوندها</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="">تماس با ما</a>
+              </li>
+
+
+
+            </ul>
+            <div class="nav-right">
+              <div class="search-btn">
+                <button type="button" class="nav-right-link search-box-outer"><i class="far fa-search"></i></button>
+              </div>
+              <div class="nav-right-btn mt-2">
+                <a href="" class="theme-btn"><span class="fal fa-pencil"></span>ورود
+                  به سامانه نشریات</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <!-- header area end -->
+
+
+  <!-- popup search -->
+  <div class="search-popup">
+    <button class="close-search"><span class="far fa-times"></span></button>
+    <form action="">
+      <div class="form-group">
+        <input type="search" name="search-field" placeholder="Search Here..." required="">
+        <button type="submit"><i class="far fa-search"></i></button>
+      </div>
+    </form>
+  </div>
+  <!-- popup search end -->
+
+
+  <main class="main statisticsPage">
+
+
+
+
+    <!-- course-area -->
+    <div id="stats" class="course-area  py-120">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 mx-auto">
+            <div class="site-heading text-center">
+              <!-- <span class="site-title-tagline"><i class="far fa-book-open-reader"></i> Our Courses</span> -->
+              <h2 class="site-title">فهرست نشریه‌ها بر پایه ارزشیابی </h2>
+              <!-- <p>It is a long established fact that a reader will be distracted by the readable content of
+                a page when looking at its layout.</p> -->
+
+            </div>
+          </div>
+        </div>
+        <div class="row">
+
+          <div class="box">
+            <div id="container"></div>
+
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+    <!-- course-area -->
+
+
+
+
+    <!-- course-area -->
+    <div id="links" class="category bg py-120">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 mx-auto">
+
+          </div>
+        </div>
+        <div class="row">
+          <div class="row">
+            <div class="col-md-6">
+
+              <div id="box_news" class="box with_more_btn">
+                <div class="box_header">
+                  <h5>فهرست نشریه‌ها بر پایه موضوع</h5>
+                  <span>
+                    <a class="btn_more_news" href="/Home/Announcoment"> <i class="bi bi-arrow-left"></i> </a>
+                    <div class="btn_more_news_tooltip" style="display: none;"><span>بیشتر</span></div>
+                  </span>
+                </div>
+                <div class="box_body">
+                  <div id="container1"></div>
+                  <!-- <a href="" class="news_item">
+                    <div class="r">
+                      <div class="right">
+                        <i class="bi bi-bell list_icon"></i>
+                      </div>
+                      <div class="left">
+                        <p>
+                          علوم انسانی
+                        </p>
+                      </div>
+                    </div>
+                    <div class="l">
+                      <span>63%</span>
+                      <span>994</span>
+                    </div>
+                  </a>
+
+                  <a href="" class="news_item">
+                    <div class="r">
+                      <div class="right">
+                        <i class="bi bi-bell list_icon"></i>
+                      </div>
+                      <div class="left">
+                        <p>
+                          فنی و مهندسی
+                        </p>
+                      </div>
+                    </div>
+                    <div class="l">
+                      <span>63%</span>
+                      <span>254</span>
+                    </div>
+                  </a>
+
+                  <a href="" class="news_item">
+                    <div class="r">
+                      <div class="right">
+                        <i class="bi bi-bell list_icon"></i>
+                      </div>
+                      <div class="left">
+                        <p>
+                          کشاورزی و منابع طبیعی
+                        </p>
+                      </div>
+                    </div>
+                    <div class="l">
+                      <span>63%</span>
+                      <span>210</span>
+                    </div>
+                  </a>
+
+                  <a href="" class="news_item">
+                    <div class="r">
+                      <div class="right">
+                        <i class="bi bi-bell list_icon"></i>
+                      </div>
+                      <div class="left">
+                        <p>
+                          علوم پایه
+                        </p>
+                      </div>
+                    </div>
+                    <div class="l">
+                      <span>63%</span>
+                      <span>200</span>
+                    </div>
+                  </a>
+
+                  <a href="" class="news_item">
+                    <div class="r">
+                      <div class="right">
+                        <i class="bi bi-bell list_icon"></i>
+                      </div>
+                      <div class="left">
+                        <p>
+                          هنر و معماری
+                        </p>
+                      </div>
+                    </div>
+                    <div class="l">
+                      <span>63%</span>
+                      <span>64</span>
+                    </div>
+                  </a>
+
+                  <a href="" class="news_item">
+                    <div class="r">
+                      <div class="right">
+                        <i class="bi bi-bell list_icon"></i>
+                      </div>
+                      <div class="left">
+                        <p>
+                          دامپزشکی
+                        </p>
+                      </div>
+                    </div>
+                    <div class="l">
+                      <span>63%</span>
+                      <span>24</span>
+                    </div>
+                  </a>
+ -->
+
+                </div>
+              </div>
+
+            </div>
+            <div class="col-md-6">
+
+
+              <div id="box_news" class="box universities">
+                <div class="box_header">
+                  <h5>فهرست نشریات بر اساس صاحب امتیاز
+                  </h5>
+                </div>
+                <div class="box_body">
+                  <a href="" class="news_item">
+                    <div class="r">
+                      <div class="right">
+                        <i class="bi bi-bell list_icon"></i>
+                      </div>
+                      <div class="left">
+                        <p>
+                          دانشگاه آزاد اسلامی
+                        </p>
+                      </div>
+                    </div>
+                    <div class="l">
+                      <!-- <span>63%</span> -->
+                      <span>137</span>
+                    </div>
+                  </a>
+                  <a href="" class="news_item">
+                    <div class="r">
+                      <div class="right">
+                        <i class="bi bi-bell list_icon"></i>
+                      </div>
+                      <div class="left">
+                        <p>
+                          دانشگاه تهران
+                        </p>
+                      </div>
+                    </div>
+                    <div class="l">
+                      <!-- <span>63%</span> -->
+                      <span>109</span>
+                    </div>
+                  </a>
+                  <a href="" class="news_item">
+                    <div class="r">
+                      <div class="right">
+                        <i class="bi bi-bell list_icon"></i>
+                      </div>
+                      <div class="left">
+                        <p>
+                          دانشگاه فردوسی مشهد
+                        </p>
+                      </div>
+                    </div>
+                    <div class="l">
+                      <!-- <span>63%</span> -->
+                      <span>46</span>
+                    </div>
+                  </a>
+                  <a href="" class="news_item">
+                    <div class="r">
+                      <div class="right">
+                        <i class="bi bi-bell list_icon"></i>
+                      </div>
+                      <div class="left">
+                        <p>
+                          دانشگاه علامه طباطبایی
+                        </p>
+                      </div>
+                    </div>
+                    <div class="l">
+                      <!-- <span>63%</span> -->
+                      <span>43</span>
+                    </div>
+                  </a>
+                  <a href="" class="news_item">
+                    <div class="r">
+                      <div class="right">
+                        <i class="bi bi-bell list_icon"></i>
+                      </div>
+                      <div class="left">
+                        <p>
+                          دانشگاه تبریز
+                        </p>
+                      </div>
+                    </div>
+                    <div class="l">
+                      <!-- <span>63%</span> -->
+                      <span>36</span>
+                    </div>
+                  </a>
+
+                  <a href="" class="news_item">
+                    <div class="r">
+                      <div class="right">
+                        <i class="bi bi-bell list_icon"></i>
+                      </div>
+                      <div class="left">
+                        <p>
+                          دانشگاه اصفهان
+                        </p>
+                      </div>
+                    </div>
+                    <div class="l">
+                      <!-- <span>63%</span> -->
+                      <span>34</span>
+                    </div>
+                  </a>
+
+                  <a href="" class="news_item">
+                    <div class="r">
+                      <div class="right">
+                        <i class="bi bi-bell list_icon"></i>
+                      </div>
+                      <div class="left">
+                        <p>
+                          دانشگاه شهید بهشتی
+                        </p>
+                      </div>
+                    </div>
+                    <div class="l">
+                      <!-- <span>63%</span> -->
+                      <span>32</span>
+                    </div>
+                  </a>
+
+                  <a href="" class="news_item">
+                    <div class="r">
+                      <div class="right">
+                        <i class="bi bi-bell list_icon"></i>
+                      </div>
+                      <div class="left">
+                        <p>
+                          دانشگاه پیام نور
+                        </p>
+                      </div>
+                    </div>
+                    <div class="l">
+                      <!-- <span>63%</span> -->
+                      <span>31</span>
+                    </div>
+                  </a>
+
+                  <a href="" class="news_item">
+                    <div class="r">
+                      <div class="right">
+                        <i class="bi bi-bell list_icon"></i>
+                      </div>
+                      <div class="left">
+                        <p>
+                          دانشگاه تربیت مدرس
+                        </p>
+                      </div>
+                    </div>
+                    <div class="l">
+                      <!-- <span>63%</span> -->
+                      <span>26</span>
+                    </div>
+                  </a>
+
+                  <a href="" class="news_item">
+                    <div class="r">
+                      <div class="right">
+                        <i class="bi bi-bell list_icon"></i>
+                      </div>
+                      <div class="left">
+                        <p>
+                          دانشگاه جامع امام حسین (ع)
+                        </p>
+                      </div>
+                    </div>
+                    <div class="l">
+                      <!-- <span>63%</span> -->
+                      <span>24</span>
+                    </div>
+                  </a>
+
+
+                  <a href="" class="news_item">
+                    <div class="r">
+                      <div class="right">
+                        <i class="bi bi-bell list_icon"></i>
+                      </div>
+                      <div class="left">
+                        <p>
+                          دانشگاه خوارزمی
+                        </p>
+                      </div>
+                    </div>
+                    <div class="l">
+                      <!-- <span>63%</span> -->
+                      <span>22</span>
+                    </div>
+                  </a>
+
+
+                </div>
+              </div>
+
+            </div>
+
+            <div class="col-md-6">
+
+              <div id="box_news" class="box with_more_btn">
+                <div class="box_header">
+                  <h5>فهرست نشریه‌ها بر پایه موضوع</h5>
+                  <span>
+                    <a class="btn_more_news" href="/Home/Announcoment"> <i class="bi bi-arrow-left"></i> </a>
+                    <div class="btn_more_news_tooltip" style="display: none;"><span>بیشتر</span></div>
+                  </span>
+                </div>
+                <div class="box_body">
+                  <div id="container2"></div>
+
+                </div>
+              </div>
+
+            </div>
+            <div class="col-md-6">
+
+
+              <div id="box_news" class="box with_more_btn">
+                <div class="box_header">
+                  <h5>اخبار و تازه‌ها</h5>
+
+                </div>
+                <div class="box_body">
+
+                  <div id="container3"></div>
+
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+
+
+        </div>
+      </div>
+    </div>
+    <!-- course-area -->
+
+
+
+
+  </main>
+
+
+  <!-- footer area -->
+  <footer class="footer-area">
+    <div class="footer-shape">
+      <img src="assets/img/03(7).png" alt="">
+    </div>
+    <div class="footer-widget">
+      <div class="container">
+        <div class="row footer-widget-wrapper pt-100 pb-70">
+          <div class="col-md-2 col-sm-12">
+            <div class="footer-widget-box about-us" style="    text-align: center;">
+              <a href="" class="footer-logo">
+                <img src="assets/img/va-logo-w.png" alt="">
+              </a>
+
+
+            </div>
+          </div>
+
+          <div class="col-md-10 col-sm-12">
+            <div class="footer-widget-box list">
+              <!-- <h4 class="footer-widget-title">Newsletter</h4> -->
+              <div class="footer-newsletter">
+
+                <p class="mb-3">
+                  معاونت پژوهشی / دفتر سیاستگذاری و برنامه ریزی امور پژوهشی
+                </p>
+                <p>
+                  ارسال نظرات، درخواست تصصیح اطلاعات
+                </p>
+                <p>
+
+                  چنانچه نظری در مورد سامانه و عملکرد آن دارید تقاضامند است ما را در جریان بگذارید
+                </p>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">
+      <div class="container">
+        <div class="copyright-wrapper">
+          <div class="row">
+            <div class="col-md-12 align-self-center">
+              <p class="copyright-text">
+                © کلیه حقوق این وب سایت و مطالب آن متعلق به دفتر پژوهشی معاونت پژوهش وفناوری وزارت علوم، تحقیقات و
+                فناوری بوده و هر استفاده از مطالب آن با ذکر منبع بلامانع است.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- footer area end -->
+
+
+  <!-- scroll-top -->
+  <a href="" id="scroll-top" class=""><i class="bi bi-arrow-up"></i></a>
+  <!-- scroll-top end -->
+
+
+
+
+  <script src="assets/vendor/highcharts/highcharts.js"></script>
+  <script src="assets/vendor/highcharts/exporting.js"></script>
+  <script src="assets/vendor/highcharts/series-label.js"></script>
+  <script src="assets/vendor/highcharts/export-data.js"></script>
+  <script src="assets/vendor/highcharts/accessibility.js"></script>
+
+
+  <script>
+    Highcharts.chart('container', {
+      chart: {
+        zoomType: 'xy'
+      },
+      title: {
+        text: 'فهرست نشریه‌ها بر پایه ارزشیابی'
+      },
+      xAxis: [{
+        categories: ['سال 1402', 'سال 1401', 'سال 1400', 'سال 1399', 'سال 1398'],
+        crosshair: true
+      }],
+      yAxis: [{ // Primary yAxis
+        labels: {
+          format: '{value}',
+          style: {
+            color: Highcharts.getOptions().colors[1]
+          }
+        },
+        title: {
+          text: 'همه نشریه‌ها',
+          style: {
+            color: Highcharts.getOptions().colors[1]
+          }
+        }
+      }, { // Secondary yAxis
+        title: {
+          text: 'نشریه‌های بین‌المللی',
+          style: {
+            color: Highcharts.getOptions().colors[0]
+          }
+        },
+        labels: {
+          format: '{value}',
+          style: {
+            color: Highcharts.getOptions().colors[0]
+          }
+        },
+        opposite: true
+      }],
+      tooltip: {
+        shared: true
+      },
+      plotOptions: {
+        column: {
+          stacking: 'normal'
+        }
+      },
+      series: [{
+        name: 'الف',
+        type: 'column',
+        data: [422, 352, 237, 117, 111],
+        color: '#00e272'
+
+      }, {
+        name: 'ب',
+        type: 'column',
+        data: [980, 964, 990, 919, 891],
+        color: '#2caffe'
+
+      }, {
+        name: 'ج',
+        type: 'column',
+        data: [108, 98, 87, 163, 143],
+        color: '#e5da0f'
+
+      }, {
+        name: 'د',
+        type: 'column',
+        data: [27, 20, 18, 16, 23],
+        color: '#fe6a35'
+
+      }, {
+        name: 'بین‌المللی',
+        type: 'spline',
+        yAxis: 1,
+        data: [202, 163, 110, 94, 77],
+        tooltip: {
+          valueSuffix: ''
+        },
+        color: '#cf66e1',
+      }]
+    });
+  </script>
+
+  <script>
+    Highcharts.chart('container1', {
+      chart: {
+        type: 'bar'
+      },
+      title: {
+        text: 'موضوع نشریه‌ها'
+      },
+      subtitle: {
+        text: ''
+      },
+      xAxis: {
+        categories: ['علوم انسانی', 'فنی و مهندسی', 'کشاورزی و منابع طبیعی', 'علوم پایه', 'هنر و معماری', 'دامپزشکی'],
+        title: {
+          text: null
+        },
+        gridLineWidth: 1,
+        lineWidth: 0
+      },
+      yAxis: {
+        min: 0,
+        title: {
+          text: 'تعداد',
+          align: 'high'
+        },
+        labels: {
+          overflow: 'justify'
+        },
+        gridLineWidth: 0
+      },
+      tooltip: {
+        valueSuffix: ' '
+      },
+      plotOptions: {
+        bar: {
+          borderRadius: '50%',
+          dataLabels: {
+            enabled: true
+          },
+          groupPadding: 0.1
+        }
+      },
+      legend: {
+        layout: 'vertical',
+        align: 'right',
+        verticalAlign: 'top',
+        x: -40,
+        y: 80,
+        floating: true,
+        borderWidth: 1,
+        backgroundColor:
+          Highcharts.defaultOptions.legend.backgroundColor || '#FFFFFF',
+        shadow: true
+      },
+      credits: {
+        enabled: false
+      },
+      series: [{
+        name: 'نشریه‌ها',
+        data: [994, 254, 210, 200, 64, 24]
+      }],
+      legend: { enabled: false }
+    });
+
+  </script>
+
+
+
+  <script>
+    Highcharts.chart('container2', {
+      chart: {
+        type: 'column'
+      },
+      title: {
+        text: 'فهرست نشریه‌ها بر پایه موضوع'
+      },
+      subtitle: {
+        text:
+          ''
+      },
+      xAxis: {
+        categories: ['ماهنامه', 'دو ماهنامه', 'فصلنامه', 'دو فصلنامه'],
+        crosshair: true,
+        accessibility: {
+          description: ''
+        }
+      },
+      yAxis: {
+        min: 0,
+        title: {
+          text: 'تعداد'
+        }
+      },
+      tooltip: {
+        valueSuffix: ''
+      },
+      plotOptions: {
+        column: {
+          pointPadding: 0.2,
+          borderWidth: 0
+        }
+      },
+      series: [
+        {
+          name: '',
+          data: [1140, 549, 31, 26]
+        },
+      ]
+      ,
+      legend: { enabled: false }
+    });
+
+  </script>
+
+  <script>
+    Highcharts.chart('container3', {
+      chart: {
+        plotBackgroundColor: null,
+        plotBorderWidth: 0,
+        plotShadow: false
+      },
+      title: {
+        text: 'وضعیت نشریه‌ها',
+        align: 'center',
+        verticalAlign: 'middle',
+        y: 60,
+        style: {
+          fontSize: '1.1em'
+        }
+      },
+      tooltip: {
+        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+      },
+      accessibility: {
+        point: {
+          valueSuffix: '%'
+        }
+      },
+      plotOptions: {
+        pie: {
+          dataLabels: {
+            enabled: true,
+            distance: -50,
+            style: {
+              fontWeight: 'bold',
+              color: 'white'
+            }
+          },
+          startAngle: -90,
+          endAngle: 90,
+          center: ['50%', '75%'],
+          size: '110%'
+        }
+      },
+      series: [{
+        type: 'pie',
+        name: '',
+        innerSize: '50%',
+        data: [
+          ['فعال', 1752],
+          ['لغو شده', 30]
+        ]
+      }]
+    });
+  </script>
+
+
+  <!-- js -->
+  <script src="./o-v/jquery-3.7.1.min.js"></script>
+  <script src="./o-v/modernizr.min.js"></script>
+  <script src="./o-v/bootstrap.bundle.min.js"></script>
+  <script src="./o-v/imagesloaded.pkgd.min.js"></script>
+  <script src="./o-v/jquery.magnific-popup.min.js"></script>
+  <script src="./o-v/isotope.pkgd.min.js"></script>
+  <script src="./o-v/jquery.appear.min.js"></script>
+  <script src="./o-v/jquery.easing.min.js"></script>
+  <script src="./o-v/owl.carousel.min.js"></script>
+  <script src="./o-v/counter-up.js"></script>
+  <script src="./o-v/wow.min.js"></script>
+  <script src="./o-v/main.js"></script>
+
+
+  <!-- searchable table -->
+  <script src="assets/vendor/dataTable/jquery.dataTables.min.js"></script>
+  <script src="assets/vendor/dataTable/dataTables.bootstrap5.min.js"></script>
+  <script src="assets/vendor/dataTable/dataTables.searchPanes.min.js"></script>
+  <script src="assets/vendor/dataTable/searchPanes.bootstrap5.min.js"></script>
+  <script src="assets/vendor/dataTable/dataTables.select.min.js"></script>
+
+
+  <script>
+    $(document).ready(function () {
+      var table = $('#results_table').DataTable({
+        // ordering: false,
+        // // paging: false,
+        // searchPanes: true
+
+      });
+    });
+
+
+
+
+
+  </script>
+
+
+
+
+</body>
+
+</html>

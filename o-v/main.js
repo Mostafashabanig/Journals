@@ -455,3 +455,73 @@ $(document).ready(function() {
     $input.focus();
   });
 });
+
+
+
+
+
+
+//header: date 
+$(document).ready(function () {
+    moment.loadPersian({ usePersianDigits: true });
+
+    const todayJalali = moment().format('dddd jD jMMMM jYYYY');
+    const formattedDate = `امروز: ${todayJalali}`;
+
+    $('.header-top-left .header-top-social').text(formattedDate);
+});
+
+
+
+
+
+
+
+// index: searchBox filters binding
+$(document).ready(function() {
+  $('.searchBox select').select2({ allowClear: true });
+  var originalOptionsMap = {};
+  function updateDependencies(parentSelector, childSelector, placeholderText) {
+    var $parent = $(parentSelector);
+    var $child = $(childSelector);
+
+    if (!originalOptionsMap[childSelector]) {
+      originalOptionsMap[childSelector] = $child.html();
+    }
+
+    function initializeChild() {
+      $child.html('<option value="">' + placeholderText + '</option>');
+      $child.select2('destroy').select2({ allowClear: true });
+      $child.prop('disabled', false);
+    }
+
+    initializeChild();
+
+    $parent.on('change', function() {
+      var selectedGroup = $parent.val();
+
+      $child.prop('disabled', true);
+      $child.select2('destroy').html('<option value="">درحال بارگیری...</option>').select2({ allowClear: true });
+
+      setTimeout(function() {
+        var optionsHtml = '<option value="">' + placeholderText + '</option>';
+
+        if (selectedGroup) {
+
+          $(originalOptionsMap[childSelector]).filter('option').each(function() {
+            var $option = $(this);
+            if ($option.data('group') == selectedGroup) {
+              optionsHtml += $option.prop('outerHTML');
+            }
+          });
+        }
+
+        $child.html(optionsHtml).select2({ allowClear: true });
+        $child.prop('disabled', false);
+      }, 250);
+    });
+  }
+
+  updateDependencies('#selectFilter1', '#selectFilter2', 'زیرگروه');
+  updateDependencies('#selectFilter4', '#selectFilter5', 'زیرگروه');
+});
