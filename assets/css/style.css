@@ -490,7 +490,9 @@
 .hide {
   display: none !important;
 }
-
+.hide1 {
+  display: none !important;
+}
 
 
 
@@ -7746,6 +7748,11 @@ text {
 
 
 
+.searchPage .filterInfo{
+  display: none;
+}
+
+
 .datatable-top,
 .datatable-bottom {
   padding: 8px 10px;
@@ -8266,8 +8273,16 @@ div.dataTables_wrapper div.dataTables_filter {
 .searchPage .sidebar .boxBody li {
   padding: 2px 2px;
 }
+.searchPage .sidebar .boxBody li:hover .checkbox-wrapper-65 .cbx {
+  background-image: linear-gradient(#e5e7ef, #d6dae6fc);
+  transition: 0.15s;
+}
 
-.searchPage .sidebar .boxBody li:not(:last-child) {
+
+/* .searchPage .sidebar .boxBody li:not(:last-child) {
+  border-bottom: 1px solid #0000000d;
+} */
+.sidebar .boxBody li:not(.last-visible-item) {
   border-bottom: 1px solid #0000000d;
 }
 
@@ -8368,7 +8383,7 @@ div.dataTables_wrapper div.dataTables_filter {
   padding: 2px 10px;
   font-size: 0.85rem;
   color: #444;
-  font-weight: 400;
+  font-weight: 300;
   width: 100%;
 }
 

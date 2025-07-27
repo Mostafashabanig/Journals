@@ -411,6 +411,39 @@ $(document).ready(function () {
         });
       }
     });
+
+
+    $(".searchPage .jTitle").each(function(){
+      var $span = $(this);
+      var txt = $span.text();
+      var lang; 
+  
+     
+      for(var i=0, ch; i<txt.length; i++){
+        ch = txt.charAt(i);
+        if (persianRe.test(ch)) { lang = "fa"; break; }
+        if (englishRe.test(ch)) { lang = "en"; break; }
+       
+      }
+      
+      if (!lang) lang = "fa";
+  
+      
+      if (lang === "en") {
+        $(this).css({
+          "direction": "ltr",
+          "text-align": "left"
+        });
+        $(this).closest('td').css({
+          "direction": "ltr",
+        })
+      } else {
+        $(this).css({
+          "direction": "rtl",
+          "text-align": "right"
+        });
+      }
+    });
   });
   
 });
@@ -525,3 +558,28 @@ $(document).ready(function() {
   updateDependencies('#selectFilter1', '#selectFilter2', 'زیرگروه');
   updateDependencies('#selectFilter4', '#selectFilter5', 'زیرگروه');
 });
+
+
+
+
+
+
+
+
+// alert searched data
+//   $(document).ready(function() {
+//   $('.indexPage .searchBox input[type="submit"]').click(function(event) {
+//     event.preventDefault(); 
+
+//     var title = $('input[name="query"]').val();
+//     var group = $('select[name="Group"]').val();
+//     var subgroup = $('select[name="SubGroupId"]').val();
+//     var language = $('select[name="Language"]').val();
+//     var applicant = $('select[name="Applicant"]').val();
+//     var university = $('select[name="UniversityId"]').val();
+//     var status = $('select[name="Status"]').val();
+   
+//     alert(title+" "+group);
+//   });
+// });
+
