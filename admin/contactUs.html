@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <title>پرتال نشریات علمی</title>
+
+    <!-- Custom fonts for this template-->
+    <link
+      href="vendor/fontawesome-free/css/all.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <link
+      href="../assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin-2.css" rel="stylesheet" />
+  </head>
+
+  <body id="page-top">
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+      <!-- Sidebar -->
+      <ul
+        class="navbar-nav sidebar sidebar-dark accordion"
+        id="accordionSidebar"
+      >
+        <!-- Sidebar - Brand -->
+        <a
+          class="sidebar-brand d-flex align-items-center justify-content-center"
+          href="index.html"
+        >
+          <div class="sidebar-brand-icon rotate-n-15"></div>
+          <div class="sidebar-brand-text mx-3">
+            <!-- پرتال نشریات علمی -->
+            <img class="titleImg" src="img/title.png" alt="" />
+          </div>
+        </a>
+
+        <!-- Divider -->
+        <hr class="sidebar-divider my-0" />
+
+        <!-- Nav Item - Dashboard -->
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">
+            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <span>داشبورد</span></a
+          >
+        </li>
+
+        <!-- Divider -->
+        <hr class="sidebar-divider" />
+
+        <!-- Heading -->
+        <div class="sidebar-heading">محتوی</div>
+        <!-- Nav Item - Pages Collapse Menu -->
+        <li class="nav-item">
+          <a
+            class="nav-link collapsed"
+            href="#collapseTwo"
+            data-bs-toggle="collapse"
+            role="button"
+            aria-expanded="false"
+            aria-controls="collapseTwo"
+          >
+            <i class="fas fa-fw fa-cog"></i>
+            <span>نشریات</span>
+          </a>
+
+          <div
+            class="collapse"
+            id="collapseTwo"
+            data-bs-parent="#accordionSidebar"
+          >
+            <div class="bg-white py-2 collapse-inner rounded">
+              <!-- <h6 class="collapse-header">Custom Components:</h6> -->
+              <a class="collapse-item" href="./addPublisher.html"
+                >افزودن نشریه تازه</a
+              >
+              <a class="collapse-item" href="./publishers.html"
+                >مشاهده نشریه‌ها</a
+              >
+            </div>
+          </div>
+        </li>
+
+        <!-- Nav Item - Utilities Collapse Menu -->
+        <li class="nav-item">
+          <a
+            class="nav-link collapsed"
+            href="#collapseUtilities"
+            data-bs-toggle="collapse"
+            role="button"
+            aria-expanded="false"
+            aria-controls="collapseUtilities"
+          >
+            <i class="fas fa-fw fa-wrench"></i>
+            <span>صفحات جانبی</span>
+          </a>
+          <div
+            id="collapseUtilities"
+            class="collapse"
+            data-bs-parent="#accordionSidebar"
+          >
+            <div class="bg-white py-2 collapse-inner rounded">
+              <!-- <h6 class="collapse-header">Custom Utilities:</h6> -->
+              <a class="collapse-item" href="./contactUs.html">تماس با ما</a>
+              <a class="collapse-item" href="./faq.html">پرسش‌های همیشگی</a>
+            </div>
+          </div>
+        </li>
+
+        <!-- Divider -->
+        <hr class="sidebar-divider" />
+
+        <!-- Sidebar Toggler (Sidebar) -->
+        <div class="text-center d-none d-md-inline">
+          <button class="rounded-circle border-0" id="sidebarToggle"></button>
+        </div>
+      </ul>
+      <!-- End of Sidebar -->
+
+      <!-- Content Wrapper -->
+      <div id="content-wrapper" class="d-flex flex-column">
+        <!-- Main Content -->
+        <div id="content">
+          <!-- Topbar -->
+          <nav
+            class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow"
+          >
+            <!-- Sidebar Toggle (Topbar) -->
+            <button
+              id="sidebarToggleTop"
+              class="btn btn-link d-md-none rounded-circle mr-3"
+            >
+              <i class="fa fa-bars"></i>
+            </button>
+
+            <!-- Topbar Search -->
+            <!-- <form
+                        class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+                        <div class="input-group">
+                            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
+                                aria-label="Search" aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary" type="button">
+                                    <i class="fas fa-search fa-sm"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form> -->
+
+            <!-- Topbar Navbar -->
+            <ul class="navbar-nav mr-auto">
+              <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+              <li class="nav-item dropdown no-arrow d-sm-none">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="searchDropdown"
+                  role="button"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  <i class="fas fa-search fa-fw"></i>
+                </a>
+                <!-- Dropdown - Messages -->
+                <div
+                  class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+                  aria-labelledby="searchDropdown"
+                >
+                  <form class="form-inline mr-auto w-100 navbar-search">
+                    <div class="input-group">
+                      <input
+                        type="text"
+                        class="form-control bg-light border-0 small"
+                        placeholder="Search for..."
+                        aria-label="Search"
+                        aria-describedby="basic-addon2"
+                      />
+                      <div class="input-group-append">
+                        <button class="btn btn-primary" type="button">
+                          <i class="fas fa-search fa-sm"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </li>
+
+              <div class="topbar-divider d-none d-sm-block"></div>
+
+              <!-- Nav Item - User Information -->
+              <li class="nav-item dropdown no-arrow">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="userDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <span class="ms-2 d-none d-lg-inline text-gray-600 small">
+                    نام و نام خانوادگی
+                  </span>
+                  <img
+                    class="img-profile rounded-circle"
+                    src="img/undraw_profile.svg"
+                    alt="Profile"
+                  />
+                </a>
+              
+                <!-- Dropdown - User Information -->
+                <ul class="dropdown-menu dropdown-menu-end shadow animated--grow-in" aria-labelledby="userDropdown">
+                  <li>
+                    <a class="dropdown-item" href="./index.html">
+                      <i class="fas fa-user fa-sm fa-fw ms-2 text-gray-400"></i>
+                      پروفایل
+                    </a>
+                  </li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="#"
+                      data-bs-toggle="modal"
+                      data-bs-target="#logoutModal"
+                    >
+                      <i class="fas fa-sign-out-alt fa-sm fa-fw ms-2 text-gray-400"></i>
+                      خروج از حساب
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              
+            </ul>
+          </nav>
+          <!-- End of Topbar -->
+
+          <!-- Begin Page Content -->
+          <div class="container-fluid contactPage">
+            <!-- Page Heading -->
+            <div
+              class="d-sm-flex align-items-center justify-content-between mb-4"
+            >
+              <h1 class="h3 mb-0 text-gray-800">ویرایش صفحه تماس با ما</h1>
+              <div class="btns">
+              <a id="editOrder" class="btn btn-primary shadow-sm">ویرایش ترتیب</a >
+              <a id="editValues" class="btn btn-success shadow-sm" >ویرایش مقادیر</a >
+            </div>
+            </div>
+
+            <div class="row" style="justify-content: center;">
+              <!-- <div class="col-md-12">
+              <div class="holder">
+                <div class="sortIcon"><i class="bi bi-list"></i></div>
+                <div class="personBox">
+                  <div class="personInfo">
+                      <div class="right">
+                          <i class="bi bi-person"></i>
+                      </div>
+                      <div class="left">
+                
+                          <h4>خانم خرسند</h4>
+                          <p class="desc1">رئیس گروه نشریات علمی</p>
+                      
+                      </div>
+                  </div>
+  
+                  <div class="row">
+  
+                      <div class="col-auto">
+                          <div class="contact-info">
+                              <div class="contact-info-icon">
+                                  <i class="bi bi-telephone"></i>
+                              </div>
+                              <div class="contact-info-content">
+                                  <h5>تلفن تماس</h5>
+                                  <p>۰۲۱-۸۲۲۳۳۵۸۲</p>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-auto">
+                          <div class="contact-info">
+                              <div class="contact-info-icon">
+                                  <i class="bi bi-envelope"></i>
+                              </div>
+                              <div class="contact-info-content">
+                                  <h5>رایانامه</h5>
+                                  <p>journals@msrt.ir</p>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-auto">
+                          <div class="contact-info">
+                              <div class="contact-info-icon">
+                                  <i class="bi bi-alarm"></i>
+                              </div>
+                              <div class="contact-info-content">
+                                  <h5>زمان پاسخگویی</h5>
+                                  <p style="  text-align: right;">شنبه تا چهارشنبه (08:00 - 16:00)</p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="editIcon"><i class="bi bi-pencil-square"></i></div>
+              </div>
+
+            </div> -->
+
+              <div id="sortable-container">
+                <div class="col-md-12" id="person-1">
+                  <div class="holder">
+                    <div class="sortIcon"><i class="bi bi-list"></i></div>
+                    <div class="personBox">
+                      <div class="personInfo">
+                        <div class="right">
+                          <i class="bi bi-person"></i>
+                        </div>
+                        <div class="left">
+                          <h4 class="person-name"> خانم رحمتی
+                          </h4>
+                          <p class="desc1 person-title">
+                            رئیس گروه نشریات علمی
+                          </p>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-auto">
+                          <div class="contact-info">
+                            <div class="contact-info-icon">
+                              <i class="bi bi-telephone"></i>
+                            </div>
+                            <div class="contact-info-content">
+                              <h5>تلفن تماس</h5>
+                              <p class="phone-number">۰۲۱-۸۲۲۳۳۵۸۲</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-auto">
+                          <div class="contact-info">
+                            <div class="contact-info-icon">
+                              <i class="bi bi-envelope"></i>
+                            </div>
+                            <div class="contact-info-content">
+                              <h5>رایانامه</h5>
+                              <p class="email-address">journals@msrt.ir</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-auto">
+                          <div class="contact-info">
+                            <div class="contact-info-icon">
+                              <i class="bi bi-alarm"></i>
+                            </div>
+                            <div class="contact-info-content">
+                              <h5>زمان پاسخگویی</h5>
+                              <p
+                                class="response-time"
+                                style="text-align: right"
+                              >
+                                شنبه تا چهارشنبه (08:00 - 16:00)
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="editIcon">
+                      <i class="bi bi-pencil-square editBtn"></i>
+                      <i class="bi bi-trash3"></i>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-12" id="person-2">
+                  <div class="holder">
+                    <div class="sortIcon"><i class="bi bi-list"></i></div>
+                    <div class="personBox">
+                      <div class="personInfo">
+                        <div class="right">
+                          <i class="bi bi-person"></i>
+                        </div>
+                        <div class="left">
+                          <h4 class="person-name">خانم حاج حسینی</h4>
+                          <p class="desc1 person-title">
+                            رئیس گروه نشریات علمی
+                          </p>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-auto">
+                          <div class="contact-info">
+                            <div class="contact-info-icon">
+                              <i class="bi bi-telephone"></i>
+                            </div>
+                            <div class="contact-info-content">
+                              <h5>تلفن تماس</h5>
+                              <p class="phone-number">۰۲۱-۸۲۲۳۳۵۸۲</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-auto">
+                          <div class="contact-info">
+                            <div class="contact-info-icon">
+                              <i class="bi bi-envelope"></i>
+                            </div>
+                            <div class="contact-info-content">
+                              <h5>رایانامه</h5>
+                              <p class="email-address">journals@msrt.ir</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-auto">
+                          <div class="contact-info">
+                            <div class="contact-info-icon">
+                              <i class="bi bi-alarm"></i>
+                            </div>
+                            <div class="contact-info-content">
+                              <h5>زمان پاسخگویی</h5>
+                              <p
+                                class="response-time"
+                                style="text-align: right"
+                              >
+                                شنبه تا چهارشنبه (08:00 - 16:00)
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="editIcon">
+                      <i class="bi bi-pencil-square editBtn"></i>
+                      <i class="bi bi-trash3"></i>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-12" id="person-3">
+                  <div class="holder">
+                    <div class="sortIcon"><i class="bi bi-list"></i></div>
+                    <div class="personBox">
+                      <div class="personInfo">
+                        <div class="right">
+                          <i class="bi bi-person"></i>
+                        </div>
+                        <div class="left">
+                          <h4 class="person-name">خانم خرسند</h4>
+                          <p class="desc1 person-title">
+                            رئیس گروه نشریات علمی
+                          </p>
+                        </div>
+                      </div>
+                      <p class="desc2">
+                        (ادبیات و زبانها، تاریخ، علوم اجتماعی، علوم سیاسی، علم اطلاعات و دانش شناسی، آرشیو و نسخه پژوهی،
+                        مدیریت،
+                        حسابداری، اقتصاد، جغرافیا و مالی)
+                    </p>
+                      <div class="row">
+                        <div class="col-auto">
+                          <div class="contact-info">
+                            <div class="contact-info-icon">
+                              <i class="bi bi-telephone"></i>
+                            </div>
+                            <div class="contact-info-content">
+                              <h5>تلفن تماس</h5>
+                              <p class="phone-number">۰۲۱-۸۲۲۳۳۵۸۲</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-auto">
+                          <div class="contact-info">
+                            <div class="contact-info-icon">
+                              <i class="bi bi-envelope"></i>
+                            </div>
+                            <div class="contact-info-content">
+                              <h5>رایانامه</h5>
+                              <p class="email-address">journals@msrt.ir</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-auto">
+                          <div class="contact-info">
+                            <div class="contact-info-icon">
+                              <i class="bi bi-alarm"></i>
+                            </div>
+                            <div class="contact-info-content">
+                              <h5>زمان پاسخگویی</h5>
+                              <p
+                                class="response-time"
+                                style="text-align: right"
+                              >
+                                شنبه تا چهارشنبه (08:00 - 16:00)
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="editIcon">
+                      <i class="bi bi-pencil-square editBtn"></i>
+                      <i class="bi bi-trash3"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <button id="submit" class="btn btn-primary mt-3">
+                  ذخیره ترتیب
+                </button>
+              </div>
+
+              <div
+                class="modal fade"
+                id="editModal"
+                tabindex="-1"
+                aria-labelledby="editModalLabel"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="editModalLabel">
+                        ویرایش اطلاعات
+                      </h5>
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      >
+                        <i class="bi bi-x-lg"></i>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <form id="editForm">
+                        <div class="mb-3">
+                          <label for="editName" class="form-label">نام</label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="editName"
+                          />
+                        </div>
+                        <div class="mb-3">
+                          <label for="editTitle" class="form-label"
+                            >عنوان</label
+                          >
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="editTitle"
+                          />
+                        </div>
+                        <div class="mb-3">
+                          <label for="editDescription" class="form-label"
+                            >توضیحات</label
+                          >
+                          <textarea
+                            class="form-control"
+                            id="editDescription"
+                            rows="4"
+                          ></textarea>
+                        </div>
+                        <div class="mb-3">
+                          <label for="editPhone" class="form-label"
+                            >تلفن</label
+                          >
+                          <input
+                            type="tel"
+                            class="form-control"
+                            id="editPhone"
+                          />
+                        </div>
+                        <div class="mb-3">
+                          <label for="editEmail" class="form-label"
+                            >رایانامه</label
+                          >
+                          <input
+                            type="email"
+                            class="form-control"
+                            id="editEmail"
+                            style="direction: ltr; text-align: left;"
+                          />
+                        </div>
+                        <div class="mb-3">
+                          <label for="editResponseTime" class="form-label"
+                            >زمان پاسخگویی</label
+                          >
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="editResponseTime"
+                          />
+                        </div>
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button
+                        type="button"
+                        class="btn btn-secondary"
+                        data-bs-dismiss="modal"
+                      >
+                        لغو
+                      </button>
+                      <button
+                        type="button"
+                        class="btn btn-primary"
+                        id="modalSubmitBtn"
+                      >
+                        ذخیره تغییرات
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- /.container-fluid -->
+        </div>
+        <!-- End of Main Content -->
+
+
+        <div class="notification" id="myNotification">
+          <strong>اعلان!</strong>تغییرات انجام شد.
+        </div>
+
+
+
+        <!-- Footer -->
+        <footer class="sticky-footer">
+          <div class="container my-auto">
+            <div class="copyright text-center my-auto">
+              <!-- <span>Copyright &copy; Your Website 2021</span> -->
+            </div>
+          </div>
+        </footer>
+        <!-- End of Footer -->
+      </div>
+      <!-- End of Content Wrapper -->
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+      <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Logout Modal-->
+    <div
+      class="modal fade"
+      id="logoutModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+            <button
+              class="close"
+              type="button"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            Select "Logout" below if you are ready to end your current session.
+          </div>
+          <div class="modal-footer">
+            <button
+              class="btn btn-secondary"
+              type="button"
+              data-dismiss="modal"
+            >
+              Cancel
+            </button>
+            <a class="btn btn-primary" href="login.html">Logout</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/jquery/jquery-ui.min.js"></script>
+    <script src="../assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="vendor/chart.js/Chart.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="js/demo/chart-area-demo.js"></script>
+    <script src="js/demo/chart-pie-demo.js"></script>
+
+    <script>
+      $(function () {
+
+        $("#editOrder").on("click", function () {
+          $(this).hide();
+          $("#editValues").show();
+          $(".editIcon").hide();
+          $(".sortIcon").show();
+          $("#submit").show();
+          $(".contactPage .personBox .row,.desc2").hide();
+        });
+        $("#editValues").on("click", function () {
+          $(this).hide();
+          $("#editOrder").show();
+          $(".editIcon").show();
+          $(".sortIcon").hide();
+          $("#submit").hide();
+          $(".contactPage .personBox .row,.desc2").show();
+        });
+
+
+
+        $(document).on("click", ".editIcon .bi.bi-trash3", function () {
+  if (confirm("برای حذف مطمئن هستید؟")) {
+    $(this).closest(".col-md-12").remove();
+    showNotification(
+      'حذف کارت با موفقیت انجام شد.',
+      'حذف!',
+      'success'
+    );
+  }
+});
+
+
+
+
+
+        let currentEditingCard = null;
+
+        //resotr cards
+
+        $("#sortable-container").sortable({
+          handle: ".sortIcon i",
+          placeholder: "sortable-placeholder",
+          forcePlaceholderSize: true,
+          cursor: "grabbing",
+        });
+
+        $("#submit").on("click", function () {
+          const orderedData = {};
+
+          $("#sortable-container .col-md-12").each(function (index) {
+            if (this.id) {
+              orderedData[this.id] =index+1;
+              // console.log(index)
+            }
+          });
+
+          console.log("Order changed:", orderedData)
+                  showNotification(
+           'ویرایش ترتیب کارت ها با موفقیت انجام شد.',
+           'تغییر ترتیب!',
+           'success'
+        );
+        });
+
+        //open modal
+
+        $(document).on("click", ".editIcon i.editBtn", function () {
+          currentEditingCard = $(this).closest(".col-md-12");
+
+          const originalData = {
+            name: currentEditingCard.find("h4").text().trim(),
+            title: currentEditingCard.find(".desc1").text().trim(),
+            description: currentEditingCard.find(".desc2").text()?.trim() || "",
+            phone: currentEditingCard .find(".bi-telephone") .closest(".contact-info") .find("p") .text() .trim(),
+            email: currentEditingCard .find(".bi-envelope") .closest(".contact-info") .find("p") .text() .trim(),
+            responseTime: currentEditingCard .find(".bi-alarm") .closest(".contact-info") .find("p") .text() .trim(),
+          };
+
+          $("#editForm").data("originalData", originalData);
+          $("#editForm").data("editingId", currentEditingCard.attr("id"));
+
+          $("#editName").val(originalData.name);
+          $("#editTitle").val(originalData.title);
+          $("#editDescription").val(originalData.description);
+          $("#editPhone").val(originalData.phone);
+          $("#editEmail").val(originalData.email);
+          $("#editResponseTime").val(originalData.responseTime);
+
+          $("#editModal").modal("show");
+        });
+
+        $("#modalSubmitBtn").on("click", function () {
+          const originalData = $("#editForm").data("originalData");
+          const editingId = $("#editForm").data("editingId");
+
+          const newData = {
+            name: $("#editName").val().trim(),
+            title: $("#editTitle").val().trim(),
+            description: $("#editDescription").val().trim(),
+            phone: $("#editPhone").val().trim(),
+            email: $("#editEmail").val().trim(),
+            responseTime: $("#editResponseTime").val().trim(),
+          };
+
+          if (JSON.stringify(originalData) === JSON.stringify(newData)) {
+            console.log("no changes");
+            showNotification(
+              'هیچ تغییری در اطلاعات ایجاد نشده است.',
+              'تغییرات!',
+              'warning'
+            );
+            $("#editModal").modal("hide");
+            return;
+          }
+
+          console.log("changes detected:", { id: editingId, ...newData, });
+
+          showNotification(
+            'ویرایش اطلاعات با موفقیت انجام شد.',
+            'تغییرات!',
+            'success'
+          );
+
+          // update cards
+          currentEditingCard.find("h4").text(newData.name);
+          currentEditingCard.find(".desc1").text(newData.title);
+          currentEditingCard .find(".bi-telephone") .closest(".contact-info") .find("p") .text(newData.phone);
+          currentEditingCard .find(".bi-envelope") .closest(".contact-info") .find("p") .text(newData.email);
+          currentEditingCard .find(".bi-alarm") .closest(".contact-info") .find("p") .text(newData.responseTime);
+
+          const descElement = currentEditingCard.find(".desc2");
+          if (newData.description) {
+            if (descElement.length) {
+              descElement.text(newData.description).show();
+            } else {
+              $('<p class="desc2"></p>') .text(newData.description) .insertAfter(currentEditingCard.find(".personInfo"));
+            }
+          } else {
+            descElement.hide();
+          }
+
+          $("#editModal").modal("hide");
+        });
+      });
+
+
+      
+function showNotification(content, title, type) {
+   
+   $('#myNotification').fadeOut(50);
+   if (typeof notif_timer !== 'undefined') {
+       if (notif_timer) {
+           clearTimeout(notif_timer);
+       }
+   }
+   var notification = $('#myNotification');
+
+   notification.html('<strong>' + title + '</strong>' + content);
+
+   if (type === 'success') {
+       notification.css('background-color', '#3dcf97');
+   } else if (type === 'error') {
+       notification.css('background-color', '#f44336');
+   } else {
+       notification.css('background-color', '#2196F3');
+   }
+
+   /*alert('heree');*/
+   notification.fadeIn();
+   notif_timer = setTimeout(function () {
+       notification.fadeOut();
+   }, 5000);
+}
+
+
+    </script>
+  </body>
+</html>

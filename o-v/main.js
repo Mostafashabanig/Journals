@@ -583,3 +583,68 @@ $(document).ready(function() {
 //   });
 // });
 
+
+
+
+
+
+
+
+
+//Register popup
+$(document).ready(function () {
+  $('.registerPopupBackground').on('click', function (event) {
+    closeRegisterPopup();
+  });
+
+  $('header .theme-btn').on('click', function (event) {
+    // alert('ssdfsd');
+    openRegisterPopup();
+  });
+
+  $('div.registerPopup .box .boxHeader i.bi-x').on('click', function (event) {
+    closeRegisterPopup();
+  });
+
+
+  function openRegisterPopup() {
+    $('.registerPopup').fadeIn('fast');
+    $('.registerPopupBackground').fadeIn('fast');
+  }
+  function closeRegisterPopup() {
+    $('.registerPopup').fadeOut('fast');
+    $('.registerPopupBackground').fadeOut('fast');
+  }
+
+
+
+
+
+  $('div.registerPopup a.goRegisterBtn').on('click', function (e) {
+    e.preventDefault();
+
+
+    $(this).closest('.box').hide();
+    $('#enterSms.box').show();
+
+  });
+
+
+
+  $('div.registerPopup a.goLoginBtn').on('click', function (e) {
+    e.preventDefault();
+
+    $(this).closest('.box').hide();
+    $('#sendSms.box').show();
+
+  });
+
+
+
+  $('div.registerPopup a.submit').on('click', function (e) {
+    e.preventDefault();
+    alert('ورود');
+  });
+
+});
+
