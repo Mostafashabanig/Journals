@@ -194,7 +194,7 @@
                           اختیار پژوهشگران قرار می‌دهد.
                         </p>
                         <div class="hero-btn" data-animation="fadeInUp" data-delay="1s" style="animation-delay: 1s;">
-                          <a href="" class="theme-btn">ورود به سامانه نشریه‌ها<i
+                          <a class="theme-btn">ورود به سامانه نشریه‌ها<i
                               class="fas fa-arrow-right-long"></i></a>
                           <a href="" class="theme-btn theme-btn2">درباره سامانه<i
                               class="fas fa-arrow-right-long"></i></a>
@@ -232,7 +232,7 @@
                     <h3>جست‌وجوی پیشرفته</h3>
                     <p>برای محدودکردن نتایج جست‌وجو می‌توانید ز فیلتر‌های زیر استفاده کنید..</p>
                   </div>
-                  <form >
+                  <form>
                     <div class="row">
                       <div class="col-lg-12">
                         <div class="form-group">
@@ -2429,53 +2429,52 @@
 
 
 
-<!-- Register modal -->
-  <div class="registerPopupBackground" ></div>
+  <!-- Register modal -->
+  <div class="registerPopupBackground"></div>
   <div class="registerPopup">
 
     <div id="sendSms" class="box">
-      <div class="boxHeader">
-        <h5>ورود به حساب کاربری</h5>
-        <i class="bi bi-x"></i>
-      </div>
-      <div class="boxBody">
-        <h6>نام کاربری</h6>
-        <input type="text" name="" id="userName">
-        <h6>رمز عبور</h6>
-        <input type="password" name="" id="password">
-        <div class="capcha"></div>
-
-        <a class="goRegisterBtn">حساب کاربری ندارید؟</a>
-      </div>
-      <div class="boxFooter">
-        <a class="submitLogin">ورود</a>
-        
-      </div>
+      <form action="login">
+        <div class="boxHeader">
+          <h5>ورود به حساب کاربری</h5>
+          <i class="bi bi-x"></i>
+        </div>
+        <div class="boxBody">
+          <input type="text" name="" id="userName" placeholder="نام کاربری">
+          <input type="password" name="" id="password" placeholder="رمز عبور">
+         
+          <div class="capcha"></div>
+          <div class="err">ابتدا همه فیلدها را پر کنید</div>
+          <a class="goRegisterBtn">حساب کاربری ندارید؟</a>
+        </div>
+        <div class="boxFooter">
+          <input class="submitLogin" type="submit" value="ورود">
+        </div>
+      </form>
     </div>
 
     <div id="enterSms" class="box" style="display: none;">
+      <form action="register">
       <div class="boxHeader">
         <h5>ثبت حساب کاربری تازه</h5>
         <i class="bi bi-x"></i>
       </div>
       <div class="boxBody">
-        <!-- <h6>نام و نام خانوادگی</h6> -->
         <input type="text" name="" id="name" placeholder="نام و نام خانوادگی">
-        <!-- <h6>رایانامه</h6> -->
-        <input type="email" name="" id="email" placeholder="رایانامه" class="dirLtr">
-        <!-- <h6>نام کاربری</h6> -->
-        <input type="text" name="" id="userName" placeholder="نام کاربری" class="dirLtr">
-        <!-- <h6>رمز عبور</h6> -->
-        <input type="password" name="" id="password" placeholder="رمز عبور"  class="dirLtr">
+        <input type="email" name="" id="email" placeholder="رایانامه">
+        <input type="text" name="" id="userName" placeholder="نام کاربری">
+        <input type="password" name="" id="password" placeholder="رمز عبور">
         <div class="capcha"></div>
+        <div class="err">ابتدا همه فیلدها را پر کنید</div>
         <a class="goLoginBtn">حساب کاربری دارید؟</a>
       </div>
       <div class="boxFooter">
-        <a class="submitRegister">ثبت نام</a>
-       
+        <input class="submitRegister" type="submit" value="ثبت نام">
       </div>
+    </form>
     </div>
   </div>
+
 
 
 
@@ -2637,8 +2636,6 @@
     });
 
   </script>
-
-
 
   <script>
     Highcharts.chart('container2', {

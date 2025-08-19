@@ -180,7 +180,7 @@
         <div class="container-fluid addNewPage">
           <!-- Page Heading -->
           <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">افزودن نشریه تازه</h1>
+            <!-- <h1 class="h3 mb-0 text-gray-800">ویرایش اطلاعات کاربر</h1> -->
             <!-- <a
                 href="#"
                 class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"
@@ -189,47 +189,48 @@
               > -->
           </div>
 
-          <div class="row" style="    justify-content: center;">
+          <div class="row" style="justify-content: center;">
             <div class="col-md-6">
               <div class="card shadow mb-4">
                 <!-- Card Header - Dropdown -->
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                   <h6 class="m-0 font-weight-bold text-primary">
-                    نشریه تازه
+                    ویرایش اطلاعات کاربر
                   </h6>
-                  <div class="dropdown no-arrow">
-                    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
-                      aria-haspopup="true" aria-expanded="false">
-                      <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                    </a>
 
-                  </div>
                 </div>
                 <!-- Card Body -->
                 <div class="card-body">
                   <form action="">
                     <div class="row">
-                      <div class="col-md-8">
-                        <label for="">عنوان</label>
-                        <input type="text" name="" id="title">
-                        <div class="err titleErr"><i class="bi bi-exclamation-circle-fill"></i> عنوان باید پر شود!</div>
-                      </div>
-                      <div class="col-md-4">
-                        <label for="">تصویر</label>
-                        <input type="file" name="" id="file" class="form-control">
-                        <div class="err fileErr"><i class="bi bi-exclamation-circle-fill"></i> تصویر باید انتخاب شود!
+                      <form action="">
+                        <div class="col-md-6">
+                          <label for="">نام</label>
+                          <input type="text" name="" id="title" value="نام و نام خانوادگی کاربر">
+                          <div class="err"><i class="bi bi-exclamation-circle-fill"></i> نام باید پر شود!</div>
                         </div>
-                      </div>
+                        <div class="col-md-6">
+                          <label for="">تصویر</label>
+                          <input type="file" name="" id="file" class="form-control">
+                          <div class="err"><i class="bi bi-exclamation-circle-fill"></i> تصویر باید انتخاب شود!
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <label for="">تلفن</label>
+                          <input type="text" name="" id="phone" value="09123456789" class="dirLtr">
+                          <div class="err"><i class="bi bi-exclamation-circle-fill"></i> شماره تلفن باید پر شود!</div>
+                        </div>
+                        <div class="col-md-6">
+                          <label for="">رایانامه</label>
+                          <input type="text" name="" id="email" value="Email@gmail.com" class="dirLtr">
+                          <div class="err"><i class="bi bi-exclamation-circle-fill"></i> شماره تلفن باید پر شود!</div>
+                        </div>
 
-                      <div class="col-12">
-                        <label for="">توضیحات</label>
-                        <textarea id="description" name=""></textarea>
-                        <div class="err descriptionErr"><i class="bi bi-exclamation-circle-fill"></i> توضیحات باید پر
-                          شود!</div>
-                      </div>
-                      <div class="col-12">
-                        <input class="btn btn-primary" type="submit" value="ثبت">
-                      </div>
+
+                        <div class="col-12">
+                          <input class="btn btn-primary" type="submit" value="ثبت تغییرات">
+                        </div>
+                      </form>
                     </div>
                   </form>
                 </div>
@@ -302,72 +303,6 @@
   <script src="js/demo/chart-area-demo.js"></script>
   <script src="js/demo/chart-pie-demo.js"></script>
 
-
-  <script>
-    $(document).ready(function(){
-    
-        let ckEditorInstance; 
-        ClassicEditor
-            .create(document.querySelector('#description'), {
-                language: 'fa',
-                toolbar: { shouldNotGroupWhenFull: true },
-                initialData: '',
-                placeholder: '',
-            })
-            .then(editor => {
-                ckEditorInstance = editor;
-                editor.editing.view.change(writer => {
-                    writer.setAttribute('dir', 'rtl', editor.editing.view.document.getRoot());
-                    writer.setStyle('text-align', 'right', editor.editing.view.document.getRoot());
-                });
-            })
-            .catch(error => console.error(error));
-    
-      
-        $("#title").on("focus", function(){
-            $(".titleErr").hide();
-        });
-    
-        $("#file").on("change", function(){
-            $(".fileErr").hide();
-        });
-    
-        $(document).on("focus", ".ck-content", function(){
-            $(".descriptionErr").hide();
-        });
-    
-
-
-        $("form").on("submit", function(e){
-            e.preventDefault(); 
-    
-            let hasError = false;
-    
-            if($.trim($("#title").val()) === ""){
-                $(".titleErr").show();
-                hasError = true;
-            }
-   
-            let file = $("#file")[0].files[0];
-            if(!file || !file.type.match(/^image\//)){
-                $(".fileErr").show();
-                hasError = true;
-            }
-    
-            let descriptionVal = ckEditorInstance.getData().trim();
-            if(descriptionVal === ""){
-                $(".descriptionErr").show();
-                hasError = true;
-            }
-    
-            if(!hasError){
-                this.submit();
-            }
-        });
-    
-    });
-    </script>
-    
 
 
 

@@ -616,10 +616,6 @@ $(document).ready(function () {
     $('.registerPopupBackground').fadeOut('fast');
   }
 
-
-
-
-
   $('div.registerPopup a.goRegisterBtn').on('click', function (e) {
     e.preventDefault();
 
@@ -629,8 +625,6 @@ $(document).ready(function () {
 
   });
 
-
-
   $('div.registerPopup a.goLoginBtn').on('click', function (e) {
     e.preventDefault();
 
@@ -639,12 +633,54 @@ $(document).ready(function () {
 
   });
 
-
-
-  $('div.registerPopup a.submit').on('click', function (e) {
-    e.preventDefault();
-    alert('ورود');
-  });
-
 });
 
+
+
+//submitting the login/reg popup
+$(function () {
+
+    $(".submitLogin").on("click", function (e) {
+        e.preventDefault();
+        let form = $(this).closest("form");
+        let allFilled = true;
+
+        form.find("input[type='text'], input[type='password'], input[type='email']").each(function () {
+            if ($.trim($(this).val()) === "") {
+                allFilled = false;
+                return false; 
+            }
+        });
+
+        if (!allFilled) {
+            form.find(".err").fadeIn();
+        } else {
+         
+            form.submit();
+        }
+    });
+
+
+    $(".submitRegister").on("click", function (e) {
+        e.preventDefault();
+        let form = $(this).closest("form");
+        let allFilled = true;
+
+        form.find("input[type='text'], input[type='password'], input[type='email']").each(function () {
+            if ($.trim($(this).val()) === "") {
+                allFilled = false;
+                return false;
+            }
+        });
+
+        if (!allFilled) {
+            form.find(".err").fadeIn();
+        } else {
+            form.submit();
+        }
+    });
+
+    $("form input").on("focus", function () {
+        $(this).closest("form").find(".err").fadeOut();
+    });
+});

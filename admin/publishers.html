@@ -1,174 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
 
-    <title>پرتال نشریات علمی</title>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
 
-    <!-- Custom fonts for this template-->
-    <link
-      href="vendor/fontawesome-free/css/all.min.css"
-      rel="stylesheet"
-      type="text/css"
-    />
+  <title>پرتال نشریات علمی</title>
+
+  <!-- Custom fonts for this template-->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css" />
 
 
-   
-    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css" />
-    
-    <!-- searchable table -->
-    <link
-      rel="stylesheet"
-      href="../assets/vendor/dataTable/dataTables.bootstrap5.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="../assets/vendor/dataTable/searchPanes.bootstrap5.min.css"
-    />
 
-    <link
-      href="../assets/vendor/bootstrap-icons/bootstrap-icons.css"
-      rel="stylesheet"
-    />
+  <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css" />
 
-    <!-- Custom styles for this template-->
-    <link href="css/sb-admin-2.css" rel="stylesheet" />
-  </head>
+  <!-- searchable table -->
+  <link rel="stylesheet" href="../assets/vendor/dataTable/dataTables.bootstrap5.min.css" />
+  <link rel="stylesheet" href="../assets/vendor/dataTable/searchPanes.bootstrap5.min.css" />
 
-  <body id="page-top">
-    <!-- Page Wrapper -->
-    <div id="wrapper">
-      <!-- Sidebar -->
-      <ul
-        class="navbar-nav  sidebar sidebar-dark accordion"
-        id="accordionSidebar"
-      >
-        <!-- Sidebar - Brand -->
-        <a
-          class="sidebar-brand d-flex align-items-center justify-content-center"
-          href="index.html"
-        >
-          <div class="sidebar-brand-icon rotate-n-15">
-            
-          </div>
-          <div class="sidebar-brand-text mx-3">
-            <!-- پرتال نشریات علمی -->
-						<img class="titleImg" src="img/title.png" alt="">
-          </div>
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+
+  <!-- Custom styles for this template-->
+  <link href="css/sb-admin-2.css" rel="stylesheet" />
+</head>
+
+<body id="page-top">
+  <!-- Page Wrapper -->
+  <div id="wrapper">
+    <!-- Sidebar -->
+    <ul class="navbar-nav  sidebar sidebar-dark accordion" id="accordionSidebar">
+      <!-- Sidebar - Brand -->
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+        <div class="sidebar-brand-icon rotate-n-15">
+
+        </div>
+        <div class="sidebar-brand-text mx-3">
+          <!-- پرتال نشریات علمی -->
+          <img class="titleImg" src="img/title.png" alt="">
+        </div>
+      </a>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider my-0" />
+
+      <!-- Nav Item - Dashboard -->
+      <li class="nav-item active">
+        <a class="nav-link" href="index.html">
+          <i class="fas fa-fw fa-tachometer-alt"></i>
+          <span>داشبورد</span></a>
+      </li>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider" />
+
+      <!-- Heading -->
+      <div class="sidebar-heading">محتوی</div>
+      <!-- Nav Item - Pages Collapse Menu -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#collapseTwo" data-bs-toggle="collapse" role="button" aria-expanded="false"
+          aria-controls="collapseTwo">
+          <i class="fas fa-fw fa-cog"></i>
+          <span>نشریات</span>
         </a>
 
-        <!-- Divider -->
-        <hr class="sidebar-divider my-0" />
-
-        <!-- Nav Item - Dashboard -->
-        <li class="nav-item active">
-          <a class="nav-link" href="index.html">
-            <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span>داشبورد</span></a
-          >
-        </li>
-
-        <!-- Divider -->
-        <hr class="sidebar-divider" />
-
-        <!-- Heading -->
-        <div class="sidebar-heading">محتوی</div>
-              <!-- Nav Item - Pages Collapse Menu -->
-  <li class="nav-item">
-    <a
-      class="nav-link collapsed"
-      href="#collapseTwo"
-      data-bs-toggle="collapse"
-      role="button"
-      aria-expanded="false"
-      aria-controls="collapseTwo"
-    >
-      <i class="fas fa-fw fa-cog"></i>
-      <span>نشریات</span>
-    </a>
-
-    <div
-      class="collapse"
-      id="collapseTwo"
-      data-bs-parent="#accordionSidebar"
-    >
-      <div class="bg-white py-2 collapse-inner rounded">
-        <!-- <h6 class="collapse-header">Custom Components:</h6> -->
-        <a class="collapse-item" href="./addPublisher.html">افزودن نشریه تازه</a>
-        <a class="collapse-item" href="./publishers.html">مشاهده نشریه‌ها</a>
-      </div>
-    </div>
-  </li>
-
-  <!-- Nav Item - Utilities Collapse Menu -->
-  <li class="nav-item">
-    <a
-      class="nav-link collapsed"
-      href="#collapseUtilities"
-      data-bs-toggle="collapse"
-      role="button"
-      aria-expanded="false"
-      aria-controls="collapseUtilities"
-    >
-      <i class="fas fa-fw fa-wrench"></i>
-      <span>صفحات جانبی</span>
-    </a>
-    <div
-      id="collapseUtilities"
-      class="collapse"
-      data-bs-parent="#accordionSidebar"
-    >
-      <div class="bg-white py-2 collapse-inner rounded">
-        <!-- <h6 class="collapse-header">Custom Utilities:</h6> -->
-        <a class="collapse-item" href="./contactUs.html">تماس با ما</a>
-        <a class="collapse-item" href="./faq.html">پرسش‌های همیشگی</a>
-      </div>
-    </div>
-  </li>
-
-        <!-- Divider -->
-        <hr class="sidebar-divider" />
-
-      
-
-
-        <!-- Sidebar Toggler (Sidebar) -->
-        <div class="text-center d-none d-md-inline">
-          <button class="rounded-circle border-0" id="sidebarToggle"></button>
+        <div class="collapse" id="collapseTwo" data-bs-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <!-- <h6 class="collapse-header">Custom Components:</h6> -->
+            <a class="collapse-item" href="./addPublisher.html">افزودن نشریه تازه</a>
+            <a class="collapse-item" href="./publishers.html">مشاهده نشریه‌ها</a>
+          </div>
         </div>
+      </li>
+
+      <!-- Nav Item - Utilities Collapse Menu -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#collapseUtilities" data-bs-toggle="collapse" role="button"
+          aria-expanded="false" aria-controls="collapseUtilities">
+          <i class="fas fa-fw fa-wrench"></i>
+          <span>صفحات جانبی</span>
+        </a>
+        <div id="collapseUtilities" class="collapse" data-bs-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <!-- <h6 class="collapse-header">Custom Utilities:</h6> -->
+            <a class="collapse-item" href="./contactUs.html">تماس با ما</a>
+            <a class="collapse-item" href="./faq.html">پرسش‌های همیشگی</a>
+          </div>
+        </div>
+      </li>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider" />
 
 
-      </ul>
-      <!-- End of Sidebar -->
+
+
+      <!-- Sidebar Toggler (Sidebar) -->
+      <div class="text-center d-none d-md-inline">
+        <button class="rounded-circle border-0" id="sidebarToggle"></button>
+      </div>
+
+
+    </ul>
+    <!-- End of Sidebar -->
 
 
 
 
-      <!-- Content Wrapper -->
-      <div id="content-wrapper" class="d-flex flex-column">
-        <!-- Main Content -->
-        <div id="content">
-          <!-- Topbar -->
-          <nav
-            class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow"
-          >
-            <!-- Sidebar Toggle (Topbar) -->
-            <button
-              id="sidebarToggleTop"
-              class="btn btn-link d-md-none rounded-circle mr-3"
-            >
-              <i class="fa fa-bars"></i>
-            </button>
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+      <!-- Main Content -->
+      <div id="content">
+        <!-- Topbar -->
+        <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+          <!-- Sidebar Toggle (Topbar) -->
+          <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+            <i class="fa fa-bars"></i>
+          </button>
 
-            <!-- Topbar Search -->
-            <!-- <form
+          <!-- Topbar Search -->
+          <!-- <form
                         class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
                         <div class="input-group">
                             <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
@@ -181,608 +134,1002 @@
                         </div>
                     </form> -->
 
-            <!-- Topbar Navbar -->
-            <ul class="navbar-nav mr-auto">
-              <!-- Nav Item - Search Dropdown (Visible Only XS) -->
-              <li class="nav-item dropdown no-arrow d-sm-none">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  id="searchDropdown"
-                  role="button"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                >
-                  <i class="fas fa-search fa-fw"></i>
-                </a>
-                <!-- Dropdown - Messages -->
-                <div
-                  class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
-                  aria-labelledby="searchDropdown"
-                >
-                  <form class="form-inline mr-auto w-100 navbar-search">
-                    <div class="input-group">
-                      <input
-                        type="text"
-                        class="form-control bg-light border-0 small"
-                        placeholder="Search for..."
-                        aria-label="Search"
-                        aria-describedby="basic-addon2"
-                      />
-                      <div class="input-group-append">
-                        <button class="btn btn-primary" type="button">
-                          <i class="fas fa-search fa-sm"></i>
-                        </button>
-                      </div>
+          <!-- Topbar Navbar -->
+          <ul class="navbar-nav mr-auto">
+            <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+            <li class="nav-item dropdown no-arrow d-sm-none">
+              <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-search fa-fw"></i>
+              </a>
+              <!-- Dropdown - Messages -->
+              <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+                aria-labelledby="searchDropdown">
+                <form class="form-inline mr-auto w-100 navbar-search">
+                  <div class="input-group">
+                    <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
+                      aria-label="Search" aria-describedby="basic-addon2" />
+                    <div class="input-group-append">
+                      <button class="btn btn-primary" type="button">
+                        <i class="fas fa-search fa-sm"></i>
+                      </button>
                     </div>
-                  </form>
+                  </div>
+                </form>
+              </div>
+            </li>
+
+
+
+            <div class="topbar-divider d-none d-sm-block"></div>
+
+            <!-- Nav Item - User Information -->
+            <li class="nav-item dropdown no-arrow">
+              <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                <span class="ms-2 d-none d-lg-inline text-gray-600 small">
+                  نام و نام خانوادگی
+                </span>
+                <img class="img-profile rounded-circle" src="img/undraw_profile.svg" alt="Profile" />
+              </a>
+
+              <!-- Dropdown - User Information -->
+              <ul class="dropdown-menu dropdown-menu-end shadow animated--grow-in" aria-labelledby="userDropdown">
+                <li>
+                  <a class="dropdown-item" href="./index.html">
+                    <i class="fas fa-user fa-sm fa-fw ms-2 text-gray-400"></i>
+                    پروفایل
+                  </a>
+                </li>
+                <li>
+                  <hr class="dropdown-divider" />
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#logoutModal">
+                    <i class="fas fa-sign-out-alt fa-sm fa-fw ms-2 text-gray-400"></i>
+                    خروج از حساب
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+          </ul>
+        </nav>
+        <!-- End of Topbar -->
+
+
+        <div class="container publishersPage">
+          <div class="row">
+            <div class="col-lg-3 col-md-12">
+              <div class="sidePanel">
+                <div class="box" id="filterGroup">
+                  <div class="boxHeader">
+                    <h5><i class="bi bi-diagram-2"></i> گروه علمی</h5>
+                    <div class="btns">
+                      <a class="cancel">لغو</a>
+                      <i class="bi bi-chevron-up collapseIcon"></i>
+                    </div>
+                  </div>
+                  <div class="boxBody">
+                    <ul>
+                      <li>
+                        <div class="checkbox-wrapper-65">
+                          <label for="">
+                            <input type="checkbox" id="" value="علوم انسانی" />
+                            <span class="cbx">
+                              <svg width="12px" height="11px" viewBox="0 0 12 11">
+                                <polyline points="1 6.29411765 4.5 10 11 1"></polyline>
+                              </svg>
+                            </span>
+                            <span>علوم انسانی</span>
+                          </label>
+                        </div>
+                      </li>
+
+                      <li>
+                        <div class="checkbox-wrapper-65">
+                          <label for="">
+                            <input type="checkbox" id="" value="علوم کشاورزی" />
+                            <span class="cbx">
+                              <svg width="12px" height="11px" viewBox="0 0 12 11">
+                                <polyline points="1 6.29411765 4.5 10 11 1"></polyline>
+                              </svg>
+                            </span>
+                            <span>علوم کشاورزی</span>
+                          </label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="checkbox-wrapper-65">
+                          <label for="">
+                            <input type="checkbox" id="" value="فنی و مهندسی" />
+                            <span class="cbx">
+                              <svg width="12px" height="11px" viewBox="0 0 12 11">
+                                <polyline points="1 6.29411765 4.5 10 11 1"></polyline>
+                              </svg>
+                            </span>
+                            <span>فنی و مهندسی</span>
+                          </label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="checkbox-wrapper-65">
+                          <label for="">
+                            <input type="checkbox" id="" value="علوم پایه" />
+                            <span class="cbx">
+                              <svg width="12px" height="11px" viewBox="0 0 12 11">
+                                <polyline points="1 6.29411765 4.5 10 11 1"></polyline>
+                              </svg>
+                            </span>
+                            <span>علوم پایه</span>
+                          </label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="checkbox-wrapper-65">
+                          <label for="">
+                            <input type="checkbox" id="" value="کشاورزی و منابع طبیعی" />
+                            <span class="cbx">
+                              <svg width="12px" height="11px" viewBox="0 0 12 11">
+                                <polyline points="1 6.29411765 4.5 10 11 1"></polyline>
+                              </svg>
+                            </span>
+                            <span>کشاورزی و منابع طبیعی</span>
+                          </label>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
-              </li>
 
-           
+                <div class="box" id="filterOwner">
+                  <div class="boxHeader">
+                    <h5><i class="bi bi-building"></i> صاحب امتیاز</h5>
+                    <div class="btns">
+                      <a class="cancel">لغو</a>
+                      <i class="bi bi-chevron-up collapseIcon"></i>
+                    </div>
+                  </div>
+                  <div class="boxBody">
+                    <div class="filterSearchBox">
+                      <input type="text" name="" id="" placeholder="جست‌وجو کنید ..." />
+                      <i class="bi bi-x"></i>
+                    </div>
+                    <ul>
+                      <li>
+                        <div class="checkbox-wrapper-65">
+                          <label for="">
+                            <input type="checkbox" id="" value="انجمن هوش و استعداد ایران" />
+                            <span class="cbx">
+                              <svg width="12px" height="11px" viewBox="0 0 12 11">
+                                <polyline points="1 6.29411765 4.5 10 11 1"></polyline>
+                              </svg>
+                            </span>
+                            <span>انجمن هوش و استعداد ایران </span>
+                          </label>
+                        </div>
+                      </li>
 
-              <div class="topbar-divider d-none d-sm-block"></div>
+                      <li>
+                        <div class="checkbox-wrapper-65">
+                          <label for="">
+                            <input type="checkbox" id="" value="مؤسسه دانش، توسعه و پژوهش" />
+                            <span class="cbx">
+                              <svg width="12px" height="11px" viewBox="0 0 12 11">
+                                <polyline points="1 6.29411765 4.5 10 11 1"></polyline>
+                              </svg>
+                            </span>
+                            <span>مؤسسه دانش، توسعه و پژوهش </span>
+                          </label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="checkbox-wrapper-65">
+                          <label for="">
+                            <input type="checkbox" id="" value="موسسه پژوهشی توسعه مدیریت ایران" />
+                            <span class="cbx">
+                              <svg width="12px" height="11px" viewBox="0 0 12 11">
+                                <polyline points="1 6.29411765 4.5 10 11 1"></polyline>
+                              </svg>
+                            </span>
+                            <span>موسسه پژوهشی توسعه مدیریت ایران </span>
+                          </label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="checkbox-wrapper-65">
+                          <label for="">
+                            <input type="checkbox" id="" value="انتشارات سامی" />
+                            <span class="cbx">
+                              <svg width="12px" height="11px" viewBox="0 0 12 11">
+                                <polyline points="1 6.29411765 4.5 10 11 1"></polyline>
+                              </svg>
+                            </span>
+                            <span>انتشارات سامی </span>
+                          </label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="checkbox-wrapper-65">
+                          <label for="">
+                            <input type="checkbox" id="" value="123 دانشنامه" />
+                            <span class="cbx">
+                              <svg width="12px" height="11px" viewBox="0 0 12 11">
+                                <polyline points="1 6.29411765 4.5 10 11 1"></polyline>
+                              </svg>
+                            </span>
+                            <span>123 دانشنامه </span>
+                          </label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="checkbox-wrapper-65">
+                          <label for="">
+                            <input type="checkbox" id="" value="Information 3" />
+                            <span class="cbx">
+                              <svg width="12px" height="11px" viewBox="0 0 12 11">
+                                <polyline points="1 6.29411765 4.5 10 11 1"></polyline>
+                              </svg>
+                            </span>
+                            <span>Information 3 </span>
+                          </label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="checkbox-wrapper-65">
+                          <label for="">
+                            <input type="checkbox" id="" value="231441(3)" />
+                            <span class="cbx">
+                              <svg width="12px" height="11px" viewBox="0 0 12 11">
+                                <polyline points="1 6.29411765 4.5 10 11 1"></polyline>
+                              </svg>
+                            </span>
+                            <span>231441(3) Eng </span>
+                          </label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="checkbox-wrapper-65">
+                          <label for="">
+                            <input type="checkbox" id="" value="-" />
+                            <span class="cbx">
+                              <svg width="12px" height="11px" viewBox="0 0 12 11">
+                                <polyline points="1 6.29411765 4.5 10 11 1"></polyline>
+                              </svg>
+                            </span>
+                            <span>-</span>
+                          </label>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
 
-              <!-- Nav Item - User Information -->
-              <li class="nav-item dropdown no-arrow">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  id="userDropdown"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  <span class="ms-2 d-none d-lg-inline text-gray-600 small">
-                    نام و نام خانوادگی
-                  </span>
-                  <img
-                    class="img-profile rounded-circle"
-                    src="img/undraw_profile.svg"
-                    alt="Profile"
-                  />
-                </a>
-              
-                <!-- Dropdown - User Information -->
-                <ul class="dropdown-menu dropdown-menu-end shadow animated--grow-in" aria-labelledby="userDropdown">
-                  <li>
-                    <a class="dropdown-item" href="./index.html">
-                      <i class="fas fa-user fa-sm fa-fw ms-2 text-gray-400"></i>
-                      پروفایل
-                    </a>
-                  </li>
-                  <li><hr class="dropdown-divider" /></li>
-                  <li>
-                    <a
-                      class="dropdown-item"
-                      href="#"
-                      data-bs-toggle="modal"
-                      data-bs-target="#logoutModal"
-                    >
-                      <i class="fas fa-sign-out-alt fa-sm fa-fw ms-2 text-gray-400"></i>
-                      خروج از حساب
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              
-            </ul>
-          </nav>
-          <!-- End of Topbar -->
+                <div class="box" id="filterRank">
+                  <div class="boxHeader">
+                    <h5><i class="bi bi-trophy"></i> رتبه</h5>
+                    <div class="btns">
+                      <a class="cancel">لغو</a>
+                      <i class="bi bi-chevron-up collapseIcon"></i>
+                    </div>
+                  </div>
+                  <div class="boxBody">
+                    <ul>
+                      <li>
+                        <div class="checkbox-wrapper-65">
+                          <label for="">
+                            <input type="checkbox" id="" value="بین‌المللی" />
+                            <span class="cbx">
+                              <svg width="12px" height="11px" viewBox="0 0 12 11">
+                                <polyline points="1 6.29411765 4.5 10 11 1"></polyline>
+                              </svg>
+                            </span>
+                            <span>بین‌المللی</span>
+                          </label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="checkbox-wrapper-65">
+                          <label for="">
+                            <input type="checkbox" id="" value="الف" />
+                            <span class="cbx">
+                              <svg width="12px" height="11px" viewBox="0 0 12 11">
+                                <polyline points="1 6.29411765 4.5 10 11 1"></polyline>
+                              </svg>
+                            </span>
+                            <span>الف</span>
+                          </label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="checkbox-wrapper-65">
+                          <label for="">
+                            <input type="checkbox" id="" value="ب" />
+                            <span class="cbx">
+                              <svg width="12px" height="11px" viewBox="0 0 12 11">
+                                <polyline points="1 6.29411765 4.5 10 11 1"></polyline>
+                              </svg>
+                            </span>
+                            <span>ب</span>
+                          </label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="checkbox-wrapper-65">
+                          <label for="">
+                            <input type="checkbox" id="" value="ج" />
+                            <span class="cbx">
+                              <svg width="12px" height="11px" viewBox="0 0 12 11">
+                                <polyline points="1 6.29411765 4.5 10 11 1"></polyline>
+                              </svg>
+                            </span>
+                            <span>ج</span>
+                          </label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="checkbox-wrapper-65">
+                          <label for="">
+                            <input type="checkbox" id="" value="د" />
+                            <span class="cbx">
+                              <svg width="12px" height="11px" viewBox="0 0 12 11">
+                                <polyline points="1 6.29411765 4.5 10 11 1"></polyline>
+                              </svg>
+                            </span>
+                            <span>د</span>
+                          </label>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
 
-          <!-- Begin Page Content -->
-          <div class="container-fluid publishersPage">
-            <!-- Page Heading -->
-            <div
-              class="d-sm-flex align-items-center justify-content-between mb-4"
-            >
-              <h1 class="h3 mb-0 text-gray-800">نشریه‌ها</h1>
-              <!-- <a
-                href="#"
-                class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"
-                ><i class="fas fa-download fa-sm text-white-50"></i> Generate
-                Report</a
-              > -->
+                <div class="box" id="filterLanguage">
+                  <div class="boxHeader">
+                    <h5><i class="bi bi-translate"></i> زبان</h5>
+                    <div class="btns">
+                      <a class="cancel">لغو</a>
+                      <i class="bi bi-chevron-up collapseIcon"></i>
+                    </div>
+                  </div>
+                  <div class="boxBody">
+                    <ul>
+                      <li>
+                        <div class="checkbox-wrapper-65">
+                          <label for="">
+                            <input type="checkbox" id="" value="فارسی" />
+                            <span class="cbx">
+                              <svg width="12px" height="11px" viewBox="0 0 12 11">
+                                <polyline points="1 6.29411765 4.5 10 11 1"></polyline>
+                              </svg>
+                            </span>
+                            <span>فارسی</span>
+                          </label>
+                        </div>
+                      </li>
+
+                      <li>
+                        <div class="checkbox-wrapper-65">
+                          <label for="">
+                            <input type="checkbox" id="" value="انگلیسی" />
+                            <span class="cbx">
+                              <svg width="12px" height="11px" viewBox="0 0 12 11">
+                                <polyline points="1 6.29411765 4.5 10 11 1"></polyline>
+                              </svg>
+                            </span>
+                            <span>انگلیسی</span>
+                          </label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="checkbox-wrapper-65">
+                          <label for="">
+                            <input type="checkbox" id="" value="عربی" />
+                            <span class="cbx">
+                              <svg width="12px" height="11px" viewBox="0 0 12 11">
+                                <polyline points="1 6.29411765 4.5 10 11 1"></polyline>
+                              </svg>
+                            </span>
+                            <span>عربی</span>
+                          </label>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
             </div>
+            <div class="col-lg-9 col-md-12">
+              <div class="box">
+                <table id="results_table" class="table" style="width: 100%">
+                  <thead>
+                    <tr>
+                      <th>ردیف</th>
+                      <th>عنوان نشریه</th>
+                      <th width="100px">گروه علمی</th>
+                      <th>صاحب امتیاز</th>
+                      <th style="text-align: center">رتبه ارزیابی</th>
+                      <th width="40px">گزینه‌ها</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td></td>
+                      <td>
+                        <a class="jTitle" target="_blank" href="">
+                          International Journal of Education
+                        </a>
+                      </td>
+                      <td>علوم انسانی</td>
+                      <td>انجمن هوش و استعداد ایران</td>
+                      <td>
+                        <span class="rate rA">الف</span>
+                      </td>
 
-          
+                      <td>
+                        <div class="dropdown">
+                          <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="bi bi-three-dots"></i>
+                          </button>
+                          <ul class="dropdown-menu">
+                            <li>
+                              <a class="dropdown-item" href="#"><i class="bi bi-globe"></i> وبسایت</a>
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="#"><i class="bi bi-info-circle"></i> وضعیت</a>
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="#"><i class="bi bi-newspaper"></i> گواهی رتبه
+                                علمی</a>
+                            </li>
+                          </ul>
+                        </div>
 
-            <div class="box">
-              <table id="results_table" class="table" style="width: 100%">
-                <thead>
-                  <tr>
-                    <th>ردیف</th>
-                    <th>عنوان نشریه</th>
-                    <th width="100px">گروه علمی</th>
-                    <th>صاحب امتیاز</th>
-                    <th style="text-align: center">رتبه ارزیابی</th>
-                    <th width="40px">گزینه‌ها</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td></td>
-                    <td>
-                      <a class="jTitle" target="_blank" href="">
-                        International Journal of Education
-                      </a>
-                    </td>
-                    <td>علوم انسانی</td>
-                    <td>انجمن هوش و استعداد ایران</td>
-                    <td>
-                      <span class="rate rA">الف</span>
-                    </td>
+                        <div class="filterInfo">
+                          <div class="f_group">علوم انسانی</div>
+                          <div class="f_owner">انجمن هوش و استعداد ایران</div>
+                          <div class="f_rank">الف</div>
+                          <div class="f_language">انگلیسی</div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td>
+                        <a class="jTitle" target="_blank" href="">
+                          توسعه فردی و تحول سازمانی
+                        </a>
+                      </td>
+                      <td>علوم انسانی</td>
+                      <td>مؤسسه دانش، توسعه و پژوهش</td>
+                      <td><span class="rate rB">ب</span></td>
+                      <td>
+                        <div class="dropdown">
+                          <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="bi bi-three-dots"></i>
+                          </button>
+                          <ul class="dropdown-menu">
+                            <li>
+                              <a class="dropdown-item" href="#"><i class="bi bi-globe"></i> وبسایت</a>
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="#"><i class="bi bi-info-circle"></i> وضعیت</a>
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="#"><i class="bi bi-newspaper"></i> گواهی رتبه
+                                علمی</a>
+                            </li>
+                          </ul>
+                        </div>
 
-                    <td>
-                      <div class="dropdown">
-                        <button
-                          class="btn btn-secondary dropdown-toggle"
-                          type="button"
-                          data-bs-toggle="dropdown"
-                          aria-expanded="false"
-                        >
-                          <i class="bi bi-three-dots"></i>
-                        </button>
-                        <ul class="dropdown-menu">
-                          <li>
-                            <a class="dropdown-item" href="#"
-                              ><i class="bi bi-eye"></i> مشاهده</a
-                            >
-                          </li>
-                          <li>
-                            <a class="dropdown-item" href="#"
-                              ><i class="bi bi-pencil-square"></i> ویرایش</a
-                            >
-                          </li>
-                          <hr>
-                          <li>
-                            <a class="dropdown-item text-red" href="#"
-                              ><i class="bi bi-trash3"></i> حذف</a
-                            >
-                          </li>
-                        </ul>
-                      </div>
+                        <div class="filterInfo">
+                          <div class="f_group">علوم انسانی</div>
+                          <div class="f_owner">مؤسسه دانش، توسعه و پژوهش </div>
+                          <div class="f_rank">ب</div>
+                          <div class="f_language">فارسی</div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr class="disabled">
+                      <td></td>
+                      <td>
+                        <a class="jTitle" target="_blank" href="">
+                          تکنولوژی در کارآفرینی و مدیریت استراتژیک
+                        </a>
+                      </td>
+                      <td>علوم انسانی</td>
+                      <td>موسسه پژوهشی توسعه مدیریت ایران</td>
+                      <td><span class="rate rC">ج</span></td>
+                      <td>
+                        <div class="dropdown">
+                          <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="bi bi-three-dots"></i>
+                          </button>
+                          <ul class="dropdown-menu">
+                            <li>
+                              <a class="dropdown-item" href="#"><i class="bi bi-globe"></i> وبسایت</a>
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="#"><i class="bi bi-info-circle"></i> وضعیت</a>
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="#"><i class="bi bi-newspaper"></i> گواهی رتبه
+                                علمی</a>
+                            </li>
+                          </ul>
+                        </div>
 
-                    
-                    </td>
-                  </tr>
-                  <tr>
-                    <td></td>
-                    <td>
-                      <a class="jTitle" target="_blank" href="">
-                        توسعه فردی و تحول سازمانی
-                      </a>
-                    </td>
-                    <td>علوم انسانی</td>
-                    <td>مؤسسه دانش، توسعه و پژوهش</td>
-                    <td><span class="rate rB">ب</span></td>
-                    <td>
-                      <div class="dropdown">
-                        <button
-                          class="btn btn-secondary dropdown-toggle"
-                          type="button"
-                          data-bs-toggle="dropdown"
-                          aria-expanded="false"
-                        >
-                          <i class="bi bi-three-dots"></i>
-                        </button>
-                        <ul class="dropdown-menu">
-                          <li>
-                            <a class="dropdown-item" href="#"
-                              ><i class="bi bi-eye"></i> مشاهده</a
-                            >
-                          </li>
-                          <li>
-                            <a class="dropdown-item" href="#"
-                              ><i class="bi bi-pencil-square"></i> ویرایش</a
-                            >
-                          </li>
-                          <hr>
-                          <li>
-                            <a class="dropdown-item text-red" href="#"
-                              ><i class="bi bi-trash3"></i> حذف</a
-                            >
-                          </li>
-                        </ul>
-                      </div>
+                        <div class="filterInfo">
+                          <div class="f_group">علوم انسانی</div>
+                          <div class="f_owner">موسسه پژوهشی توسعه مدیریت ایران </div>
+                          <div class="f_rank">ج</div>
+                          <div class="f_language">فارسی</div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td>
+                        <a class="jTitle" target="_blank" href="">
+                          حقوق و مطالعات سیاسی
+                        </a>
+                      </td>
+                      <td>علوم انسانی</td>
+                      <td>انتشارات سامی</td>
+                      <td><span class="rate rD">د</span></td>
+                      <td>
+                        <div class="dropdown">
+                          <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="bi bi-three-dots"></i>
+                          </button>
+                          <ul class="dropdown-menu">
+                            <li>
+                              <a class="dropdown-item" href="#"><i class="bi bi-globe"></i> وبسایت</a>
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="#"><i class="bi bi-info-circle"></i> وضعیت</a>
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="#"><i class="bi bi-newspaper"></i> گواهی رتبه
+                                علمی</a>
+                            </li>
+                          </ul>
+                        </div>
 
-                    </td>
-                  </tr>
-                  <tr class="">
-                    <td></td>
-                    <td>
-                      <a class="jTitle" target="_blank" href="">
-                        تکنولوژی در کارآفرینی و مدیریت استراتژیک
-                      </a>
-                    </td>
-                    <td>علوم انسانی</td>
-                    <td>موسسه پژوهشی توسعه مدیریت ایران</td>
-                    <td><span class="rate rC">ج</span></td>
-                    <td>
-                      <div class="dropdown">
-                        <button
-                          class="btn btn-secondary dropdown-toggle"
-                          type="button"
-                          data-bs-toggle="dropdown"
-                          aria-expanded="false"
-                        >
-                          <i class="bi bi-three-dots"></i>
-                        </button>
-                        <ul class="dropdown-menu">
-                          <li>
-                            <a class="dropdown-item" href="#"
-                              ><i class="bi bi-eye"></i> مشاهده</a
-                            >
-                          </li>
-                          <li>
-                            <a class="dropdown-item" href="#"
-                              ><i class="bi bi-pencil-square"></i> ویرایش</a
-                            >
-                          </li>
-                          <hr>
-                          <li>
-                            <a class="dropdown-item text-red" href="#"
-                              ><i class="bi bi-trash3"></i> حذف</a
-                            >
-                          </li>
-                        </ul>
-                      </div>
+                        <div class="filterInfo">
+                          <div class="f_group">علوم انسانی</div>
+                          <div class="f_owner">انتشارات سامی </div>
+                          <div class="f_rank">د</div>
+                          <div class="f_language">فارسی</div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td>
+                        <a class="jTitle" target="_blank" href="">
+                          Journal of science
+                        </a>
+                      </td>
+                      <td>علوم کشاورزی</td>
+                      <td>انتشارات سامی</td>
+                      <td><span class="rate rI">بین‌المللی</span></td>
+                      <td>
+                        <div class="dropdown">
+                          <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="bi bi-three-dots"></i>
+                          </button>
+                          <ul class="dropdown-menu">
+                            <li>
+                              <a class="dropdown-item" href="#"><i class="bi bi-globe"></i> وبسایت</a>
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="#"><i class="bi bi-info-circle"></i> وضعیت</a>
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="#"><i class="bi bi-newspaper"></i> گواهی رتبه
+                                علمی</a>
+                            </li>
+                          </ul>
+                        </div>
 
-                    </td>
-                  </tr>
-                  <tr>
-                    <td></td>
-                    <td>
-                      <a class="jTitle" target="_blank" href="">
-                        حقوق و مطالعات سیاسی
-                      </a>
-                    </td>
-                    <td>علوم انسانی</td>
-                    <td>انتشارات سامی</td>
-                    <td><span class="rate rD">د</span></td>
-                    <td>
-                      <div class="dropdown">
-                        <button
-                          class="btn btn-secondary dropdown-toggle"
-                          type="button"
-                          data-bs-toggle="dropdown"
-                          aria-expanded="false"
-                        >
-                          <i class="bi bi-three-dots"></i>
-                        </button>
-                        <ul class="dropdown-menu">
-                          <li>
-                            <a class="dropdown-item" href="#"
-                              ><i class="bi bi-eye"></i> مشاهده</a
-                            >
-                          </li>
-                          <li>
-                            <a class="dropdown-item" href="#"
-                              ><i class="bi bi-pencil-square"></i> ویرایش</a
-                            >
-                          </li>
-                          <hr>
-                          <li>
-                            <a class="dropdown-item text-red" href="#"
-                              ><i class="bi bi-trash3"></i> حذف</a
-                            >
-                          </li>
-                        </ul>
-                      </div>
-
-                    
-                    </td>
-                  </tr>
-                  <tr>
-                    <td></td>
-                    <td>
-                      <a class="jTitle" target="_blank" href="">
-Journal of science
-                      </a>
-                    </td>
-                    <td>علوم کشاورزی</td>
-                    <td>انتشارات سامی</td>
-                    <td><span class="rate rI">بین‌المللی</span></td>
-                    <td>
-                      <div class="dropdown">
-                        <button
-                          class="btn btn-secondary dropdown-toggle"
-                          type="button"
-                          data-bs-toggle="dropdown"
-                          aria-expanded="false"
-                        >
-                          <i class="bi bi-three-dots"></i>
-                        </button>
-                        <ul class="dropdown-menu">
-                          <li>
-                            <a class="dropdown-item" href="#"
-                              ><i class="bi bi-eye"></i> مشاهده</a
-                            >
-                          </li>
-                          <li>
-                            <a class="dropdown-item" href="#"
-                              ><i class="bi bi-pencil-square"></i> ویرایش</a
-                            >
-                          </li>
-                          <hr>
-                          <li>
-                            <a class="dropdown-item text-red" href="#"
-                              ><i class="bi bi-trash3"></i> حذف</a
-                            >
-                          </li>
-                        </ul>
-                      </div>
-
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+                        <div class="filterInfo">
+                          <div class="f_group">علوم کشاورزی</div>
+                          <div class="f_owner">انتشارات سامی</div>
+                          <div class="f_rank">بین‌المللی</div>
+                          <div class="f_language">انگلیسی</div>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
-          <!-- /.container-fluid -->
         </div>
-        <!-- End of Main Content -->
-
-        <!-- Footer -->
-        <footer class="sticky-footer">
-          <div class="container my-auto">
-            <div class="copyright text-center my-auto">
-              <!-- <span>Copyright &copy; Your Website 2021</span> -->
-            </div>
-          </div>
-        </footer>
-        <!-- End of Footer -->
+     
       </div>
-      <!-- End of Content Wrapper -->
+      <!-- End of Main Content -->
+
+      <!-- Footer -->
+      <footer class="sticky-footer">
+        <div class="container my-auto">
+          <div class="copyright text-center my-auto">
+            <!-- <span>Copyright &copy; Your Website 2021</span> -->
+          </div>
+        </div>
+      </footer>
+      <!-- End of Footer -->
     </div>
-    <!-- End of Page Wrapper -->
+    <!-- End of Content Wrapper -->
+  </div>
+  <!-- End of Page Wrapper -->
 
-    <!-- Scroll to Top Button-->
-    <a class="scroll-to-top rounded" href="#page-top">
-      <i class="fas fa-angle-up"></i>
-    </a>
+  <!-- Scroll to Top Button-->
+  <a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
 
-    <!-- Logout Modal-->
-    <div
-      class="modal fade"
-      id="logoutModal"
-      tabindex="-1"
-      role="dialog"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-            <button
-              class="close"
-              type="button"
-              data-dismiss="modal"
-              aria-label="Close"
-            >
-              <span aria-hidden="true">×</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            Select "Logout" below if you are ready to end your current session.
-          </div>
-          <div class="modal-footer">
-            <button
-              class="btn btn-secondary"
-              type="button"
-              data-dismiss="modal"
-            >
-              Cancel
-            </button>
-            <a class="btn btn-primary" href="login.html">Logout</a>
-          </div>
+  <!-- Logout Modal-->
+  <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Select "Logout" below if you are ready to end your current session.
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" type="button" data-dismiss="modal">
+            Cancel
+          </button>
+          <a class="btn btn-primary" href="login.html">Logout</a>
         </div>
       </div>
     </div>
-
-    <!-- Bootstrap core JavaScript-->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="../assets/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Core plugin JavaScript-->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-
- 
-    <!-- Page level plugins -->
-    <script src="vendor/chart.js/Chart.min.js"></script>
-
-    <!-- Page level custom scripts -->
-    <script src="js/demo/chart-area-demo.js"></script>
-    <script src="js/demo/chart-pie-demo.js"></script>
+  </div>
 
 
-    <!-- searchable table -->
-    <script src="../assets/vendor/dataTable/jquery.dataTables.min.js"></script>
-    <script src="../assets/vendor/dataTable/dataTables.bootstrap5.min.js"></script>
-    <script src="../assets/vendor/dataTable/dataTables.searchPanes.min.js"></script>
-    <script src="../assets/vendor/dataTable/searchPanes.bootstrap5.min.js"></script>
-    <script src="../assets/vendor/dataTable/dataTables.select.min.js"></script>
-
-   <!-- Custom scripts for all pages-->
-   <script src="js/sb-admin-2.min.js"></script>
+  <div class="notification" id="myNotification"></div>
 
 
-    <script>
+  <!-- Bootstrap core JavaScript-->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="../assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Core plugin JavaScript-->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+
+  <!-- Page level plugins -->
+  <script src="vendor/chart.js/Chart.min.js"></script>
+
+  <!-- Page level custom scripts -->
+  <script src="js/demo/chart-area-demo.js"></script>
+  <script src="js/demo/chart-pie-demo.js"></script>
+
+
+  <!-- searchable table -->
+  <script src="../assets/vendor/dataTable/jquery.dataTables.min.js"></script>
+  <script src="../assets/vendor/dataTable/dataTables.bootstrap5.min.js"></script>
+  <script src="../assets/vendor/dataTable/dataTables.searchPanes.min.js"></script>
+  <script src="../assets/vendor/dataTable/searchPanes.bootstrap5.min.js"></script>
+  <script src="../assets/vendor/dataTable/dataTables.select.min.js"></script>
+
+  <!-- Custom scripts for all pages-->
+  <script src="js/sb-admin-2.min.js"></script>
+
+
+  <script>
     $(document).ready(function () {
-        var table = $("#results_table").DataTable({
-            "lengthMenu": [10, 25, 50, 100],
-            
-            columnDefs: [{
-      targets: 0,
-      orderable: false
-    }]
+      var table = $("#results_table").DataTable({
+        "lengthMenu": [15, 25, 50, 100],
+
+        columnDefs: [{
+          targets: 0,
+          orderable: false
+        }]
 
 
-        });
-
-  table.on('order.dt search.dt page.dt', function() {
-    table
-      .column(0, { order:   'applied'
-                 , search:  'applied'
-                 
-                 })
-      .nodes()
-      .each(function(cell, i) {
-        cell.innerHTML = i + 1;
       });
-  }).draw(); 
+
+      table.on('order.dt search.dt page.dt', function () {
+        table
+          .column(0, {
+            order: 'applied'
+            , search: 'applied'
+
+          })
+          .nodes()
+          .each(function (cell, i) {
+            cell.innerHTML = i + 1;
+          });
+      }).draw();
 
 
-        const filterMap = {
-            'filterGroup': 'f_group',
-            'filterOwner': 'f_owner',
-            'filterRank': 'f_rank',
-            'filterLanguage': 'f_language'
-        };
+      const filterMap = {
+        'filterGroup': 'f_group',
+        'filterOwner': 'f_owner',
+        'filterRank': 'f_rank',
+        'filterLanguage': 'f_language'
+      };
 
-        function applyAndRefreshFilters() {
-            let activeFilters = getActiveFilters();
-            applyCustomDataTableFilter(activeFilters);
-            table.draw(); 
-            updateAvailableCheckboxes();
-        }
+      function applyAndRefreshFilters() {
+        let activeFilters = getActiveFilters();
+        applyCustomDataTableFilter(activeFilters);
+        table.draw();
+        updateAvailableCheckboxes();
+      }
 
-        function getActiveFilters() {
-            let activeFilters = {};
-           
-            for (const key in filterMap) {
-                activeFilters[filterMap[key]] = [];
-            }
+      function getActiveFilters() {
+        let activeFilters = {};
 
-           
-            $('.box input[type="checkbox"]:checked').each(function () {
-                const checkbox = $(this);
-                const filterGroupDiv = checkbox.closest('.box');
-                const filterGroupId = filterGroupDiv.attr('id');
-                const filterClass = filterMap[filterGroupId];
-
-                if (filterClass) {
-                    activeFilters[filterClass].push(checkbox.val());
-                }
-            });
-            return activeFilters;
-        }
-
- 
-        function applyCustomDataTableFilter(activeFilters) {
-            $.fn.dataTable.ext.search.push(function (settings, data, dataIndex) {
-              
-                const row = table.row(dataIndex).node();
-                const $row = $(row);
-
-                for (const filterClass in activeFilters) {
-                    const selectedValues = activeFilters[filterClass];
-
-                    if (selectedValues.length > 0) {
-                        const rowValue = $row.find('.' + filterClass).text().trim();
-                       
-                        if (!selectedValues.includes(rowValue)) {
-                            return false;
-                        }
-                    }
-                }
-               
-                return true; 
-            });
-        }
-
-        function updateAvailableCheckboxes() {
-       
-            let availableOptions = {};
-            for (const key in filterMap) {
-                availableOptions[filterMap[key]] = new Set();
-            }
-
-            table.rows({ search: 'applied' }).nodes().each(function (row) {
-                const $row = $(row);
-               
-                for (const key in filterMap) {
-                    const filterClass = filterMap[key];
-                    const value = $row.find('.' + filterClass).text().trim();
-                    if (value) {
-                        availableOptions[filterClass].add(value);
-                    }
-                }
-            });
-
-            $('.box input[type="checkbox"]').each(function () {
-                const checkbox = $(this);
-                const li = checkbox.closest('li');
-
-     
-                if (checkbox.is(':checked')) {
-                    li.css('opacity', 1).css('pointer-events', 'auto').show();
-                    return; 
-                }
-                
-            
-                const filterGroupDiv = checkbox.closest('.box');
-                const filterGroupId = filterGroupDiv.attr('id');
-                const filterClass = filterMap[filterGroupId];
-                const checkboxValue = checkbox.val();
-
-     
-                if (availableOptions[filterClass] && availableOptions[filterClass].has(checkboxValue)) {
-                    li.css('opacity', 1).css('pointer-events', 'auto').show();
-                } else {
-                    li.css('opacity', 0.4).css('pointer-events', 'none').css('display', 'none');
-                }
-            });
-
-
-
-
-    $('.boxBody ul').each(function() {
-        $(this).find('li').removeClass('last-visible-item');
-        $(this).find('li:visible').last().addClass('last-visible-item');
-    });
-
-
+        for (const key in filterMap) {
+          activeFilters[filterMap[key]] = [];
         }
 
 
-        function initialEmptyFilterScan() {
-            $('.box input[type="checkbox"]').each(function () {
-                const checkbox = $(this);
-                const li = checkbox.closest('li');
-                const checkboxValue = checkbox.val();
+        $('.box input[type="checkbox"]:checked').each(function () {
+          const checkbox = $(this);
+          const filterGroupDiv = checkbox.closest('.box');
+          const filterGroupId = filterGroupDiv.attr('id');
+          const filterClass = filterMap[filterGroupId];
 
-                const filterGroupDiv = checkbox.closest('.box');
-                const filterGroupId = filterGroupDiv.attr('id');
-                const filterClass = filterMap[filterGroupId];
-
-                let matchCount = 0;
-          
-                table.rows().nodes().each(function (row) {
-                    const rowValue = $(row).find('.' + filterClass).text().trim();
-                    if (rowValue === checkboxValue) {
-                        matchCount++;
-                    }
-                });
-
-                if (matchCount === 0) {
-                    li.addClass('hide1');
-                }
-            });
-        }
-
-        $('.box input[type="checkbox"]').on('change', function () {
-       
-            $.fn.dataTable.ext.search.pop();
-            applyAndRefreshFilters();
+          if (filterClass) {
+            activeFilters[filterClass].push(checkbox.val());
+          }
         });
-        initialEmptyFilterScan();
+        return activeFilters;
+      }
+
+
+      function applyCustomDataTableFilter(activeFilters) {
+        $.fn.dataTable.ext.search.push(function (settings, data, dataIndex) {
+
+          const row = table.row(dataIndex).node();
+          const $row = $(row);
+
+          for (const filterClass in activeFilters) {
+            const selectedValues = activeFilters[filterClass];
+
+            if (selectedValues.length > 0) {
+              const rowValue = $row.find('.' + filterClass).text().trim();
+
+              if (!selectedValues.includes(rowValue)) {
+                return false;
+              }
+            }
+          }
+
+          return true;
+        });
+      }
+
+      function updateAvailableCheckboxes() {
+
+        let availableOptions = {};
+        for (const key in filterMap) {
+          availableOptions[filterMap[key]] = new Set();
+        }
+
+        table.rows({ search: 'applied' }).nodes().each(function (row) {
+          const $row = $(row);
+
+          for (const key in filterMap) {
+            const filterClass = filterMap[key];
+            const value = $row.find('.' + filterClass).text().trim();
+            if (value) {
+              availableOptions[filterClass].add(value);
+            }
+          }
+        });
+
+        $('.box input[type="checkbox"]').each(function () {
+          const checkbox = $(this);
+          const li = checkbox.closest('li');
+
+
+          if (checkbox.is(':checked')) {
+            li.css('opacity', 1).css('pointer-events', 'auto').show();
+            return;
+          }
+
+
+          const filterGroupDiv = checkbox.closest('.box');
+          const filterGroupId = filterGroupDiv.attr('id');
+          const filterClass = filterMap[filterGroupId];
+          const checkboxValue = checkbox.val();
+
+
+          if (availableOptions[filterClass] && availableOptions[filterClass].has(checkboxValue)) {
+            li.css('opacity', 1).css('pointer-events', 'auto').show().removeClass('hide2');
+          } else {
+            li.css('opacity', 0.4).css('pointer-events', 'none').css('display', 'none').addClass('hide2');
+          }
+        });
+
+
+
+
+        $('.boxBody ul').each(function () {
+          $(this).find('li').removeClass('last-visible-item');
+          $(this).find('li:visible').last().addClass('last-visible-item');
+        });
+
+
+      }
+
+
+      function initialEmptyFilterScan() {
+        $('.box input[type="checkbox"]').each(function () {
+          const checkbox = $(this);
+          const li = checkbox.closest('li');
+          const checkboxValue = checkbox.val();
+
+          const filterGroupDiv = checkbox.closest('.box');
+          const filterGroupId = filterGroupDiv.attr('id');
+          const filterClass = filterMap[filterGroupId];
+
+          let matchCount = 0;
+
+          table.rows().nodes().each(function (row) {
+            const rowValue = $(row).find('.' + filterClass).text().trim();
+            if (rowValue === checkboxValue) {
+              matchCount++;
+            }
+          });
+
+          if (matchCount === 0) {
+            li.addClass('hide1');
+          }
+        });
+      }
+
+      $('.box input[type="checkbox"]').on('change', function () {
+
+        $.fn.dataTable.ext.search.pop();
         applyAndRefreshFilters();
+      });
+      initialEmptyFilterScan();
+      applyAndRefreshFilters();
 
     });
-    </script>
+  </script>
 
-  </body>
+
+
+<script>
+  
+//filters
+
+$(document).ready(function () {
+
+
+$('.publishersPage .sidePanel input[type="checkbox"]').each(function (index) {
+  $(this).attr('id', 'checkbox-' + index);
+  $(this).closest('label').attr('for', 'checkbox-' + index);
+});
+
+$('.publishersPage .sidePanel .box').each(function (boxIndex) {
+  $(this).find('input[type="checkbox"]').attr('name', 'filter-' + boxIndex);
+
+  $(this).find('.boxBody').show();
+  // $(this).find('.collapseIcon').addClass('rotated');
+});
+
+
+$('.publishersPage .sidePanel .collapseIcon').on('click', function (e) {
+  e.stopPropagation();
+  $(this).closest('.box').find('.boxBody').slideToggle('fast');
+  $(this).toggleClass('rotated');
+  $(this).closest('.box').toggleClass("collapsed");
+});
+
+
+$('.publishersPage .sidePanel input[type="checkbox"]').on('change', function () {
+  const anyChecked = $(this).closest('.box').find('input[type="checkbox"]:checked').length > 0;
+
+
+  if (anyChecked) {
+    $(this).closest('.box').find('.cancel').fadeIn('fast');
+  } else {
+    $(this).closest('.box').find('.cancel').fadeOut('fast');
+  }
+
+
+  const filterData = {};
+  $('.publishersPage .sidePanel .box').each(function () {
+    const title = $(this).find('h5').text().trim();
+    const checkedValues = [];
+
+    $(this).find('input[type="checkbox"]:checked').each(function () {
+      checkedValues.push($(this).val());
+    });
+
+    if (checkedValues.length > 0) {
+      filterData[title] = checkedValues;
+    }
+  });
+
+
+  console.log('filterData: ', filterData);
+
+
+});
+
+// when cancel button clicked
+$('.publishersPage .sidePanel .cancel').on('click', function (e) {
+  e.preventDefault();
+  e.stopPropagation();
+
+  $(this).closest('.box').find('input[type="checkbox"]:checked').prop('checked', false).trigger('change');
+
+
+});
+});
+
+
+
+
+
+
+
+// search page search inside sidebar box
+$(document).ready(function() {
+  var $input = $('.filterSearchBox input');
+  var $clear = $('.filterSearchBox .bi-x');
+  var $items = $('#filterOwner .boxBody ul li');
+
+
+  $clear.hide();
+
+
+  $input.on('input', function() {
+    var val = $(this).val().trim().toLowerCase();
+
+    
+    if (val.length) {
+      $clear.css("display","flex");
+    } else {
+      $clear.hide();
+    }
+
+
+    $items.each(function() {
+      var text = $(this).find('label span').last().text().toLowerCase();
+      if (text.indexOf(val) !== -1) {
+        $(this).show();
+      } else {
+        $(this).hide();
+      }
+    });
+  });
+
+
+  $clear.on('click', function() {
+    $input.val('').trigger('input');
+    $input.focus();
+  });
+});
+
+
+</script>
+
+
+
+
+
+
+</body>
+
 </html>

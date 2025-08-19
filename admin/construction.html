@@ -179,15 +179,7 @@
         <!-- Begin Page Content -->
         <div class="container-fluid addNewPage">
           <!-- Page Heading -->
-          <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">افزودن نشریه تازه</h1>
-            <!-- <a
-                href="#"
-                class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"
-                ><i class="fas fa-download fa-sm text-white-50"></i> Generate
-                Report</a
-              > -->
-          </div>
+         
 
           <div class="row" style="    justify-content: center;">
             <div class="col-md-6">
@@ -195,7 +187,7 @@
                 <!-- Card Header - Dropdown -->
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                   <h6 class="m-0 font-weight-bold text-primary">
-                    نشریه تازه
+                    404
                   </h6>
                   <div class="dropdown no-arrow">
                     <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
@@ -207,31 +199,52 @@
                 </div>
                 <!-- Card Body -->
                 <div class="card-body">
-                  <form action="">
-                    <div class="row">
-                      <div class="col-md-8">
-                        <label for="">عنوان</label>
-                        <input type="text" name="" id="title">
-                        <div class="err titleErr"><i class="bi bi-exclamation-circle-fill"></i> عنوان باید پر شود!</div>
-                      </div>
-                      <div class="col-md-4">
-                        <label for="">تصویر</label>
-                        <input type="file" name="" id="file" class="form-control">
-                        <div class="err fileErr"><i class="bi bi-exclamation-circle-fill"></i> تصویر باید انتخاب شود!
-                        </div>
-                      </div>
+                <p>این بخش در فاز بعدی پروژه تکمیل می‌شود</p>
 
-                      <div class="col-12">
-                        <label for="">توضیحات</label>
-                        <textarea id="description" name=""></textarea>
-                        <div class="err descriptionErr"><i class="bi bi-exclamation-circle-fill"></i> توضیحات باید پر
-                          شود!</div>
-                      </div>
-                      <div class="col-12">
-                        <input class="btn btn-primary" type="submit" value="ثبت">
-                      </div>
-                    </div>
-                  </form>
+                <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+  Launch static backdrop modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable ">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">افزودن کاربر جدید</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x"></i></button>
+      </div>
+      <div class="modal-body">
+        <form action="">
+        <div class="formRow">
+          <label for="name">نام</label>
+          <input type="text" name="" id="title">
+        </div>
+        <div class="formRow">
+          <label for="role">نقش</label>
+          <select name="" id="role">
+            <option value="">نقش 1</option>
+          </select>
+        </div>
+        <div class="formRow">
+          <label for="username">نام کاربری</label>
+          <input type="text" name="" id="username">
+        </div>
+        <div class="formRow">
+          <label for="password">رمز عبور</label>
+          <input type="password" name="" id="password">
+        </div>
+      </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary " data-bs-dismiss="modal">لغو</button>
+        <button type="button" class="btn btn-primary">تایید</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
                 </div>
               </div>
             </div>
